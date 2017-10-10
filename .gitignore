@@ -3,7 +3,6 @@
 /config/cache.php
 /config/database.php
 /config/developer.php
-/config/multisite.php
 /config/salts.php
 /config/ad.php
 /config/capthca.php
