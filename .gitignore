@@ -5,6 +5,7 @@
 /config/developer.php
 /config/multisite.php
 /config/salts.php
+/config/ad.php
 
 # Municipio dependencies #
 ##########################
