@@ -1,5 +1,6 @@
+@import 'config';
 @import 'master';
 
 .is-child-theme {
-	//@import 'layout/base';
+	@import 'layout/header';
 }
