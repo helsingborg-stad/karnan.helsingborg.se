@@ -35,6 +35,15 @@ if (file_exists(__DIR__ . '/config/ad.php')) {
 }
 
 /**
+ * Google reCaptcha
+ *
+ * Keys for google integrations
+ */
+if (file_exists(__DIR__ . '/config/capthca.php')) {
+    require_once 'config/capthca.php';
+}
+
+/**
  * Cookie settings
  *
  * To enable this site as a multisite please rename the config/cookie-example.php file to

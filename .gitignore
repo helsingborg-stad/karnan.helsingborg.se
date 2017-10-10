@@ -6,6 +6,7 @@
 /config/multisite.php
 /config/salts.php
 /config/ad.php
+/config/capthca.php
 
 # Municipio dependencies #
 ##########################
