@@ -23,6 +23,7 @@ composer.lock
 wp-content/themes/*
 !wp-content/themes
 !wp-content/themes/karnan
+!wp-content/themes/karnan/library/Vendor/
 wp-content/themes/karnan/node_modules
 
 # Compiled source #
