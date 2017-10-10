@@ -23,8 +23,8 @@ composer.lock
 ##########################
 wp-content/themes/*
 !wp-content/themes
-!wp-content/themes/helsingborg
-wp-content/themes/helsingborg/node_modules
+!wp-content/themes/karnan
+wp-content/themes/karnan/node_modules
 
 # Compiled source #
 ###################
