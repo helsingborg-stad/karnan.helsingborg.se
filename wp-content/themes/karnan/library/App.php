@@ -6,5 +6,7 @@ class App
     public function __construct()
     {
         new \karnan\Theme\Enqueue();
+
+        new \karnan\Admin\ThemeOptions();
     }
 }
