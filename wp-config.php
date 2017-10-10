@@ -44,6 +44,14 @@ if (file_exists(__DIR__ . '/config/capthca.php')) {
 }
 
 /**
+ * SSL proxy
+ * Set to SSL proxy mode in live enviroment
+ */
+if (file_exists(__DIR__ . '/config/ssl.php')) {
+    require_once __DIR__ . '/config/ssl.php';
+}
+
+/**
  * Cookie settings
  *
  * To enable this site as a multisite please rename the config/cookie-example.php file to
