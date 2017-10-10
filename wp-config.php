@@ -18,9 +18,9 @@
  * @package WordPress
  */
 
+require_once __DIR__ . '/config/salts.php';
 require_once __DIR__ . '/config/content.php';
 require_once __DIR__ . '/config/database.php';
-require_once __DIR__ . '/config/salts.php';
 require_once __DIR__ . '/config/plugins.php';
 require_once __DIR__ . '/config/update.php';
 require_once __DIR__ . '/config/upload.php';
