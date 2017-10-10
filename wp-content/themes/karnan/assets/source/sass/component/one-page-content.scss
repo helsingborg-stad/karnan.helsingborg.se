@@ -1,0 +1,10 @@
+#one-page-content {
+    section {
+        height: 100vh;
+        width: 100%;
+        display: block;
+    }
+    section + section {
+        border-top: 4px solid #ff0000;
+    }
+}

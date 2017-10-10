@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Childtheme for Municipio theme",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "jquery-mousewheel": "^3.1.13"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",

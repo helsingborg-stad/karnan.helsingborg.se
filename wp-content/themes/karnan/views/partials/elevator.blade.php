@@ -1,8 +1,10 @@
 @if (is_array($sections) && !empty($sections))
-    <ul id="elevator">
+    <ul id="one-page-elevator">
     @foreach ($sections as $elevatorItem)
         <li class="elevator-item" data-label="{{ $elevatorItem['post_title'] }}">
-            <span class="height-indicator">{{ $elevatorItem['height_indicator'] }}</span>
+            <a href="#{{ $elevatorItem['section_anchor'] }}">
+                <span class="height-indicator">{{ $elevatorItem['height_indicator'] }}</span>
+            </a>
         </li>
     @endforeach
     </ul>

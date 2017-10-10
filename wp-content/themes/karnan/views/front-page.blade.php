@@ -4,15 +4,15 @@
 
 @include ('partials/elevator')
 
-<div class="container main-container">
-    <div class="grid-xs-12">
+<div id="one-page-content">
+    <div id="inner">
         @foreach ($sections as $section)
-            <div class="panel">
+            <section id="{{ $section['section_anchor'] }}">
                 <article>
                     <h1>{{ $section['post_title'] }}</h1>
                     {!! $section['post_content'] !!}
                 </article>
-            </div>
+            </section>
         @endforeach
     </div>
 </div>

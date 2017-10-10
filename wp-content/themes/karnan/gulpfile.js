@@ -9,6 +9,8 @@ var cssnano 		= require('gulp-cssnano');
 var rename 			= require('gulp-rename');
 var autoprefixer 	= require('gulp-autoprefixer');
 
+var node_modules = 'node_modules/';
+
 // Compile Our Sass
 gulp.task('sass-dist', function() {
     return gulp.src('assets/source/sass/app.scss')
@@ -32,7 +34,10 @@ gulp.task('sass-dev', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts-dist', function() {
-    return gulp.src('assets/source/js/*.js')
+    return gulp.src([
+                node_modules + 'jquery-mousewheel/jquery.mousewheel.js',
+                'assets/source/js/*.js'
+            ])
             .pipe(concat('app.js'))
             .pipe(gulp.dest('assets/dist/js'))
             .pipe(rename('app.min.js'))
@@ -48,4 +53,3 @@ gulp.task('watch', function() {
 
 // Default Task
 gulp.task('default', ['sass-dist', 'sass-dev', 'scripts-dist', 'watch']);
-

@@ -1,5 +1,5 @@
 karnan = karnan || {};
-karnan.ExampleNamespace = karnan.Liquid || {};
+karnan.ExampleNamespace = karnan.ExampleNamespace || {};
 
 karnan.ExampleNamespace.ExampleClass = (function ($) {
 

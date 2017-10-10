@@ -3,4 +3,7 @@
 
 .is-child-theme {
 	@import 'layout/header';
+
+    @import 'component/one-page-elevator';
+    @import 'component/one-page-content';
 }
