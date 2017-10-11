@@ -1,0 +1,13 @@
+.scroll-action {
+    position: fixed;
+    z-index: $level-top;
+    left: 50%;
+
+    &.scroll-up {
+        top: 10px;
+    }
+
+    &.scroll-down {
+        bottom: 10px;
+    }
+}

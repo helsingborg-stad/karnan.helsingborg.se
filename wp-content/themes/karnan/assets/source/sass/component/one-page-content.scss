@@ -1,12 +1,56 @@
 #one-page-content {
     z-index: $level-3;
     position: relative;
+
     section {
         height: 100vh;
         width: 100%;
         display: block;
     }
+
     section + section {
         border-top: 4px solid #ff0000;
+    }
+
+    article {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 1s opacity;
+        width: 60%;
+        margin-left: auto;
+        min-height: 300px;
+        border-radius: 0;
+        padding-left: 60px;
+
+        &.animate {
+            opacity: 0;
+        }
+
+        &.animated {
+            opacity: 1;
+        }
+
+        .label {
+            padding: 0;
+            border-radius: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            line-height: 50px;
+            font-size: 2em;
+            color: #fff;
+            background: rgba(#000,.1);
+        }
+
+        .label .inner {
+            transform: rotate(90deg);
+            display: inline-block;
+            transform-origin: left;
+            width: 280px;
+        }
+
     }
 }

@@ -2,21 +2,27 @@
 
 @section('content')
 
-@include ('partials/backgroundvideo')
+@include ('partials/one-page/video')
+@include ('partials/one-page/elevator')
 
-@include ('partials/elevator')
+@include ('partials/one-page/scroll-up')
 
 <div id="one-page-content">
     <div id="inner">
         @foreach ($sections as $section)
             <section id="{{ $section['section_anchor'] }}">
-                <article>
-                    <h1>{{ $section['post_title'] }}</h1>
-                    {!! $section['post_content'] !!}
+                <article class="box box-filled animate">
+                    <span class="label"><span class="inner">{{ $section['section_name'] }}</span></span>
+                    <div class="box-content">
+                        <h5>{{ $section['post_title'] }}</h5>
+                        {!! $section['post_content'] !!}
+                    </div>
                 </article>
             </section>
         @endforeach
     </div>
 </div>
+
+@include ('partials/one-page/scroll-down')
 
 @stop
