@@ -2,6 +2,8 @@
 
 @section('content')
 
+@include ('partials/backgroundvideo')
+
 @include ('partials/elevator')
 
 <div id="one-page-content">

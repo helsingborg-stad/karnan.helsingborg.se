@@ -1,4 +1,5 @@
 #one-page-elevator {
+    z-index: $level-3;
     position: fixed;
     top: 0;
     right: auto;
@@ -9,6 +10,15 @@
     li {
         display: block;
         height: 20%;
-        vertical-align: middle;
+        position: relative;
+
+        .height-indicator {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
     }
 }
