@@ -1,1 +1,1 @@
-<a class="scroll-action scroll-down btn btn-primary" href="#up">Go down</a>
+<a class="scroll-action scroll-down btn btn-primary disabled" href="#up">Go down</a>

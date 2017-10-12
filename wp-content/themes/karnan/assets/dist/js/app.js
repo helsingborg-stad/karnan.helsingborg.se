@@ -234,34 +234,6 @@ $(function(){
 Karnan = Karnan || {};
 Karnan.OnePage = Karnan.OnePage || {};
 
-Karnan.OnePage.ScrollButtons = (function ($) {
-
-    var AnchorScrollTrigger = '#one-page-elevator li a';
-    var ActiveAnchorScrollTrigger = '#one-page-elevator li.active a';
-
-	function ScrollButtons() {
-        this.bindButton('up', '.scroll-action.scroll-up');
-        this.bindButton('down', '.scroll-action.scroll-down');
-    }
-
-    ScrollButtons.prototype.bindButton = function (direction, class) {
-
-        $(class).on('click', function(){
-
-            //active menu item
-            console.log($(ActiveAnchorScrollTrigger));
-            console.log($("a", $(ActiveAnchorScrollTrigger).next()));
-            $("a", $(ActiveAnchorScrollTrigger).next()).trigger('click');
-        }.bind(this));
-    }
-
-	return new ScrollButtons();
-
-})(jQuery);
-
-Karnan = Karnan || {};
-Karnan.OnePage = Karnan.OnePage || {};
-
 Karnan.OnePage.AnchorScroll = (function ($) {
 
     var AnchorScrollTriggers = [
@@ -314,7 +286,7 @@ Karnan.OnePage.AnchorScroll = (function ($) {
             event.preventDefault();
             this.updateHash(target);
             var targetOffset = jQuery(target).offset();
-            jQuery('html, body').animate({scrollTop: Math.abs(targetOffset.top -Math.abs(AnchorScrollSettings.scrollOffset))}, AnchorScrollSettings.scrollSpeed, jQuery.bez([0.815, 0.020, 0.080, 1.215]));
+            jQuery('html, body').animate({scrollTop: Math.abs(targetOffset.top -Math.abs(AnchorScrollSettings.scrollOffset))}, AnchorScrollSettings.scrollSpeed);
         }.bind(this));
     };
 
@@ -331,6 +303,61 @@ Karnan.OnePage.AnchorScroll = (function ($) {
     }
 
     new AnchorScroll();
+
+})(jQuery);
+
+Karnan = Karnan || {};
+Karnan.OnePage = Karnan.OnePage || {};
+
+Karnan.OnePage.ScrollButtons = (function ($) {
+
+    var AnchorScrollTrigger = '#one-page-elevator li a';
+    var ActiveAnchorScrollTrigger = '#one-page-elevator li.active';
+
+	function ScrollButtons() {
+        this.bindButton('up', '.scroll-action.scroll-up');
+        this.bindButton('down', '.scroll-action.scroll-down');
+
+        this.buttonToggle();
+        setInterval(function(){
+            this.buttonToggle();
+        }.bind(this),175);
+    }
+
+    ScrollButtons.prototype.bindButton = function (direction, class) {
+
+        $(class).on('click', function(){
+
+            //Movement
+            if(direction == 'up') {
+                $("a", $(ActiveAnchorScrollTrigger).prev()).trigger('click');
+            } else {
+                $("a", $(ActiveAnchorScrollTrigger).next()).trigger('click');
+            }
+
+            this.buttonToggle();
+
+        }.bind(this));
+    }
+
+    ScrollButtons.prototype.buttonToggle = function() {
+
+        //Toggles up button
+        if(jQuery(ActiveAnchorScrollTrigger).hasClass('is-first')) {
+            jQuery('.scroll-action.scroll-up').addClass('disabled');
+        } else {
+            jQuery('.scroll-action.scroll-up').removeClass('disabled');
+        }
+
+        //Toggles down button
+        if(jQuery(ActiveAnchorScrollTrigger).hasClass('is-last')) {
+            jQuery('.scroll-action.scroll-down').addClass('disabled');
+        } else {
+            jQuery('.scroll-action.scroll-down').removeClass('disabled');
+        }
+    }
+
+	return new ScrollButtons();
 
 })(jQuery);
 

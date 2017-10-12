@@ -53,7 +53,7 @@ Karnan.OnePage.AnchorScroll = (function ($) {
             event.preventDefault();
             this.updateHash(target);
             var targetOffset = jQuery(target).offset();
-            jQuery('html, body').animate({scrollTop: Math.abs(targetOffset.top -Math.abs(AnchorScrollSettings.scrollOffset))}, AnchorScrollSettings.scrollSpeed, jQuery.bez([0.815, 0.020, 0.080, 1.215]));
+            jQuery('html, body').animate({scrollTop: Math.abs(targetOffset.top -Math.abs(AnchorScrollSettings.scrollOffset))}, AnchorScrollSettings.scrollSpeed);
         }.bind(this));
     };
 
