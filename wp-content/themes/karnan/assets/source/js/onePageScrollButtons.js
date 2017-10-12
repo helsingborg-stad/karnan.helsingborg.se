@@ -10,7 +10,6 @@ Karnan.OnePage.ScrollButtons = (function ($) {
         this.bindButton('up', '.scroll-action.scroll-up');
         this.bindButton('down', '.scroll-action.scroll-down');
 
-        this.buttonToggle();
         setInterval(function(){
             this.buttonToggle();
         }.bind(this),175);
