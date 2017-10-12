@@ -4,6 +4,8 @@
 .is-child-theme {
 	@import 'layout/header';
 
+    @import 'component/stripe';
+
     @import 'component/one-page-scroll-action';
     @import 'component/one-page-video';
     @import 'component/one-page-elevator';

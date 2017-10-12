@@ -2,6 +2,7 @@
 
 @section('content')
 
+@include ('partials/stripe')
 @include ('partials/one-page/video')
 @include ('partials/one-page/elevator')
 
@@ -10,7 +11,7 @@
 <div id="one-page-content">
     <div id="inner">
         @foreach ($sections as $section)
-            <section id="{{ $section['section_anchor'] }}">
+            <section id="{{ $section['section_anchor'] }}" class="onepage-section">
                 <article class="box box-filled animate">
                     <span class="label"><span class="inner">{{ $section['section_name'] }}</span></span>
                     <div class="box-content">

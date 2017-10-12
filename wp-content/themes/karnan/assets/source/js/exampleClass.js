@@ -1,25 +1,27 @@
-karnan = karnan || {};
-karnan.ExampleNamespace = karnan.ExampleNamespace || {};
+Karnan = Karnan || {};
+Karnan.OnePage = Karnan.OnePage || {};
 
-karnan.ExampleNamespace.ExampleClass = (function ($) {
+Karnan.OnePage.ScrollButtons = (function ($) {
 
-	var classVariable = false;
+    var AnchorScrollTrigger = '#one-page-elevator li a';
+    var ActiveAnchorScrollTrigger = '#one-page-elevator li.active a';
 
-    /**
-     * Constructor
-     * Should be named as the class itself
-     */
-	function ExampleClass() {
-
+	function ScrollButtons() {
+        this.bindButton('up', '.scroll-action.scroll-up');
+        this.bindButton('down', '.scroll-action.scroll-down');
     }
 
-    /**
-     * Method
-     */
-    ExampleClass.prototype.exampleMethod = function () {
+    ScrollButtons.prototype.bindButton = function (direction, class) {
 
+        $(class).on('click', function(){
+
+            //active menu item
+            console.log($(ActiveAnchorScrollTrigger));
+            console.log($("a", $(ActiveAnchorScrollTrigger).next()));
+            $("a", $(ActiveAnchorScrollTrigger).next()).trigger('click');
+        }.bind(this));
     }
 
-	return new ExampleClass();
+	return new ScrollButtons();
 
 })(jQuery);

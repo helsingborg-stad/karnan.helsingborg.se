@@ -220,7 +220,9 @@
 
 }));
 
-var karnan;
+var Karnan;
+
+
 
 $(function(){
     $("body").mousewheel(function(event) {
@@ -229,38 +231,197 @@ $(function(){
     });
 });
 
-karnan = karnan || {};
-karnan.ExampleNamespace = karnan.ExampleNamespace || {};
+Karnan = Karnan || {};
+Karnan.OnePage = Karnan.OnePage || {};
 
-karnan.ExampleNamespace.ExampleClass = (function ($) {
+Karnan.OnePage.ScrollButtons = (function ($) {
 
-	var classVariable = false;
+    var AnchorScrollTrigger = '#one-page-elevator li a';
+    var ActiveAnchorScrollTrigger = '#one-page-elevator li.active a';
 
-    /**
-     * Constructor
-     * Should be named as the class itself
-     */
-	function ExampleClass() {
-
+	function ScrollButtons() {
+        this.bindButton('up', '.scroll-action.scroll-up');
+        this.bindButton('down', '.scroll-action.scroll-down');
     }
 
-    /**
-     * Method
-     */
-    ExampleClass.prototype.exampleMethod = function () {
+    ScrollButtons.prototype.bindButton = function (direction, class) {
 
+        $(class).on('click', function(){
+
+            //active menu item
+            console.log($(ActiveAnchorScrollTrigger));
+            console.log($("a", $(ActiveAnchorScrollTrigger).next()));
+            $("a", $(ActiveAnchorScrollTrigger).next()).trigger('click');
+        }.bind(this));
     }
 
-	return new ExampleClass();
+	return new ScrollButtons();
+
+})(jQuery);
+
+Karnan = Karnan || {};
+Karnan.OnePage = Karnan.OnePage || {};
+
+Karnan.OnePage.AnchorScroll = (function ($) {
+
+    var AnchorScrollTriggers = [
+        '#one-page-elevator li a'
+    ];
+
+    var AnchorScrollTargets = [
+        'section.onepage-section'
+    ];
+
+    var AnchorScrollSettings = {
+        scrollSpeed: 750,
+        scrollOffset: 100
+    };
+
+    function AnchorScroll() {
+        AnchorScrollTriggers.forEach(function(element) {
+            jQuery(element).each(function(index,item) {
+                if(this.isAnchorLink(jQuery(item).attr('href')) && this.anchorLinkExists(jQuery(item).attr('href'))) {
+                    this.bindAnchorScroll(item,jQuery(item).attr('href'));
+                }
+                if(this.isAnchorLink(jQuery(item).attr('href')) && !this.anchorLinkExists(jQuery(item).attr('href')) && window.location.pathname !== '/') {
+                    jQuery(item).attr('href', jQuery(".logotype").attr('href')  + "/" + jQuery(item).attr('href'));
+                }
+            }.bind(this));
+        }.bind(this));
+    }
+
+    AnchorScroll.prototype.isAnchorLink = function (href) {
+        if(/^#/.test(href) === true && href.length > 1) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    AnchorScroll.prototype.anchorLinkExists = function (id) {
+        var linkExist = false;
+        AnchorScrollTargets.forEach(function(element) {
+            if(jQuery(element + id).length) {
+               linkExist = true;
+               return true;
+            }
+        }.bind(this));
+        return linkExist;
+    };
+
+    AnchorScroll.prototype.bindAnchorScroll = function (trigger,target) {
+        jQuery(trigger).on('click',function(event){
+            event.preventDefault();
+            this.updateHash(target);
+            var targetOffset = jQuery(target).offset();
+            jQuery('html, body').animate({scrollTop: Math.abs(targetOffset.top -Math.abs(AnchorScrollSettings.scrollOffset))}, AnchorScrollSettings.scrollSpeed, jQuery.bez([0.815, 0.020, 0.080, 1.215]));
+        }.bind(this));
+    };
+
+    AnchorScroll.prototype.updateHash = function(hash) {
+        if(history.pushState) {
+            if(hash === "" ) {
+                history.pushState(null, null, "#");
+            } else {
+                history.pushState(null, null, hash);
+            }
+        } else {
+            window.location.hash = hash;
+        }
+    }
+
+    new AnchorScroll();
+
+})(jQuery);
+
+Karnan = Karnan || {};
+Karnan.OnePage = Karnan.OnePage || {};
+
+Karnan.OnePage.ScrollHighlight = (function ($) {
+
+    var ScrollTopValue = 0;
+
+    var ScrollTopOffset = 50;
+
+    var ScrollMenuWrapperActiveClass = 'active';
+
+    var ScrollHighlightTrigger = 'section.onepage-section';
+
+    var ScrollMenuWrapper = [
+        '#one-page-elevator'
+    ];
+
+    function ScrollHighlight() {
+        ScrollTopValue = jQuery(window).scrollTop();
+        jQuery(window).on('scroll', function (e) {
+            var scrolledToItem = null;
+            ScrollTopValue = jQuery(window).scrollTop() + ScrollTopOffset + jQuery("#site-header").outerHeight();
+            jQuery(ScrollHighlightTrigger).each(function (index,item) {
+                if(ScrollTopValue >= jQuery(item).offset().top) {
+                    scrolledToItem = item;
+                    return;
+                }
+            });
+            this.cleanHighlight();
+            this.highlightMenuItem("#" + jQuery(scrolledToItem).attr('id'));
+        }.bind(this));
+    }
+
+    ScrollHighlight.prototype.highlightMenuItem = function (id) {
+        if(this.isAnchorLink(id) && this.anchorLinkExists(id)){
+            ScrollMenuWrapper.forEach(function(element) {
+                jQuery("a[href='" + id + "']", element).parent('li').addClass(ScrollMenuWrapperActiveClass);
+            });
+        }
+    };
+
+    ScrollHighlight.prototype.isAnchorLink = function (href) {
+        if(/^#/.test(href) === true && href.length > 1) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    ScrollHighlight.prototype.anchorLinkExists = function (id) {
+        var linkExist = false;
+        ScrollMenuWrapper.forEach(function(element) {
+            if(jQuery("a[href='" + id + "']",element).length) {
+                linkExist = true;
+                return true;
+            }
+        }.bind(this));
+        return linkExist;
+    };
+
+    ScrollHighlight.prototype.cleanHighlight = function () {
+        ScrollMenuWrapper.forEach(function(element) {
+            jQuery("li",element).removeClass(ScrollMenuWrapperActiveClass);
+        }.bind(this));
+    };
+
+    new ScrollHighlight();
 
 })(jQuery);
 
 
     /* This function is not object orientated due to some wierd performance issues */
-    function skipOnScroll () {
+    var scrollTickingBool = false;
+
+    function videoSkipOnScroll () {
+        //Set tick to false (listen to new scroll event)
+        scrollTickingBool = false;
+
+        //Animate
         document.getElementById("one-page-video-player").currentTime = parseFloat(document.getElementById("one-page-video-player").duration * (window.pageYOffset / (document.body.scrollHeight - window.innerHeight))).toFixed(3);
-        window.requestAnimationFrame(skipOnScroll);
     }
-    if(document.getElementById("one-page-video-player") !== null) {
-        window.requestAnimationFrame(skipOnScroll);
+
+    function videoScrollListener() {
+        if(!scrollTickingBool) {
+            requestAnimationFrame(videoSkipOnScroll);
+        }
+        scrollTickingBool = true;
     }
+
+    //Listen for scroll
+    window.addEventListener('scroll', videoScrollListener, false);

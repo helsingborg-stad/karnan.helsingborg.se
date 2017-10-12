@@ -1,4 +1,6 @@
-var karnan;
+var Karnan;
+
+
 
 $(function(){
     $("body").mousewheel(function(event) {

@@ -16,35 +16,35 @@ class FrontPage extends \Municipio\Controller\BaseController
         $this->data['sections'] = array(
             array(
                 'section_name' => "Entré",
-                'section_anchor' => sanitize_title("Nibh Tellus Sit Pellentesque Aenean"),
+                'section_anchor' => sanitize_title("Mattis Consectetur Amet"),
                 'post_title' => apply_filters('the_title', "Nibh Tellus Sit Pellentesque Aenean"),
                 'post_content' => apply_filters('the_content', "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."),
                 'height_indicator' => 10
             ),
             array(
                 'section_name' => "Fösta våningen",
-                'section_anchor' => sanitize_title("Nibh Tellus Sit Pellentesque Aenean"),
+                'section_anchor' => sanitize_title("Nibh Risus Ullamcorper Etiam"),
                 'post_title' => apply_filters('the_title', "Nibh Tellus Sit Pellentesque Aenean"),
                 'post_content' => apply_filters('the_content', "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."),
                 'height_indicator' => 15
             ),
             array(
                 'section_name' => "Andra våningen",
-                'section_anchor' => sanitize_title("Nibh Tellus Sit Pellentesque Aenean"),
+                'section_anchor' => sanitize_title("Inceptos Porta Pellentesque Mattis"),
                 'post_title' => apply_filters('the_title', "Nibh Tellus Sit Pellentesque Aenean"),
                 'post_content' => apply_filters('the_content', "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."),
                 'height_indicator' => 20
             ),
             array(
                 'section_name' => "Tredje våningen",
-                'section_anchor' => sanitize_title("Nibh Tellus Sit Pellentesque Aenean"),
+                'section_anchor' => sanitize_title("Ridiculus Inceptos Aenean"),
                 'post_title' => apply_filters('the_title', "Nibh Tellus Sit Pellentesque Aenean"),
                 'post_content' => apply_filters('the_content', "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."),
                 'height_indicator' => 25
             ),
             array(
                 'section_name' => "Takterass",
-                'section_anchor' => sanitize_title("Nibh Tellus Sit Pellentesque Aenean"),
+                'section_anchor' => sanitize_title("Inceptos Consectetur Sit"),
                 'post_title' => apply_filters('the_title', "Nibh Tellus Sit Pellentesque Aenean"),
                 'post_content' => apply_filters('the_content', "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."),
                 'height_indicator' => 35
