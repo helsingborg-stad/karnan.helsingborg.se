@@ -4,7 +4,8 @@
   "description": "Childtheme for Municipio theme",
   "main": "gulpfile.js",
   "dependencies": {
-    "jquery-mousewheel": "^3.1.13"
+    "jquery-mousewheel": "^3.1.13",
+    "jquery-scrollify": "^1.0.17"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

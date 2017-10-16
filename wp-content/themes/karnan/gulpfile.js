@@ -35,7 +35,7 @@ gulp.task('sass-dev', function() {
 // Concatenate & Minify JS
 gulp.task('scripts-dist', function() {
     return gulp.src([
-                node_modules + 'jquery-mousewheel/jquery.mousewheel.js',
+                node_modules + 'jquery-scrollify/jquery.scrollify.js',
                 'assets/source/js/*.js'
             ])
             .pipe(concat('app.js'))

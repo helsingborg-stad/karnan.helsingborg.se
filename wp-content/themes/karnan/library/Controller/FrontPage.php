@@ -8,10 +8,11 @@ class FrontPage extends \Municipio\Controller\BaseController
     {
 
         $this->data['video'] = array(
-            //'webm' => 'https://hbgvaxer.se/wp-content/uploads/sites/8/2017/01/hbg-vaxer170314.webm',
             'webm' => 'https://karnan.dev/wp-content/themes/karnan/assets/video/test.webm',
-            /*'mp4' => 'https://hbgvaxer.se/wp-content/uploads/sites/8/2017/01/hbg-vaxer170314.mp4',
-            'ogv' => 'https://hbgvaxer.se/wp-content/uploads/sites/8/2017/01/hbg-vaxer170314.ogv',*/
+            //'webm' => 'https://karnan.dev/wp-content/themes/karnan/assets/video/test.webm',
+            //'webm' => 'https://hbgvaxer.se/wp-content/uploads/sites/8/2017/01/hbg-vaxer170314.webm',
+            //'mp4' => 'https://hbgvaxer.se/wp-content/uploads/sites/8/2017/01/hbg-vaxer170314.mp4',
+            //'ogv' => 'https://hbgvaxer.se/wp-content/uploads/sites/8/2017/01/hbg-vaxer170314.ogv',
         );
 
         $this->data['sections'] = array(
