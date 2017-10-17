@@ -1,0 +1,44 @@
+.event-archive {
+
+	.title-date {
+		font-weight: 300;
+	}
+
+	.box-post-brick {
+    	&:hover {
+			.box-content {
+        		transform: none;
+    		}
+		}
+
+    	&.brick-columns-4 {
+	        max-height: 300px;
+    	}
+
+    	.box-image {
+	    	&::after {
+	            background: none;
+	        }
+    	}
+
+		.box-content {
+			padding: 10px;
+    		color: #fff;
+        	background: #5ba1d8;
+    	}
+
+    	.box-post-event-date {
+    		display: block;
+  			font-weight: 600;
+    	}
+
+    	.box-post-event-title {
+    		display: block;
+			font-weight: 300;
+    	}
+
+	}
+
+
+
+}
