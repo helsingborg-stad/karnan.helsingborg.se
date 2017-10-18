@@ -5,6 +5,10 @@
 	}
 
 	.box-post-brick {
+		display: block;
+		background-color: #5ba1d8 !important;
+		color: #fff;
+
     	&:hover {
 			.box-content {
         		transform: none;
@@ -12,18 +16,21 @@
 		}
 
     	&.brick-columns-4 {
-	        max-height: 300px;
+    		height: auto;
     	}
 
     	.box-image {
+    		position: static;
+			height: 220px;
+
 	    	&::after {
 	            background: none;
 	        }
     	}
 
 		.box-content {
-			padding: 10px;
-    		color: #fff;
+			position: static;
+			padding: 10px 15px;
         	background: #5ba1d8;
     	}
 

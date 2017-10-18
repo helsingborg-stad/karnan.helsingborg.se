@@ -15,6 +15,8 @@ $columnSize = \karnan\Controller\Archive::getColumnSize();
         <div class="box-image" {!! $thumbnail ? 'style="background-image:url(' . $thumbnail . ');"' : '' !!}>
             <img src="{{ municipio_get_thumbnail_source(null,array(500,500)) }}" alt="{{ the_title() }}">
         </div>
+        @else
+            <div class="box-image"></div>
         @endif
 
         <div class="box-content">
