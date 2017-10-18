@@ -5,5 +5,22 @@ html {
 
 body {
     min-height: 100vh;
+    margin-bottom: 70px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $palette-4;
+}
+
+.weight-light {
+	font-weight: 300;
+}
+
+.weight-medium {
+	font-weight: 500;
+}
+
+.weight-bold {
+	font-weight: 700;
 }
 

@@ -1,13 +1,8 @@
 .event-archive {
-
-	.title-date {
-		font-weight: 300;
-	}
-
 	.box-post-brick {
 		display: block;
-		background-color: #5ba1d8 !important;
-		color: #fff;
+		background-color: $palette-3 !important;
+		color: $white;
 
     	&:hover {
 			.box-content {
@@ -31,7 +26,7 @@
 		.box-content {
 			position: static;
 			padding: 10px 15px;
-        	background: #5ba1d8;
+        	background: $palette-3;
     	}
 
     	.box-post-event-date {
@@ -43,9 +38,11 @@
     		display: block;
 			font-weight: 300;
     	}
-
 	}
+}
 
-
-
+.event-single {
+	.event-info-shortcode h3 {
+		@extend .weight-medium;
+	}
 }

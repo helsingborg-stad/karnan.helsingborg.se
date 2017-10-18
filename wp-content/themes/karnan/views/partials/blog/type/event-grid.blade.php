@@ -9,7 +9,8 @@ $thumbnail = municipio_get_thumbnail_source(
 $columnSize = \karnan\Controller\Archive::getColumnSize();
 ?>
 <div class="{{ $columnSize }}">
-    <a href="{{ the_permalink() }}" class="box box-post-brick <?php echo $grid_alter ? 'brick-columns-' . $gridSize . '"' : ''; ?>" data-equal-item>
+
+    <a href="{{ esc_url(add_query_arg('date', preg_replace('/\D/', '', $post->start_date), the_permalink())) }}" class="box box-post-brick <?php echo $grid_alter ? 'brick-columns-' . $gridSize . '"' : ''; ?>" data-equal-item>
 
         @if ($thumbnail)
         <div class="box-image" {!! $thumbnail ? 'style="background-image:url(' . $thumbnail . ');"' : '' !!}>

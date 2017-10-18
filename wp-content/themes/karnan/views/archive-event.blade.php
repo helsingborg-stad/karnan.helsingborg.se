@@ -25,7 +25,7 @@
             <div class="grid">
                 <div class="grid-xs-12">
                     @if (get_field('archive_' . sanitize_title($postType) . '_title', 'option'))
-                        <h1>{{ get_field('archive_' . sanitize_title($postType) . '_title', 'option') }} <span class="title-date">{{ date('Y', strtotime('now')) }}</span></h1>
+                        <h1>{{ get_field('archive_' . sanitize_title($postType) . '_title', 'option') }} <span class="weight-light">{{ date('Y', strtotime('now')) }}</span></h1>
                     @else
                         @if (is_category())
                             <h1>{{ single_cat_title() }}</h1>
