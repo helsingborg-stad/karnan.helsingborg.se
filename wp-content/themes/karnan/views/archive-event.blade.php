@@ -56,10 +56,10 @@
 
                             @if (in_array($template, array('full', 'compressed', 'collapsed')))
                                 <div class="grid-xs-12 post">
-                                    @include('partials.blog.type.event-' . $template)
+                                    @include('partials.blog.type.post-' . $template)
                                 </div>
                             @else
-                                @include('partials.blog.type.event-' . $template)
+                                @include('partials.blog.type.post-' . $template)
                             @endif
 
                             <?php $postNum++; ?>

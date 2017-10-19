@@ -1,17 +1,10 @@
 <?php global $post; ?>
 @extends('templates.master')
 
-<div class="hero" style="height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');">
-    <div class="stripe">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
-
 @section('content')
+<div class="hero" style="height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');">
+@include ('partials/stripe')
+</div>
 
 <div class="container main-container">
     <div class="grid event-single">
