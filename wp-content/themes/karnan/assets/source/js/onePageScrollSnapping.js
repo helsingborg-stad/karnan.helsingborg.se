@@ -5,17 +5,21 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
 
     function ScrollSnapping() {
 
+        var scrollSpeed = 3000;
+
         //Init
-        $.scrollify({
+        var scrollHandler = $.scrollify({
             section : ".onepage-section",
             sectionName : "section-name",
-            easing: "linear",
+            scrollSpeed: scrollSpeed,
             before: function(index, sections) {
                 this.hightlightPagination(index, sections);
                 this.hightlightDirectionArrows(index, sections);
+
+                $(document).trigger('scrollifyStart', [index, sections, scrollSpeed]);
             }.bind(this),
             after: function(index, sections) {
-
+                $(document).trigger('scrollifyStop', [index, sections, scrollSpeed]);
             }.bind(this)
         });
 
