@@ -3,9 +3,9 @@ Karnan.OnePage = Karnan.OnePage || {};
 
 Karnan.OnePage.ScrollSnapping = (function ($) {
 
-    function ScrollSnapping() {
+    var scrollSpeed = 3000;
 
-        var scrollSpeed = 3000;
+    function ScrollSnapping() {
 
         //Init
         var scrollHandler = $.scrollify({
