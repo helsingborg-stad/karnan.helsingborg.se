@@ -1,0 +1,33 @@
+.virtual-section {
+
+	.container {
+		padding:80px 0 80px 0;
+  	}
+
+	&-image {
+		img {
+			display: block;
+		    margin-left: auto;
+		    margin-right: auto;
+			max-width: 100%;
+			max-height: 70vh;
+		}
+	}
+
+	&-content {
+		p {
+			font-size: 0.8em;
+		}
+	}
+
+	&-media {
+		.modal-content {
+	  		iframe {
+	  			height:auto;
+	  			min-height: 70vh;
+	  		}
+  		}
+
+	}
+
+}

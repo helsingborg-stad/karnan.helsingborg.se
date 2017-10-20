@@ -1,18 +1,178 @@
 [{
-    "key": "group_59dcbee046030",
-    "title": "Theme settings",
-    "fields": false,
+    "key": "group_59e8688a57908",
+    "title": "K\u00e4rnan options",
+    "fields": [
+        {
+            "key": "field_59e86b9c72989",
+            "label": "Sections",
+            "name": "karnan_sections",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 5,
+            "max": 5,
+            "layout": "block",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_59e86d405017c",
+                    "label": "Section title",
+                    "name": "section_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_59e86d565017d",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_59e86decb571d",
+                    "label": "Height indicator",
+                    "name": "height_indicator",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_59e86e9021927",
+                    "label": "Google maps URL",
+                    "name": "google_maps",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_59e86eb921928",
+                    "label": "Soundcloud",
+                    "name": "soundcloud",
+                    "type": "textarea",
+                    "instructions": "Iframe script",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_59e86ecd21929",
+                    "label": "Section image",
+                    "name": "section_image",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "jpg, jpeg, gif, png"
+                },
+                {
+                    "key": "field_59e86f909b9d9",
+                    "label": "Gallery",
+                    "name": "gallery",
+                    "type": "gallery",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min": "",
+                    "max": "",
+                    "insert": "append",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "jpg, jpeg, gif, png"
+                }
+            ]
+        }
+    ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "options_page",
                 "operator": "==",
-                "value": "post"
+                "value": "acf-options-karnan"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
