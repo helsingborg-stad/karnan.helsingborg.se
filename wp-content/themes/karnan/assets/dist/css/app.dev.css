@@ -263,6 +263,19 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transform-origin: right;
             transform-origin: right;
     opacity: .97; } }
+  .is-child-theme .virtual-section .container {
+    padding: 80px 0 80px 0; }
+  .is-child-theme .virtual-section-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 70vh; }
+  .is-child-theme .virtual-section-content p {
+    font-size: 0.8em; }
+  .is-child-theme .virtual-section-media .modal-content iframe {
+    height: auto;
+    min-height: 70vh; }
   .is-child-theme .event-archive .box-post-brick {
     display: block;
     background-color: #5ba1d8 !important;
