@@ -3,7 +3,20 @@ html {
   background: #fff; }
 
 body {
-  min-height: 100vh; }
+  min-height: 100vh;
+  margin-bottom: 70px; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #005c86; }
+
+.weight-light {
+  font-weight: 300; }
+
+.weight-medium, .is-child-theme .event-single .event-info-shortcode h3 {
+  font-weight: 500; }
+
+.weight-bold {
+  font-weight: 700; }
 
 .is-child-theme {
   /* ----------------------------------------------
@@ -250,8 +263,6 @@ body {
     -webkit-transform-origin: right;
             transform-origin: right;
     opacity: .97; } }
-  .is-child-theme .event-archive .title-date {
-    font-weight: 300; }
   .is-child-theme .event-archive .box-post-brick {
     display: block;
     background-color: #5ba1d8 !important;

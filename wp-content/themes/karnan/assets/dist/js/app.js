@@ -843,19 +843,23 @@ Karnan.OnePage = Karnan.OnePage || {};
 
 Karnan.OnePage.ScrollSnapping = (function ($) {
 
+    var scrollSpeed = 3000;
+
     function ScrollSnapping() {
 
         //Init
-        $.scrollify({
+        var scrollHandler = $.scrollify({
             section : ".onepage-section",
             sectionName : "section-name",
-            easing: "linear",
+            scrollSpeed: scrollSpeed,
             before: function(index, sections) {
                 this.hightlightPagination(index, sections);
                 this.hightlightDirectionArrows(index, sections);
+
+                $(document).trigger('scrollifyStart', [index, sections, scrollSpeed]);
             }.bind(this),
             after: function(index, sections) {
-
+                $(document).trigger('scrollifyStop', [index, sections, scrollSpeed]);
             }.bind(this)
         });
 
@@ -897,50 +901,63 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
 
 })(jQuery);
 
-
-    /* This function is not object orientated due to some wierd performance issues */
-    /*var scrollTickingBool = false;
-
-    function videoSkipOnScroll () {
-        //Set tick to false (listen to new scroll event)
-        scrollTickingBool = false;
-
-        //Animate
-        document.getElementById("one-page-video-player").currentTime = parseFloat(document.getElementById("one-page-video-player").duration * (window.pageYOffset / (document.body.scrollHeight - window.innerHeight))).toFixed(3);
-    }
-
-    function videoScrollListener() {
-        if(!scrollTickingBool) {
-            requestAnimationFrame(videoSkipOnScroll);
-        }
-        scrollTickingBool = true;
-    }
-
-    //Listen for scroll
-    window.addEventListener('scroll', videoScrollListener, false);
-*/
-
-
 Karnan = Karnan || {};
 Karnan.OnePage = Karnan.OnePage || {};
 
 Karnan.OnePage.Video = (function ($) {
 
     var videoElement = 'one-page-video-player';
-    var videoSpeed = 1.4;
+    var videoSpeed = 10;
     var videoDuration = null;
 
     function Video() {
+
+        //Get video element
         this.videoElement   = document.getElementById(videoElement);
-        this.videoDuration  = document.getElementById(videoElement).duration;
-        console.log(this.videoDuration);
-    }
 
-    Video.prototype.play = function (segmentIndex, totalSegments) {
+        //Calculate stuff when metadata is avabile
+        this.videoElement.addEventListener('loadedmetadata', function() {
+            this.videoDuration              = this.videoElement.duration;
+            this.videoElement.playbackRate  = videoSpeed;
+        }.bind(this));
 
+        // Use hooks in one page scroll (start)
+        $(document).bind('scrollifyStart',function(event, segmentIndex, segments, scrollSpeed) {
+            this.play(segmentIndex, segments, scrollSpeed);
+        }.bind(this));
 
-    }.bind(this);
+        // Use hooks in one page scroll (end)
+        $(document).bind('scrollifyStop',function(event, segmentIndex, segments, scrollSpeed) {
+            this.stop(segmentIndex, segments, scrollSpeed);
+        }.bind(this));
+    };
+
+    Video.prototype.play = function (segmentIndex, segments, scrollSpeed) {
+
+        //Scroll to correct time in video
+        this.videoElement.currentTime = this.calculateMilestone(this.videoDuration, $(segments).length, segmentIndex);
+        this.videoElement.playbackRate = this.calculateSpeed(this.videoDuration, $(segments).length, scrollSpeed);
+
+        //Do play
+        this.videoElement.play();
+    };
+
+    Video.prototype.stop = function (segmentIndex, segments, scrollSpeed) {
+        this.videoElement.pause();
+    };
+
+    Video.prototype.calculateMilestone = function(duration, numberOfSegments, index) {
+        return (duration/numberOfSegments)*index;
+    };
+
+    Video.prototype.calculateSpeed = function(duration, numberOfSegments, animationTime) {
+        return (duration/numberOfSegments/animationTime)*1000;
+    };
 
     new Video();
 
 })(jQuery);
+
+
+
+
