@@ -22,15 +22,15 @@ Karnan.OnePage.Video = (function ($) {
         // Use hooks in one page scroll (start)
         $(document).bind('scrollifyStart',function(event, segmentIndex, segments, scrollSpeed) {
 
-            console.log();
-
-            if(this.lastIndex < segmentIndex) {
-
+            if(lastIndex < segmentIndex) {
+                console.log("playing");
+                this.play(segmentIndex, segments, scrollSpeed);
             } else {
-
+                console.log("rewinding");
+                this.rewind(segmentIndex, segments, scrollSpeed);
             }
 
-            this.lastIndex = segmentIndex;
+            lastIndex = segmentIndex;
 
         }.bind(this));
 
@@ -53,7 +53,7 @@ Karnan.OnePage.Video = (function ($) {
     Video.prototype.rewind = function (segmentIndex, segments, scrollSpeed) {
 
         //Scroll to correct time in video
-        this.videoElement.currentTime = this.calculateMilestone(this.videoDuration, $(segments).length, segmentIndex);
+        this.videoElement.currentTime = this.calculateMilestone(this.videoDuration, $(segments).length, segmentIndex+1);
         this.videoElement.playbackRate = -Math.abs(this.calculateSpeed(this.videoDuration, $(segments).length, scrollSpeed));
 
         //Do play
