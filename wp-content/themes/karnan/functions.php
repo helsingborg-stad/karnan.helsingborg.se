@@ -20,8 +20,7 @@ add_action('init', function () {
     $acfExportManager->setTextdomain('karnan');
     $acfExportManager->setExportFolder(KARNAN_PATH . 'library/AcfFields');
     $acfExportManager->autoExport(array(
-        'theme-settings'    => 'group_59e8688a57908',
-        'front-page'    => 'group_59dcbf10ae25f',
+        'theme-settings'    => 'group_59e8688a57908'
     ));
     $acfExportManager->import();
 });

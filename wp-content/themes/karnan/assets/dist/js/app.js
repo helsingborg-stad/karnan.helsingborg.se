@@ -855,7 +855,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
                 before: function(index, sections) {
                     this.hightlightPagination(index, sections);
                     this.hightlightDirectionArrows(index, sections);
-
+                    console.log("start");
                     $(document).trigger('scrollifyStart', [index, sections, scrollSpeed]);
                 }.bind(this),
                 after: function(index, sections) {
@@ -933,6 +933,7 @@ Karnan.OnePage.Video = (function ($) {
     var videoElement = 'one-page-video-player';
     var videoSpeed = 10;
     var videoDuration = null;
+    var lastIndex = 0;
 
     function Video() {
 
@@ -947,11 +948,17 @@ Karnan.OnePage.Video = (function ($) {
 
         // Use hooks in one page scroll (start)
         $(document).bind('scrollifyStart',function(event, segmentIndex, segments, scrollSpeed) {
-            //if(Math.random()%2) {
-              //  this.play(segmentIndex, segments, scrollSpeed);
-            //} else {
-                this.rewind(segmentIndex, segments, scrollSpeed);
-            //}
+
+            console.log();
+
+            if(this.lastIndex < segmentIndex) {
+
+            } else {
+
+            }
+
+            this.lastIndex = segmentIndex;
+
         }.bind(this));
 
         // Use hooks in one page scroll (end)
@@ -995,23 +1002,3 @@ Karnan.OnePage.Video = (function ($) {
     new Video();
 
 })(jQuery);
-
-
-
-/*
-$("#negative").click(function() { // button function for rewind
-   intervalRewind = setInterval(function(){
-       video.playbackRate = 1.0;
-       if(video.currentTime == 0){
-           clearInterval(intervalRewind);
-           video.pause();
-       }
-       else{
-           video.currentTime += -.1;
-       }
-    },30);
-});*/
-
-
-
-

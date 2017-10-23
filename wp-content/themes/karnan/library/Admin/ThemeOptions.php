@@ -6,7 +6,7 @@ class ThemeOptions
 {
     public function __construct()
     {
-        if(!is_admin()) {
+        if (!is_admin()) {
             return false;
         }
 

@@ -10,6 +10,7 @@
             'label' => __('Sections', 'karnan'),
             'name' => 'karnan_sections',
             'type' => 'repeater',
+            'value' => NULL,
             'instructions' => '',
             'required' => 1,
             'conditional_logic' => 0,
@@ -26,11 +27,12 @@
             'sub_fields' => array(
                 0 => array(
                     'key' => 'field_59e86d405017c',
-                    'label' => __(__(__(__(__(__(__(__('Section title', 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'),
+                    'label' => __('Section title', 'karnan'),
                     'name' => 'section_title',
                     'type' => 'text',
+                    'value' => NULL,
                     'instructions' => '',
-                    'required' => 0,
+                    'required' => 1,
                     'conditional_logic' => 0,
                     'wrapper' => array(
                         'width' => '',
@@ -45,11 +47,12 @@
                 ),
                 1 => array(
                     'key' => 'field_59e86d565017d',
-                    'label' => __(__(__(__(__(__(__(__('Content', 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'),
+                    'label' => __('Content', 'karnan'),
                     'name' => 'content',
                     'type' => 'textarea',
+                    'value' => NULL,
                     'instructions' => '',
-                    'required' => 0,
+                    'required' => 1,
                     'conditional_logic' => 0,
                     'wrapper' => array(
                         'width' => '',
@@ -64,11 +67,12 @@
                 ),
                 2 => array(
                     'key' => 'field_59e86decb571d',
-                    'label' => __(__(__(__(__(__(__(__('Height indicator', 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'),
+                    'label' => __('Height indicator', 'karnan'),
                     'name' => 'height_indicator',
                     'type' => 'number',
+                    'value' => NULL,
                     'instructions' => '',
-                    'required' => 0,
+                    'required' => 1,
                     'conditional_logic' => 0,
                     'wrapper' => array(
                         'width' => '',
@@ -85,9 +89,10 @@
                 ),
                 3 => array(
                     'key' => 'field_59e86e9021927',
-                    'label' => __(__(__(__(__(__(__(__('Google maps URL', 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'),
+                    'label' => __('Google maps URL', 'karnan'),
                     'name' => 'google_maps',
                     'type' => 'url',
+                    'value' => NULL,
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
@@ -101,10 +106,11 @@
                 ),
                 4 => array(
                     'key' => 'field_59e86eb921928',
-                    'label' => __(__(__(__(__(__(__(__('Soundcloud', 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'),
+                    'label' => __('Soundcloud', 'karnan'),
                     'name' => 'soundcloud',
                     'type' => 'textarea',
-                    'instructions' => __(__(__(__(__(__(__(__('Iframe script', 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'),
+                    'value' => NULL,
+                    'instructions' => __('Iframe script', 'karnan'),
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -120,9 +126,10 @@
                 ),
                 5 => array(
                     'key' => 'field_59e86ecd21929',
-                    'label' => __(__(__(__(__(__(__(__('Section image', 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'),
+                    'label' => __('Section image', 'karnan'),
                     'name' => 'section_image',
                     'type' => 'file',
+                    'value' => NULL,
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
@@ -139,9 +146,10 @@
                 ),
                 6 => array(
                     'key' => 'field_59e86f909b9d9',
-                    'label' => __(__(__(__(__(__(__(__('Gallery', 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'), 'karnan'),
+                    'label' => __('Gallery', 'karnan'),
                     'name' => 'gallery',
                     'type' => 'gallery',
+                    'value' => NULL,
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
