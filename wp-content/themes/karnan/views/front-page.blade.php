@@ -10,17 +10,19 @@
 
 <div id="one-page-content">
     <div id="inner">
-        @foreach ($sections as $section)
-            <section data-section-name="{{ sanitize_title($section['section_title']) }}" class="onepage-section" >
-                <article class="box box-filled animate">
-                    <span class="label"><span class="inner">{{ $section['section_title'] }}</span></span>
-                    <div class="box-content">
-                        <h5>{{ $section['section_title'] }}</h5>
-                        {!! $section['content'] !!}
-                    </div>
-                </article>
-            </section>
-        @endforeach
+        @if(is_array($sections) && !empty($sections))
+            @foreach ($sections as $section)
+                <section data-section-name="{{ sanitize_title($section['section_title']) }}" class="onepage-section" >
+                    <article class="box box-filled animate">
+                        <span class="label"><span class="inner">{{ $section['section_title'] }}</span></span>
+                        <div class="box-content">
+                            <h5>{{ $section['section_title'] }}</h5>
+                            {!! $section['content'] !!}
+                        </div>
+                    </article>
+                </section>
+            @endforeach
+        @endif
     </div>
 </div>
 

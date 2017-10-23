@@ -15,6 +15,6 @@ class FrontPage extends \Municipio\Controller\BaseController
             //'ogv' => 'https://hbgvaxer.se/wp-content/uploads/sites/8/2017/01/hbg-vaxer170314.ogv',
         );
 
-        $this->data['sections'] = get_field('karnan_sections', 'option');
+        $this->data['sections'] = is_array(get_field('karnan_sections', 'option')) ? get_field('karnan_sections', 'option') : array();
     }
 }

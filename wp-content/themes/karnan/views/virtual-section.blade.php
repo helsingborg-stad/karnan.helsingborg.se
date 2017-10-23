@@ -7,19 +7,19 @@
 
 <div id="one-page-content">
     <div id="inner">
-        @foreach ($sections as $elevatorKey => $section)
-            <section data-section-name="{{ sanitize_title($section['section_title']) }}" class="virtual-section">
-
-                <div class="container">
-                    <div class="grid">
-                        @include ('partials/virtual/image')
-                        @include ('partials/virtual/content')
-                        @include ('partials/virtual/media')
+        @if(is_array($sections) && !empty($sections))
+            @foreach ($sections as $elevatorKey => $section)
+                <section data-section-name="{{ sanitize_title($section['section_title']) }}" class="virtual-section">
+                    <div class="container">
+                        <div class="grid">
+                            @include ('partials/virtual/image')
+                            @include ('partials/virtual/content')
+                            @include ('partials/virtual/media')
+                        </div>
                     </div>
-                </div>
-
-            </section>
-        @endforeach
+                </section>
+            @endforeach
+        @endif
     </div>
 </div>
 
