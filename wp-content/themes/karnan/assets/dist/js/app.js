@@ -846,45 +846,62 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
     var scrollSpeed = 3000;
 
     function ScrollSnapping() {
-        if ($("body").hasClass("home")) {
-            //Init
-            var scrollHandler = $.scrollify({
-                section : ".onepage-section",
-                sectionName : "section-name",
-                scrollSpeed: scrollSpeed,
-                before: function(index, sections) {
-                    this.hightlightPagination(index, sections);
-                    this.hightlightDirectionArrows(index, sections);
+        //Home page soft move
+        if ($(".onepage-section").length) {
+            this.StartSections();
+        }
 
-                    $(document).trigger('scrollifyStart', [index, sections, scrollSpeed]);
-                }.bind(this),
-                after: function(index, sections) {
-                    $(document).trigger('scrollifyStop', [index, sections, scrollSpeed]);
-                }.bind(this)
-            });
-
-            //Bind nav click
-            this.bindPagination();
-            this.hightlightDirectionArrows(0, $(".onepage-section").length);
-        } else {
-            // Virtual sections
-            $.scrollify({
-                section : ".virtual-section",
-                sectionName : "section-name",
-                scrollSpeed: 550,
-                before: function(index, sections) {
-                    $(".container", "section").not(":eq(" + index + ")").fadeOut(100);
-                    $(".container", "section:eq(" + index + ")").fadeIn(800);
-                    this.hightlightPagination(index, sections);
-                }.bind(this),
-                after: function(index, sections) {
-
-                }.bind(this)
-            });
-
-            this.bindInstantMove();
+        //Virtual sections instant move
+        if ($(".virtual-section").length) {
+            this.StartSections();
         }
     }
+
+    ScrollSnapping.prototype.StartSections = function () {
+
+        $.scrollify({
+            section : ".onepage-section",
+            sectionName : "section-name",
+            scrollSpeed: scrollSpeed,
+            before: function(index, sections) {
+                this.hightlightPagination(index, sections);
+                this.hightlightDirectionArrows(index, sections);
+
+                $(document).trigger('scrollifyStart', [index, sections, scrollSpeed]);
+            }.bind(this),
+            after: function(index, sections) {
+                $(document).trigger('scrollifyStop', [index, sections, scrollSpeed]);
+            }.bind(this)
+        });
+
+        //Bind navigation clicks
+        this.bindSoftMove();
+        this.hightlightDirectionArrows(0, $(".onepage-section").length);
+    }
+
+    ScrollSnapping.prototype.VirtualSections = function () {
+
+        $.scrollify({
+            section : ".virtual-section",
+            sectionName : "section-name",
+            scrollSpeed: 550,
+            before: function(index, sections) {
+                $(".container", "section").not(":eq(" + index + ")").fadeOut(100);
+                $(".container", "section:eq(" + index + ")").fadeIn(800);
+
+                this.hightlightPagination(index, sections);
+                this.hightlightDirectionArrows(index, sections);
+            }.bind(this),
+            after: function(index, sections) {
+
+            }.bind(this)
+        });
+
+        //Bind navigation clicks
+        this.bindInstantMove();
+        this.hightlightDirectionArrows(0, $(".virtual-section").length);
+
+    }.bind(this);
 
     ScrollSnapping.prototype.hightlightDirectionArrows = function (index, sections) {
 
@@ -909,15 +926,19 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
         $("#one-page-elevator li:eq(" +index+ ")").addClass("active");
     };
 
-    ScrollSnapping.prototype.bindPagination = function () {
+    ScrollSnapping.prototype.bindSoftMove = function () {
         $("#one-page-elevator a").on("click",function() {
-            $.scrollify.move($(this).attr("href"));
+            if(!$("body").hasClass("lock-scroll")) {
+                $.scrollify.move($(this).attr("href"));
+            }
         });
     };
 
     ScrollSnapping.prototype.bindInstantMove = function () {
         $("#one-page-elevator a").on("click",function() {
-            $.scrollify.instantMove($(this).attr("href"));
+            if(!$("body").hasClass("lock-scroll")) {
+                $.scrollify.instantMove($(this).attr("href"));
+            }
         });
     };
 
@@ -949,6 +970,8 @@ Karnan.OnePage.Video = (function ($) {
         // Use hooks in one page scroll (start)
         $(document).bind('scrollifyStart',function(event, segmentIndex, segments, scrollSpeed) {
 
+            this.lockScroll();
+
             if(lastIndex < segmentIndex) {
                 this.play(segmentIndex, segments, scrollSpeed);
             } else {
@@ -962,6 +985,7 @@ Karnan.OnePage.Video = (function ($) {
         // Use hooks in one page scroll (end)
         $(document).bind('scrollifyStop',function(event, segmentIndex, segments, scrollSpeed) {
             this.stop(segmentIndex, segments, scrollSpeed);
+            this.unlockScroll();
         }.bind(this));
     };
 
@@ -999,6 +1023,14 @@ Karnan.OnePage.Video = (function ($) {
 
     Video.prototype.calculateSpeed = function(duration, numberOfSegments, animationTime) {
         return (duration/numberOfSegments/animationTime)*1000;
+    };
+
+    Video.prototype.lockScroll = function(duration, numberOfSegments, animationTime) {
+        $("body").addClass("lock-scroll");
+    };
+
+    Video.prototype.unlockScroll = function(duration, numberOfSegments, animationTime) {
+        $("body").removeClass("lock-scroll");
     };
 
     new Video();

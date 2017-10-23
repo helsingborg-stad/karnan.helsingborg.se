@@ -22,6 +22,8 @@ Karnan.OnePage.Video = (function ($) {
         // Use hooks in one page scroll (start)
         $(document).bind('scrollifyStart',function(event, segmentIndex, segments, scrollSpeed) {
 
+            this.lockScroll();
+
             if(lastIndex < segmentIndex) {
                 this.play(segmentIndex, segments, scrollSpeed);
             } else {
@@ -35,6 +37,7 @@ Karnan.OnePage.Video = (function ($) {
         // Use hooks in one page scroll (end)
         $(document).bind('scrollifyStop',function(event, segmentIndex, segments, scrollSpeed) {
             this.stop(segmentIndex, segments, scrollSpeed);
+            this.unlockScroll();
         }.bind(this));
     };
 
@@ -72,6 +75,14 @@ Karnan.OnePage.Video = (function ($) {
 
     Video.prototype.calculateSpeed = function(duration, numberOfSegments, animationTime) {
         return (duration/numberOfSegments/animationTime)*1000;
+    };
+
+    Video.prototype.lockScroll = function(duration, numberOfSegments, animationTime) {
+        $("body").addClass("lock-scroll");
+    };
+
+    Video.prototype.unlockScroll = function(duration, numberOfSegments, animationTime) {
+        $("body").removeClass("lock-scroll");
     };
 
     new Video();
