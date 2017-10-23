@@ -950,10 +950,8 @@ Karnan.OnePage.Video = (function ($) {
         $(document).bind('scrollifyStart',function(event, segmentIndex, segments, scrollSpeed) {
 
             if(lastIndex < segmentIndex) {
-                console.log("playing");
                 this.play(segmentIndex, segments, scrollSpeed);
             } else {
-                console.log("rewinding");
                 this.rewind(segmentIndex, segments, scrollSpeed);
             }
 
@@ -973,6 +971,8 @@ Karnan.OnePage.Video = (function ($) {
         this.videoElement.currentTime = this.calculateMilestone(this.videoDuration, $(segments).length, segmentIndex);
         this.videoElement.playbackRate = this.calculateSpeed(this.videoDuration, $(segments).length, scrollSpeed);
 
+        console.log("Play", this.videoElement.playbackRate);
+
         //Do play
         this.videoElement.play();
     };
@@ -982,6 +982,8 @@ Karnan.OnePage.Video = (function ($) {
         //Scroll to correct time in video
         this.videoElement.currentTime = this.calculateMilestone(this.videoDuration, $(segments).length, segmentIndex+1);
         this.videoElement.playbackRate = -Math.abs(this.calculateSpeed(this.videoDuration, $(segments).length, scrollSpeed));
+
+        console.log("Rewind", this.videoElement.playbackRate);
 
         //Do play
         this.videoElement.play();
