@@ -20,7 +20,11 @@ Karnan.OnePage.Video = (function ($) {
 
         // Use hooks in one page scroll (start)
         $(document).bind('scrollifyStart',function(event, segmentIndex, segments, scrollSpeed) {
-            this.play(segmentIndex, segments, scrollSpeed);
+            //if(Math.random()%2) {
+              //  this.play(segmentIndex, segments, scrollSpeed);
+            //} else {
+                this.rewind(segmentIndex, segments, scrollSpeed);
+            //}
         }.bind(this));
 
         // Use hooks in one page scroll (end)
@@ -34,6 +38,16 @@ Karnan.OnePage.Video = (function ($) {
         //Scroll to correct time in video
         this.videoElement.currentTime = this.calculateMilestone(this.videoDuration, $(segments).length, segmentIndex);
         this.videoElement.playbackRate = this.calculateSpeed(this.videoDuration, $(segments).length, scrollSpeed);
+
+        //Do play
+        this.videoElement.play();
+    };
+
+    Video.prototype.rewind = function (segmentIndex, segments, scrollSpeed) {
+
+        //Scroll to correct time in video
+        this.videoElement.currentTime = this.calculateMilestone(this.videoDuration, $(segments).length, segmentIndex);
+        this.videoElement.playbackRate = -Math.abs(this.calculateSpeed(this.videoDuration, $(segments).length, scrollSpeed));
 
         //Do play
         this.videoElement.play();
@@ -54,6 +68,22 @@ Karnan.OnePage.Video = (function ($) {
     new Video();
 
 })(jQuery);
+
+
+
+/*
+$("#negative").click(function() { // button function for rewind
+   intervalRewind = setInterval(function(){
+       video.playbackRate = 1.0;
+       if(video.currentTime == 0){
+           clearInterval(intervalRewind);
+           video.pause();
+       }
+       else{
+           video.currentTime += -.1;
+       }
+    },30);
+});*/
 
 
 
