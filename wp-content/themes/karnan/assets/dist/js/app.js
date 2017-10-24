@@ -836,74 +836,29 @@ if touchScroll is false - update index
 
 var Karnan;
 
-//https://github.com/lukehaas/Scrollify
-
 Karnan = Karnan || {};
 Karnan.OnePage = Karnan.OnePage || {};
 
-Karnan.OnePage.ScrollSnapping = (function ($) {
+Karnan.OnePage.Navigation = (function ($) {
 
-    var scrollSpeed = 3000;
+    function Navigation() {
 
-    function ScrollSnapping() {
-        //Home page soft move
-        if ($(".onepage-section").length) {
-            this.StartSections();
-        }
-
-        //Virtual sections instant move
-        if ($(".virtual-section").length) {
-            this.StartSections();
-        }
-    }
-
-    ScrollSnapping.prototype.StartSections = function () {
-
-        $.scrollify({
-            section : ".onepage-section",
-            sectionName : "section-name",
-            scrollSpeed: scrollSpeed,
-            before: function(index, sections) {
-                this.hightlightPagination(index, sections);
-                this.hightlightDirectionArrows(index, sections);
-
-                $(document).trigger('scrollifyStart', [index, sections, scrollSpeed]);
-            }.bind(this),
-            after: function(index, sections) {
-                $(document).trigger('scrollifyStop', [index, sections, scrollSpeed]);
-            }.bind(this)
-        });
-
-        //Bind navigation clicks
-        this.bindSoftMove();
         this.hightlightDirectionArrows(0, $(".onepage-section").length);
+        this.bindDirectionArrows();
+
+        // Use hooks in one page scroll (start)
+        $(document).bind('scrollifyStart',function(event, segmentIndex, segments, scrollSpeed) {
+            this.hightlightDirectionArrows(segmentIndex, segments);
+            this.hightlightPagination(segmentIndex, segments);
+        }.bind(this));
+
+        $(document).bind('scrollifyStop',function(event, segmentIndex, segments, scrollSpeed) {
+
+        }.bind(this));
+
     }
 
-    ScrollSnapping.prototype.VirtualSections = function () {
-
-        $.scrollify({
-            section : ".virtual-section",
-            sectionName : "section-name",
-            scrollSpeed: 550,
-            before: function(index, sections) {
-                $(".container", "section").not(":eq(" + index + ")").fadeOut(100);
-                $(".container", "section:eq(" + index + ")").fadeIn(800);
-
-                this.hightlightPagination(index, sections);
-                this.hightlightDirectionArrows(index, sections);
-            }.bind(this),
-            after: function(index, sections) {
-
-            }.bind(this)
-        });
-
-        //Bind navigation clicks
-        this.bindInstantMove();
-        this.hightlightDirectionArrows(0, $(".virtual-section").length);
-
-    }.bind(this);
-
-    ScrollSnapping.prototype.hightlightDirectionArrows = function (index, sections) {
+    Navigation.prototype.hightlightDirectionArrows = function (index, segments) {
 
         //This is the first item
         if(index == 0) {
@@ -913,7 +868,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
         }
 
         //This is the last item
-        if(sections == index + 1) {
+        if(segments.length == index + 1) {
             jQuery('.scroll-action.scroll-down').addClass('disabled');
         } else {
             jQuery('.scroll-action.scroll-down').removeClass('disabled');
@@ -921,20 +876,12 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
 
     }.bind(this);
 
-    ScrollSnapping.prototype.hightlightPagination = function (index, sections) {
+    Navigation.prototype.hightlightPagination = function (index, segments) {
         $("#one-page-elevator li").removeClass("active");
         $("#one-page-elevator li:eq(" +index+ ")").addClass("active");
     };
 
-    ScrollSnapping.prototype.bindSoftMove = function () {
-        $("#one-page-elevator a").on("click",function() {
-            if(!$("body").hasClass("lock-scroll")) {
-                $.scrollify.move($(this).attr("href"));
-            }
-        });
-    };
-
-    ScrollSnapping.prototype.bindInstantMove = function () {
+    Navigation.prototype.bindDirectionArrows = function () {
         $("#one-page-elevator a").on("click",function() {
             if(!$("body").hasClass("lock-scroll")) {
                 $.scrollify.instantMove($(this).attr("href"));
@@ -942,97 +889,95 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
         });
     };
 
-    new ScrollSnapping();
+    new Navigation();
 
 })(jQuery);
 
 Karnan = Karnan || {};
 Karnan.OnePage = Karnan.OnePage || {};
 
-Karnan.OnePage.Video = (function ($) {
+Karnan.OnePage.ScrollSnapping = (function ($) {
 
-    var videoElement = 'one-page-video-player';
-    var videoSpeed = 10;
-    var videoDuration = null;
-    var lastIndex = 0;
+    function ScrollSnapping() {
+        //Home page soft move
+        if ($(".onepage-section").length) {
+            this.StartSections();
+        }
 
-    function Video() {
+        //Virtual sections instant move
+        if ($(".virtual-section").length) {
+            this.VirtualSections();
+        }
+    }
 
-        //Get video element
-        this.videoElement   = document.getElementById(videoElement);
+    ScrollSnapping.prototype.StartSections = function () {
 
-        //Calculate stuff when metadata is avabile
-        this.videoElement.addEventListener('loadedmetadata', function() {
-            this.videoDuration              = this.videoElement.duration;
-            this.videoElement.playbackRate  = videoSpeed;
-        }.bind(this));
+        var scrollSpeed = 1200;
 
-        // Use hooks in one page scroll (start)
-        $(document).bind('scrollifyStart',function(event, segmentIndex, segments, scrollSpeed) {
+        $.scrollify({
+            section : ".onepage-section",
+            sectionName : "section-name",
+            scrollSpeed: scrollSpeed,
+            easing: "easeOutExpo",
+            before: function(index, sections) {
+                $(document).trigger('scrollifyStart', [index, sections, scrollSpeed, 'onepage']);
+            }.bind(this),
+            after: function(index, sections) {
+                $(document).trigger('scrollifyStop', [index, sections, scrollSpeed, 'onepage']);
+            }.bind(this)
+        });
 
-            this.lockScroll();
+        //Bind navigation clicks
+        this.bindSoftMove();
+    }
 
-            if(lastIndex < segmentIndex) {
-                this.play(segmentIndex, segments, scrollSpeed);
-            } else {
-                this.rewind(segmentIndex, segments, scrollSpeed);
+    ScrollSnapping.prototype.VirtualSections = function () {
+
+        var scrollSpeed = 550;
+
+        $.scrollify({
+            section : ".virtual-section",
+            sectionName : "section-name",
+            scrollSpeed: scrollSpeed,
+            before: function(index, sections) {
+                $(".container", "section").not(":eq(" + index + ")").fadeOut(100);
+                $(".container", "section:eq(" + index + ")").fadeIn(800);
+                $(document).trigger('scrollifyStart', [index, sections, scrollSpeed, 'virtual']);
+            }.bind(this),
+            after: function(index, sections) {
+                $(document).trigger('scrollifyStop', [index, sections, scrollSpeed, 'virtual']);
+            }.bind(this)
+        });
+
+        //Bind navigation clicks
+        this.bindInstantMove();
+
+    }.bind(this);
+
+    ScrollSnapping.prototype.bindSoftMove = function () {
+        $("#one-page-elevator a").on("click",function(event) {
+
+            event.preventDefault();
+
+            if(!$("body").hasClass("lock-scroll")) {
+                $.scrollify.move($(this).attr("href"));
             }
 
-            lastIndex = segmentIndex;
-
-        }.bind(this));
-
-        // Use hooks in one page scroll (end)
-        $(document).bind('scrollifyStop',function(event, segmentIndex, segments, scrollSpeed) {
-            this.stop(segmentIndex, segments, scrollSpeed);
-            this.unlockScroll();
-        }.bind(this));
+        });
     };
 
-    Video.prototype.play = function (segmentIndex, segments, scrollSpeed) {
+    ScrollSnapping.prototype.bindInstantMove = function () {
+        $("#one-page-elevator a").on("click",function(event) {
 
-        //Scroll to correct time in video
-        this.videoElement.currentTime = this.calculateMilestone(this.videoDuration, $(segments).length, segmentIndex);
-        this.videoElement.playbackRate = this.calculateSpeed(this.videoDuration, $(segments).length, scrollSpeed);
+            event.preventDefault();
 
-        console.log("Play", this.videoElement.playbackRate);
+            if(!$("body").hasClass("lock-scroll")) {
+                $.scrollify.instantMove($(this).attr("href"));
+            }
 
-        //Do play
-        this.videoElement.play();
+        });
     };
 
-    Video.prototype.rewind = function (segmentIndex, segments, scrollSpeed) {
-
-        //Scroll to correct time in video
-        this.videoElement.currentTime = this.calculateMilestone(this.videoDuration, $(segments).length, segmentIndex+1);
-        this.videoElement.playbackRate = -Math.abs(this.calculateSpeed(this.videoDuration, $(segments).length, scrollSpeed));
-
-        console.log("Rewind", this.videoElement.playbackRate);
-
-        //Do play
-        this.videoElement.play();
-    };
-
-    Video.prototype.stop = function (segmentIndex, segments, scrollSpeed) {
-        this.videoElement.pause();
-    };
-
-    Video.prototype.calculateMilestone = function(duration, numberOfSegments, index) {
-        return (duration/numberOfSegments)*index;
-    };
-
-    Video.prototype.calculateSpeed = function(duration, numberOfSegments, animationTime) {
-        return (duration/numberOfSegments/animationTime)*1000;
-    };
-
-    Video.prototype.lockScroll = function(duration, numberOfSegments, animationTime) {
-        $("body").addClass("lock-scroll");
-    };
-
-    Video.prototype.unlockScroll = function(duration, numberOfSegments, animationTime) {
-        $("body").removeClass("lock-scroll");
-    };
-
-    new Video();
+    new ScrollSnapping();
 
 })(jQuery);

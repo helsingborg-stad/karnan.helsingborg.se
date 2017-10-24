@@ -7,9 +7,13 @@
         width: 100%;
         display: block;
         position: relative;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
     }
 
     section + section {
+        margin-top: 0;
     }
 
     article {
