@@ -214,14 +214,16 @@ h1, h2, h3, h4, h5, h6 {
       margin-left: auto;
       min-height: 300px;
       border-radius: 0;
-      padding-left: 60px; }
-      .is-child-theme #one-page-content article.animate {
-        opacity: 0; }
-      .is-child-theme #one-page-content article.animated {
-        -webkit-animation: swing-in-right-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-                animation: swing-in-right-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-        -webkit-animation-delay: 700ms;
-                animation-delay: 700ms; }
+      padding-left: 60px;
+      /*
+        &.animate {
+            opacity: 0;
+        }
+
+        &.animated {
+            animation: swing-in-right-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            animation-delay: 700ms;
+        }*/ }
       .is-child-theme #one-page-content article .label {
         padding: 0;
         border-radius: 0;
