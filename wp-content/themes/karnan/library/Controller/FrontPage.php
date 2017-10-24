@@ -17,7 +17,5 @@ class FrontPage extends \Municipio\Controller\BaseController
             }
         }
 
-        //Reverse all
-        $this->data['sections'] = array_reverse($this->data['sections']);
     }
 }
