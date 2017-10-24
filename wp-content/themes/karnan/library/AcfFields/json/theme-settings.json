@@ -46,7 +46,7 @@
                     "key": "field_59e86d565017d",
                     "label": "Content",
                     "name": "content",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "value": null,
                     "instructions": "",
                     "required": 1,
@@ -57,10 +57,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": "wpautop"
+                    "tabs": "visual",
+                    "toolbar": "basic",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
                     "key": "field_59e86decb571d",

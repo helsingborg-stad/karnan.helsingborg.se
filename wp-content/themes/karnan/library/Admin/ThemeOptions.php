@@ -20,15 +20,13 @@ class ThemeOptions
     public function registerOptionsPage()
     {
         if (function_exists('acf_add_options_page')) {
-            acf_add_options_sub_page(array(
+            acf_add_options_page(array(
                 'page_title'    => __('Kärnan options', 'municipio'),
                 'menu_title'    => __('Kärnan', 'municipio'),
-                'parent_slug'   => 'themes.php',
                 'capability'    => 'edit_pages',
-                'menu_slug'     => 'acf-options-karnan'
+                'menu_slug'     => 'acf-options-karnan',
+                'position'      => '10'
             ));
         }
-
     }
-
 }
