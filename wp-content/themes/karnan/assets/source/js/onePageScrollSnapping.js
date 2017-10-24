@@ -32,8 +32,6 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
             }.bind(this)
         });
 
-        //Bind navigation clicks
-        this.bindSoftMove();
     }
 
     ScrollSnapping.prototype.VirtualSections = function () {
@@ -54,34 +52,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
             }.bind(this)
         });
 
-        //Bind navigation clicks
-        this.bindInstantMove();
-
     }.bind(this);
-
-    ScrollSnapping.prototype.bindSoftMove = function () {
-        $("#one-page-elevator a").on("click",function(event) {
-
-            event.preventDefault();
-
-            if(!$("body").hasClass("lock-scroll")) {
-                $.scrollify.move($(this).attr("href"));
-            }
-
-        });
-    };
-
-    ScrollSnapping.prototype.bindInstantMove = function () {
-        $("#one-page-elevator a").on("click",function(event) {
-
-            event.preventDefault();
-
-            if(!$("body").hasClass("lock-scroll")) {
-                $.scrollify.instantMove($(this).attr("href"));
-            }
-
-        });
-    };
 
     new ScrollSnapping();
 

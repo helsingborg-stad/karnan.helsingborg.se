@@ -843,17 +843,24 @@ Karnan.OnePage.Navigation = (function ($) {
 
     function Navigation() {
 
-        this.hightlightDirectionArrows(0, $(".onepage-section").length);
-        this.bindDirectionArrows();
+        //Home page soft move
+        if ($(".onepage-section").length) {
+            this.hightlightDirectionArrows(0, $(".onepage-section").length);
+            this.bindDirectionArrow('soft');
+            this.bindElevator('soft');
+        }
+
+        //Virtual sections instant move
+        if ($(".virtual-section").length) {
+            this.hightlightDirectionArrows(0, $(".virtual-section").length);
+            this.bindDirectionArrow('instant');
+            this.bindElevator('instant');
+        }
 
         // Use hooks in one page scroll (start)
         $(document).bind('scrollifyStart',function(event, segmentIndex, segments, scrollSpeed) {
-            this.hightlightDirectionArrows(segmentIndex, segments);
+            this.hightlightDirectionArrows(segmentIndex, segments.length);
             this.hightlightPagination(segmentIndex, segments);
-        }.bind(this));
-
-        $(document).bind('scrollifyStop',function(event, segmentIndex, segments, scrollSpeed) {
-
         }.bind(this));
 
     }
@@ -868,7 +875,7 @@ Karnan.OnePage.Navigation = (function ($) {
         }
 
         //This is the last item
-        if(segments.length == index + 1) {
+        if(segments == index + 1) {
             jQuery('.scroll-action.scroll-down').addClass('disabled');
         } else {
             jQuery('.scroll-action.scroll-down').removeClass('disabled');
@@ -881,12 +888,52 @@ Karnan.OnePage.Navigation = (function ($) {
         $("#one-page-elevator li:eq(" +index+ ")").addClass("active");
     };
 
-    Navigation.prototype.bindDirectionArrows = function () {
-        $("#one-page-elevator a").on("click",function() {
-            if(!$("body").hasClass("lock-scroll")) {
-                $.scrollify.instantMove($(this).attr("href"));
-            }
-        });
+    Navigation.prototype.bindElevator = function (type) {
+
+        if(type == 'soft') {
+            $("#one-page-elevator a").on("click",function(event) {
+                event.preventDefault();
+                if(!$("body").hasClass("lock-scroll")) {
+                    $.scrollify.move($(this).attr("href"));
+                }
+            });
+        }
+
+        if(type == 'instant') {
+            $("#one-page-elevator a").on("click",function(event) {
+                event.preventDefault();
+                if(!$("body").hasClass("lock-scroll")) {
+                    $.scrollify.instantMove($(this).attr("href"));
+                }
+            });
+        }
+
+    };
+
+    Navigation.prototype.bindDirectionArrow = function (type) {
+
+        if(type == 'soft') {
+            $(".scroll-action.scroll-down").on("click",function(event) {
+                event.preventDefault();
+                $.scrollify.next();
+            });
+            $(".scroll-action.scroll-up").on("click",function(event) {
+                event.preventDefault();
+                $.scrollify.previous();
+            });
+        }
+
+        if(type == 'instant') {
+            $(".scroll-action.scroll-down").on("click",function(event) {
+                event.preventDefault();
+                $.scrollify.instantNext();
+            });
+            $(".scroll-action.scroll-up").on("click",function(event) {
+                event.preventDefault();
+                $.scrollify.instantPrevious();
+            });
+        }
+
     };
 
     new Navigation();
@@ -927,8 +974,6 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
             }.bind(this)
         });
 
-        //Bind navigation clicks
-        this.bindSoftMove();
     }
 
     ScrollSnapping.prototype.VirtualSections = function () {
@@ -949,34 +994,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
             }.bind(this)
         });
 
-        //Bind navigation clicks
-        this.bindInstantMove();
-
     }.bind(this);
-
-    ScrollSnapping.prototype.bindSoftMove = function () {
-        $("#one-page-elevator a").on("click",function(event) {
-
-            event.preventDefault();
-
-            if(!$("body").hasClass("lock-scroll")) {
-                $.scrollify.move($(this).attr("href"));
-            }
-
-        });
-    };
-
-    ScrollSnapping.prototype.bindInstantMove = function () {
-        $("#one-page-elevator a").on("click",function(event) {
-
-            event.preventDefault();
-
-            if(!$("body").hasClass("lock-scroll")) {
-                $.scrollify.instantMove($(this).attr("href"));
-            }
-
-        });
-    };
 
     new ScrollSnapping();
 
