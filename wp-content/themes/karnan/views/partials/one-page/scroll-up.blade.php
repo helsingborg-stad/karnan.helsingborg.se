@@ -1,1 +1,4 @@
-<a class="scroll-action scroll-up btn btn-primary disabled" href="#up">Go up</a>
+<a class="scroll-action scroll-up btn btn-primary disabled" href="#up">
+    <span aria-hidden="true" class="sr-only"><?php _e("Go up", 'karnan'); ?></span>
+    <i class="pricon pricon-chevron-up"></i>
+</a>

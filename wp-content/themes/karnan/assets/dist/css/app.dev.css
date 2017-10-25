@@ -5,6 +5,8 @@ html {
 body {
   min-height: 100vh;
   margin-bottom: 70px; }
+  body.admin-bar {
+    top: 32px; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #005c86; }
@@ -75,7 +77,8 @@ h1, h2, h3, h4, h5, h6 {
       -webkit-animation-delay: 200ms;
               animation-delay: 200ms; }
   .is-child-theme .slide-in-blurred-bottom {
-    -webkit-animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.23, 1, 0.32, 1) both; }
+    -webkit-animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+            animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.23, 1, 0.32, 1) both; }
 
 @-webkit-keyframes slide-in-blurred-top {
   0% {
@@ -182,21 +185,39 @@ h1, h2, h3, h4, h5, h6 {
       display: block;
       height: 20%;
       position: relative; }
-      .is-child-theme #one-page-elevator li .height-indicator {
-        margin: auto;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0; }
-      .is-child-theme #one-page-elevator li.active {
-        background: rgba(51, 51, 51, 0.9); }
+      .is-child-theme #one-page-elevator li a {
+        display: block;
+        line-height: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #0069b4;
+        vertical-align: middle;
+        height: 100%;
+        padding-left: 10px; }
+      .is-child-theme #one-page-elevator li .blipper-disabled,
+      .is-child-theme #one-page-elevator li .blipper {
+        content: "";
+        display: inline-block;
+        width: calc(20px - 3px);
+        height: calc(20px - 3px);
+        border-radius: 50%;
+        border: 3px solid #0069b4; }
+      .is-child-theme #one-page-elevator li .blipper {
+        display: none;
+        width: 20px;
+        height: 20px;
+        border: none; }
+      .is-child-theme #one-page-elevator li.active .blipper-disabled {
+        display: none; }
+      .is-child-theme #one-page-elevator li.active .blipper {
+        display: inline-block; }
   .is-child-theme #one-page-content {
     z-index: 3000;
     position: relative; }
     .is-child-theme #one-page-content section {
       height: 100vh;
       width: 100%;
+      max-height: 50vw;
       display: block;
       position: relative;
       background-position: center;

@@ -1,3 +1,6 @@
+$dot-size: 20px;
+$border-size: 3px;
+
 #one-page-elevator {
     z-index: $level-4;
     position: fixed;
@@ -13,17 +16,47 @@
         height: 20%;
         position: relative;
 
-        .height-indicator {
-            margin: auto;
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
+        a {
+            display: block;
+            line-height: $dot-size;
+            text-decoration: none;
+            font-weight: bold;
+            color: $palette-2;
+            vertical-align: middle;
+            height: 100%;
+            padding-left: 10px;
+        }
+
+        .blipper-disabled,
+        .blipper {
+            content: "";
+            display: inline-block;
+            width: calc(#{$dot-size} - #{$border-size});
+            height: calc(#{$dot-size} - #{$border-size});
+            border-radius: 50%;
+            border: $border-size solid $palette-2;
+        }
+
+        .blipper {
+            display: none;
+            width: #{$dot-size};
+            height: #{$dot-size};
+            border: none;
         }
 
         &.active {
-            background: rgba(#333, .9);
+
+            .blipper-disabled {
+                display: none;
+            }
+
+            .blipper {
+                display: inline-block;
+            }
         }
+
+        .height-indicator {
+        }
+
     }
 }

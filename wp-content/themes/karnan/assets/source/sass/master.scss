@@ -6,6 +6,10 @@ html {
 body {
     min-height: 100vh;
     margin-bottom: 70px;
+
+    &.admin-bar {
+        top: 32px;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
