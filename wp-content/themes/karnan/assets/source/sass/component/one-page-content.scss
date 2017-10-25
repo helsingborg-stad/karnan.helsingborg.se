@@ -59,14 +59,14 @@
             line-height: 50px;
             font-size: 2em;
             color: #fff;
-            background: rgba(#000,.1);
+            background: none;
         }
 
         .label .inner {
             filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
             transform: rotate(90deg);
             display: inline-block;
-            transform-origin: 20px 30px;
+            transform-origin: 17px 48px;
             width: 400px;
             text-overflow: ellipsis;
             overflow: hidden;
