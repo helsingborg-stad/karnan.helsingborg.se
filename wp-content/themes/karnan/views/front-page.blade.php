@@ -14,7 +14,6 @@
                     <article class="box box-filled animate">
                         <span class="label"><span class="inner">{{ $section['section_title'] }}</span></span>
                         <div class="box-content">
-                            <h5>{{ $section['section_title'] }}</h5>
                             {!! $section['content'] !!}
                         </div>
                     </article>

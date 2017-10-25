@@ -247,6 +247,8 @@ h1, h2, h3, h4, h5, h6 {
             animation: swing-in-right-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
             animation-delay: 700ms;
         }*/ }
+      .is-child-theme #one-page-content article h1, .is-child-theme #one-page-content article h2, .is-child-theme #one-page-content article h3, .is-child-theme #one-page-content article h4, .is-child-theme #one-page-content article h5, .is-child-theme #one-page-content article h6 {
+        color: #fff; }
       .is-child-theme #one-page-content article .label {
         padding: 0;
         border-radius: 0;
