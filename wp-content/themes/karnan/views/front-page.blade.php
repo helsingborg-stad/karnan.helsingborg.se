@@ -20,7 +20,7 @@
                                         {!! $section['content'] !!}
 
                                         <p>
-                                            <a href="#virtual" class="btn btn-primary btn-lg virtual-guide"><?php _e("Show the virual guide", 'karnan'); ?> <i class="pricon pricon-chevron-right"></i></a>
+                                            <a href="{{ $virtualGuidePage }}#{{ sanitize_title($section['section_title']) }}" class="btn btn-primary btn-lg virtual-guide"><?php _e("Show the virual guide", 'karnan'); ?> <i class="pricon pricon-chevron-right"></i></a>
                                         </p>
                                     </div>
                                 </article>
