@@ -155,7 +155,8 @@ h1, h2, h3, h4, h5, h6 {
     background: top center no-repeat;
     background-size: 105% auto; }
   .is-child-theme .parallax-enabled #parallax-level-1 {
-    background-image: url("http://skyworks.enormo.us/assets/img/bg.jpg"); }
+    background-image: url("http://skyworks.enormo.us/assets/img/bg.jpg");
+    background-size: 180vh; }
   .is-child-theme .parallax-enabled #parallax-level-2 {
     background-image: url("http://skyworks.enormo.us/assets/img/mounts_4.png"); }
   .is-child-theme #one-page-elevator {
@@ -229,9 +230,7 @@ h1, h2, h3, h4, h5, h6 {
         opacity: 0; }
       .is-child-theme #one-page-content article.animated {
         -webkit-animation: swing-in-right-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-                animation: swing-in-right-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-        -webkit-animation-delay: 700ms;
-                animation-delay: 700ms; }
+                animation: swing-in-right-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; }
       .is-child-theme #one-page-content article .box-content {
         padding: 20px; }
       .is-child-theme #one-page-content article .label {

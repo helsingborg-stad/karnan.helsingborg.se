@@ -1529,20 +1529,20 @@ Karnan.OnePage.Navigation = (function ($) {
 
         //This is the first item
         if(index == 0) {
-            jQuery('.scroll-action.scroll-up').fadeOut(700,function(){
+            $('.scroll-action.scroll-up').fadeOut(700,function(){
                 $(this).addClass('disabled').removeAttr('style');
             });
         } else {
-            jQuery('.scroll-action.scroll-up').removeClass('disabled');
+            $('.scroll-action.scroll-up').removeClass('disabled');
         }
 
         //This is the last item
         if(segments == index + 1) {
-            jQuery('.scroll-action.scroll-down').fadeOut(700,function(){
+            $('.scroll-action.scroll-down').fadeOut(700,function(){
                 $(this).addClass('disabled').removeAttr('style');
             });
         } else {
-            jQuery('.scroll-action.scroll-down').removeClass('disabled');
+            $('.scroll-action.scroll-down').removeClass('disabled');
         }
 
     }.bind(this);
@@ -1611,7 +1611,6 @@ Karnan.OnePage.Parallax = (function ($) {
 
     function Parallax() {
         if($(".parallax-enabled").length) {
-            console.log("stellar!");
             this.Init();
         }
     }

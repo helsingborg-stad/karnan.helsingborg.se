@@ -5,7 +5,6 @@ Karnan.OnePage.Parallax = (function ($) {
 
     function Parallax() {
         if($(".parallax-enabled").length) {
-            console.log("stellar!");
             this.Init();
         }
     }
