@@ -12,12 +12,12 @@ $border-size: 3px;
     max-width: 100px;
 
     li {
-        display: block;
-        height: 20%;
+        display: table;
+        height: 20vh;
         position: relative;
 
         a {
-            display: block;
+            display: table-cell;
             line-height: $dot-size;
             text-decoration: none;
             font-weight: bold;
