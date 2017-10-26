@@ -36,6 +36,7 @@ gulp.task('sass-dev', function() {
 gulp.task('scripts-dist', function() {
     return gulp.src([
                 node_modules + 'jquery-scrollify/jquery.scrollify.js',
+                node_modules + 'jquery.stellar/jquery.stellar.js',
                 'assets/source/js/*.js'
             ])
             .pipe(concat('app.js'))

@@ -6,7 +6,8 @@
   "dependencies": {
     "gsap": "^1.20.3",
     "jquery-mousewheel": "^3.1.13",
-    "jquery-scrollify": "^1.0.17"
+    "jquery-scrollify": "^1.0.17",
+    "jquery.stellar": "^0.6.2"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
