@@ -57,6 +57,13 @@ h1, h2, h3, h4, h5, h6 {
     left: 0; }
   .is-child-theme .stripe {
     position: fixed; }
+  .is-child-theme [data-tooltip]:after {
+    padding: .7em 1em;
+    font-size: 16px;
+    background-color: #4db4e7; }
+  .is-child-theme [data-tooltip]:before {
+    border-right-color: #4db4e7;
+    border-width: 10px; }
   .is-child-theme .scroll-action {
     position: fixed;
     z-index: 99999;
