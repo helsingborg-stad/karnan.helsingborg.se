@@ -1,33 +1,23 @@
 .virtual-section {
+    max-height: 100vh !important;
 
-	.container {
-		padding:80px 0 80px 0;
-  	}
-
-	&-image {
-		img {
-			display: block;
-		    margin-left: auto;
-		    margin-right: auto;
-			max-width: 100%;
-			max-height: 70vh;
-		}
+	.virtual-section-image {
+		display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+		max-width: 100%;
+		max-height: 70vh;
 	}
 
-	&-content {
-		p {
-			font-size: 0.8em;
-		}
+	p {
+		font-size: 0.9em;
 	}
 
-	&-media {
-		.modal-content {
-	  		iframe {
-	  			height:auto;
-	  			min-height: 70vh;
-	  		}
+	.modal-content {
+  		iframe {
+  			height:auto;
+  			min-height: 70vh;
   		}
-
 	}
 
 }

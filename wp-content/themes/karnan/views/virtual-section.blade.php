@@ -14,7 +14,6 @@
                         <div class="grid">
                             @include ('partials/virtual/image')
                             @include ('partials/virtual/content')
-                            @include ('partials/virtual/media')
                         </div>
                     </div>
                 </section>
