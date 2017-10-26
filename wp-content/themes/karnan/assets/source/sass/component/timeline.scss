@@ -1,0 +1,7 @@
+.timeline-date {
+    @media screen and (min-width: 769px) {
+        font-weight: 700;
+        font-size: 2.6em;
+        width: calc(50% - 1em);
+    }
+}
