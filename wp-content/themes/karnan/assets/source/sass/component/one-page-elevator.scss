@@ -13,7 +13,7 @@ $border-size: 3px;
 
     li {
         display: table;
-        height: 20vh;
+        height: calc((100vh - #{$nav-height}) / 5);
         position: relative;
 
         a {
