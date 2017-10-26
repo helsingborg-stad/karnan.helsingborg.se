@@ -110,6 +110,10 @@
             "url": "https://github.com/helsingborg-stad/google-analythics.git"
         },
         {
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/modularity-timeline.git"
+        },
+        {
             "type":"composer",
             "url":"https://wpackagist.org"
         }
@@ -139,6 +143,7 @@
         "helsingborg-stad/modularity-form-builder": ">=1.0.0",
         "helsingborg-stad/wp-page-for-post-type": ">=1.0.0",
         "helsingborg-stad/google-analythics": ">=1.0.0",
+        "helsingborg-stad/modularity-timeline": ">=1.0.0",
         "wpackagist-plugin/varnish-http-purge": "^4.1.1",
         "wpackagist-plugin/stream": "^3.0.4",
         "wpackagist-plugin/wp-nested-pages": "^1.5.4",
