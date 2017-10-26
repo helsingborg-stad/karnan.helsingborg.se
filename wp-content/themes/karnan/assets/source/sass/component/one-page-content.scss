@@ -18,16 +18,16 @@
     }
 
     article {
-        position: absolute;
+
         top: 50%;
-        right: 0;
         transform: translateY(-50%);
-        width: 40%;
-        margin-left: auto;
+        width: 60%;
         min-height: 400px;
         border-radius: 0;
         padding-left: 60px;
         z-index: $level-4;
+        margin-left: auto;
+        margin-right: auto;
 
         h1, h2, h3, h4, h5, h6 {
             color: #fff;
@@ -69,6 +69,10 @@
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
+        }
+
+        .virtual-guide {
+            text-decoration: none;
         }
 
     }

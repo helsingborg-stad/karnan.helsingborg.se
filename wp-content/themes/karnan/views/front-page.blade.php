@@ -14,10 +14,14 @@
                     @if(is_array($sections) && !empty($sections))
                         @foreach ($sections as $section)
                             <section data-section-name="{{ sanitize_title($section['section_title']) }}" class="onepage-section" style="background-image: url('{{ $section['background'] }}');" >
-                                <article class="box box-filled animate" data-stellar-ratio="2">
+                                <article class="box box-filled animate">
                                     <span class="label"><span class="inner">{{ $section['section_title'] }}</span></span>
                                     <div class="box-content">
                                         {!! $section['content'] !!}
+
+                                        <p>
+                                            <a href="#virtual" class="btn btn-primary btn-lg virtual-guide"><?php _e("Show the virual guide", 'karnan'); ?> <i class="pricon pricon-chevron-right"></i></a>
+                                        </p>
                                     </div>
                                 </article>
                             </section>
