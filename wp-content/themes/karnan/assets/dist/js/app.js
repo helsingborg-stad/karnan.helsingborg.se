@@ -1607,6 +1607,26 @@ Karnan.OnePage.Navigation = (function ($) {
 Karnan = Karnan || {};
 Karnan.OnePage = Karnan.OnePage || {};
 
+Karnan.OnePage.Parallax = (function ($) {
+
+    function Parallax() {
+        if($(".parallax-enabled").length) {
+            console.log("stellar!");
+            this.Init();
+        }
+    }
+
+    Parallax.prototype.Init = function (index, segments) {
+        $(window).stellar();
+    }.bind(this);
+
+    new Parallax();
+
+})(jQuery);
+
+Karnan = Karnan || {};
+Karnan.OnePage = Karnan.OnePage || {};
+
 Karnan.OnePage.ScrollSnapping = (function ($) {
 
     function ScrollSnapping() {
