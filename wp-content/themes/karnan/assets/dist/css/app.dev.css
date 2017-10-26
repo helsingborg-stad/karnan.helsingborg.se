@@ -296,6 +296,11 @@ h1, h2, h3, h4, h5, h6 {
   .is-child-theme .virtual-section-media .modal-content iframe {
     height: auto;
     min-height: 70vh; }
+  @media screen and (min-width: 769px) {
+    .is-child-theme .timeline-date {
+      font-weight: 700;
+      font-size: 2.6em;
+      width: calc(50% - 1em); } }
   .is-child-theme .event-archive .box-post-brick {
     display: block;
     background-color: #5ba1d8 !important;
