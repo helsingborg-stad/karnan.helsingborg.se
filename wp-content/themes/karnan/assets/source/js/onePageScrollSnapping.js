@@ -17,7 +17,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
 
     ScrollSnapping.prototype.StartSections = function () {
 
-        var scrollSpeed = 1200;
+        var scrollSpeed = 800;
 
         $.scrollify({
             section : ".onepage-section",

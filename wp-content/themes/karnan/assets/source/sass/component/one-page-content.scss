@@ -11,6 +11,7 @@
         background-position: center;
         background-size: auto 100%;
         background-repeat: no-repeat;
+        padding: 10vh 0;
     }
 
     section + section {
@@ -18,9 +19,6 @@
     }
 
     article {
-
-        top: 50%;
-        transform: translateY(-50%);
         width: 60%;
         min-height: 400px;
         border-radius: 0;
