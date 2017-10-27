@@ -38,7 +38,7 @@
 	            <ul class="image-gallery grid grid-gallery">
 	                @foreach($section['gallery'] as $image)
 
-	                    <li class="grid-md-4">
+	                    <li class="grid-md-4 grid-xs-6">
 	                        <a class="box lightbox-trigger" href="{{ $image['sizes']['large'] }}">
 	                            {!! wp_get_attachment_image($image['ID'], array('250', '170')) !!}
 	                        </a>
