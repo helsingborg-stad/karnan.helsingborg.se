@@ -23,6 +23,11 @@ class Redirect
 
     public function addAnchorLink()
     {
+
+        if (!is_front_page()) {
+            return false;
+        }
+
         echo '<a name="start"></a>';
     }
 }
