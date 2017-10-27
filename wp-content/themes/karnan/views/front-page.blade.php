@@ -15,7 +15,7 @@
         @if(is_array($sections) && !empty($sections))
             @foreach ($sections as $section)
                 <section data-section-name="{{ sanitize_title($section['section_title']) }}" class="onepage-section" style="background-image: url('{{ $section['background'] }}');" >
-                    <article class="box box-filled animate">
+                    <article class="box box-filled box-filled-4 animate">
                         <span class="label"><span class="inner">{{ $section['section_title'] }}</span></span>
                         <div class="box-content">
                             {!! $section['content'] !!}
