@@ -193,9 +193,18 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     right: auto;
     bottom: 0;
-    left: 25px;
+    left: 10px;
     background: rgba(255, 255, 255, 0.5);
     max-width: 100px; }
+    @media (min-width: 469px) {
+      .is-child-theme #one-page-elevator {
+        left: 17px; } }
+    @media (min-width: 769px) {
+      .is-child-theme #one-page-elevator {
+        left: 20px; } }
+    @media (min-width: 961px) {
+      .is-child-theme #one-page-elevator {
+        left: 25px; } }
     .is-child-theme #one-page-elevator li {
       display: table;
       height: calc((100vh - 70px) / 5);

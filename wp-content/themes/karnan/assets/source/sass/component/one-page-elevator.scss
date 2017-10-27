@@ -7,9 +7,21 @@ $border-size: 3px;
     top: 0;
     right: auto;
     bottom: 0;
-    left: 25px;
+    left: 10px;
     background: rgba(#fff, .5);
     max-width: 100px;
+
+    @media #{$screen-sm-up} {
+        left: 17px;
+    }
+
+    @media #{$screen-md-up} {
+        left: 20px;
+    }
+
+    @media #{$screen-lg-up} {
+        left: 25px;
+    }
 
     li {
         display: table;
