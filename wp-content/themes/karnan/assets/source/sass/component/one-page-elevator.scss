@@ -1,4 +1,4 @@
-$dot-size: 20px;
+$dot-size: 15px;
 $border-size: 3px;
 
 #one-page-elevator {
@@ -16,6 +16,17 @@ $border-size: 3px;
         height: calc((100vh - #{$nav-height}) / 5);
         position: relative;
 
+        &.active {
+
+            .blipper-disabled {
+                opacity: 0;
+            }
+
+            .blipper {
+                opacity: 1;
+            }
+        }
+
         a {
             display: table-cell;
             line-height: $dot-size;
@@ -29,30 +40,29 @@ $border-size: 3px;
 
         .blipper-disabled,
         .blipper {
+            transition: 200ms opacity;
             content: "";
             display: inline-block;
-            width: calc(#{$dot-size} - #{$border-size});
-            height: calc(#{$dot-size} - #{$border-size});
+            width: calc(#{$dot-size} - #{$border-size}/2);
+            height: calc(#{$dot-size} - #{$border-size}/2);
             border-radius: 50%;
             border: $border-size solid $palette-2;
         }
 
+        .blipper-disabled {
+            opacity: 1;
+        }
+
         .blipper {
-            display: none;
+            opacity: 0;
             width: #{$dot-size};
             height: #{$dot-size};
             border: none;
+            position: absolute;
         }
 
-        &.active {
-
-            .blipper-disabled {
-                display: none;
-            }
-
-            .blipper {
-                display: inline-block;
-            }
+        .height-indicator {
+            line-height: $dot-size - 5;
         }
     }
 }
