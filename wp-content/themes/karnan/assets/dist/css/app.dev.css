@@ -7,6 +7,9 @@ body {
   margin-bottom: 70px; }
   body.admin-bar {
     top: 32px; }
+  @media (min-width: 469px) {
+    body[class*="virtual-section"] {
+      margin-left: 80px; } }
 
 h1, h2, h3, h4, h5, h6 {
   color: #005c86; }
@@ -354,19 +357,31 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0; }
   100% {
     opacity: 1; } }
-  .is-child-theme .virtual-section {
-    max-height: 100vh !important; }
-    .is-child-theme .virtual-section .virtual-section-image {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 100%;
-      max-height: 70vh; }
-    .is-child-theme .virtual-section p {
-      font-size: 0.9em; }
-    .is-child-theme .virtual-section .modal-content iframe {
-      height: auto;
-      min-height: 70vh; }
+  .is-child-theme #virtual-page-content section {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    padding: 2vh 1vh; }
+    .is-child-theme #virtual-page-content section p {
+      font-size: 0.7em; }
+    @media (min-width: 469px) {
+      .is-child-theme #virtual-page-content section {
+        padding: 8vh 0vh; }
+        .is-child-theme #virtual-page-content section p {
+          font-size: 0.9em; } }
+  .is-child-theme #virtual-page-content section + section {
+    margin-top: 0; }
+  .is-child-theme #virtual-page-content .virtual-section-image {
+    padding: 2vh 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 70vh; }
+  .is-child-theme #virtual-page-content .modal-content iframe {
+    height: auto;
+    min-height: 70vh; }
   @media screen and (min-width: 769px) {
     .is-child-theme .timeline-date {
       font-weight: 700;
