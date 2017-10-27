@@ -5,3 +5,13 @@
     	height: calc((100vh - #{$nav-height}) / 5);
     }
 }
+
+
+&.admin-bar {
+    .stripe {
+        margin-top: $admin-bar-height;
+        div {
+            height: calc((100vh - #{$nav-height} - #{$admin-bar-height}) / 5);
+        }
+    }
+}

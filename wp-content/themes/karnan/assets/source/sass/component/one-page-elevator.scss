@@ -56,3 +56,12 @@ $border-size: 3px;
         }
     }
 }
+
+&.admin-bar {
+    #one-page-elevator {
+        margin-top: $admin-bar-height;
+        li {
+            height: calc((100vh - #{$nav-height} - #{$admin-bar-height}) / 5);
+        }
+    }
+}
