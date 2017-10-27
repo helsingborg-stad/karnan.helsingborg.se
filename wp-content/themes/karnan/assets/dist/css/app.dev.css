@@ -55,6 +55,8 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     bottom: 0;
     left: 0; }
+    .is-child-theme header#site-header .logotype svg {
+      width: auto; }
   .is-child-theme .stripe {
     position: fixed; }
     .is-child-theme .stripe div {

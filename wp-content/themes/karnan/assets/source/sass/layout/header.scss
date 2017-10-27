@@ -5,4 +5,10 @@ header#site-header {
     right: 0;
     bottom: 0;
     left: 0;
+
+    .logotype {
+        svg {
+            width: auto;
+        }
+    }
 }
