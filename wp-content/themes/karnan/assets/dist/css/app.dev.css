@@ -577,7 +577,17 @@ h1, h2, h3, h4, h5, h6 {
       height: calc((100vh - 70px - 32px) / 5); }
   .is-child-theme #one-page-content {
     z-index: 3000;
-    position: relative; }
+    position: relative;
+    margin-left: 10px; }
+    @media (min-width: 469px) {
+      .is-child-theme #one-page-content {
+        margin-left: 17px; } }
+    @media (min-width: 769px) {
+      .is-child-theme #one-page-content {
+        margin-left: 20px; } }
+    @media (min-width: 961px) {
+      .is-child-theme #one-page-content {
+        margin-left: 25px; } }
     .is-child-theme #one-page-content section {
       height: 100vh;
       width: 100%;
@@ -588,16 +598,28 @@ h1, h2, h3, h4, h5, h6 {
       background-size: auto 100%;
       background-repeat: no-repeat;
       padding: 10vh 0; }
+      @media (min-width: 0) and (max-width: 468px) {
+        .is-child-theme #one-page-content section {
+          min-height: 100vh; } }
+      @media (min-width: 469px) and (max-width: 768px) {
+        .is-child-theme #one-page-content section {
+          min-height: 100vh; } }
     .is-child-theme #one-page-content section + section {
       margin-top: 0; }
+    .is-child-theme #one-page-content section > .container > .grid > [class*=" grid-"] {
+      margin-left: auto;
+      margin-right: auto; }
     .is-child-theme #one-page-content article {
-      width: 60%;
+      margin-top: 20vh;
       min-height: 400px;
       border-radius: 0;
       padding-left: 60px;
       z-index: 4000;
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: auto;
+      background-color: rgba(0, 92, 134, 0.85);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px); }
       .is-child-theme #one-page-content article h1, .is-child-theme #one-page-content article h2, .is-child-theme #one-page-content article h3, .is-child-theme #one-page-content article h4, .is-child-theme #one-page-content article h5, .is-child-theme #one-page-content article h6 {
         color: #fff; }
       .is-child-theme #one-page-content article.animate {
