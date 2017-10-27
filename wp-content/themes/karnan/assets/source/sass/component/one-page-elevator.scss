@@ -35,7 +35,7 @@ $border-size: 3px;
             color: $palette-2;
             vertical-align: middle;
             height: 100%;
-            padding-left: 10px;
+            padding: 0 $grid-gutter-md/2;
         }
 
         .blipper-disabled,
@@ -63,6 +63,8 @@ $border-size: 3px;
 
         .height-indicator {
             line-height: $dot-size - 5;
+            text-indent: $grid-gutter-sm/3;
+            display: inline-block;
         }
     }
 }
