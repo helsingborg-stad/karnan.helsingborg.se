@@ -57,6 +57,8 @@ h1, h2, h3, h4, h5, h6 {
     left: 0; }
   .is-child-theme .stripe {
     position: fixed; }
+    .is-child-theme .stripe div {
+      height: calc((100vh - 70px) / 5); }
   .is-child-theme [data-tooltip]:after {
     padding: .7em 1em;
     font-size: 16px;
@@ -191,11 +193,11 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(255, 255, 255, 0.5);
     max-width: 100px; }
     .is-child-theme #one-page-elevator li {
-      display: block;
-      height: 20%;
+      display: table;
+      height: calc((100vh - 70px) / 5);
       position: relative; }
       .is-child-theme #one-page-elevator li a {
-        display: block;
+        display: table-cell;
         line-height: 20px;
         text-decoration: none;
         font-weight: bold;
@@ -297,19 +299,19 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transform: translateZ(0);
             transform: translateZ(0);
     opacity: 1; } }
-  .is-child-theme .virtual-section .container {
-    padding: 80px 0 80px 0; }
-  .is-child-theme .virtual-section-image img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    max-height: 70vh; }
-  .is-child-theme .virtual-section-content p {
-    font-size: 0.8em; }
-  .is-child-theme .virtual-section-media .modal-content iframe {
-    height: auto;
-    min-height: 70vh; }
+  .is-child-theme .virtual-section {
+    max-height: 100vh !important; }
+    .is-child-theme .virtual-section .virtual-section-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+      max-height: 70vh; }
+    .is-child-theme .virtual-section p {
+      font-size: 0.9em; }
+    .is-child-theme .virtual-section .modal-content iframe {
+      height: auto;
+      min-height: 70vh; }
   @media screen and (min-width: 769px) {
     .is-child-theme .timeline-date {
       font-weight: 700;
