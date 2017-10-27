@@ -1616,7 +1616,9 @@ Karnan.OnePage.Parallax = (function ($) {
     }
 
     Parallax.prototype.Init = function (index, segments) {
-        $(window).stellar();
+        $("body").stellar({
+            horizontalScrolling: false,
+        });
     }.bind(this);
 
     new Parallax();
