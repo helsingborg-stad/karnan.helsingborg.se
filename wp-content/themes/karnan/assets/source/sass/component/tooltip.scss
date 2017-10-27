@@ -2,11 +2,11 @@
     &:after {
         padding: .7em 1em;
         font-size: 16px;
-        background-color: $palette-1;
+        background-color: $palette-2;
     }
 
     &:before {
-        border-right-color: $palette-1;
+        border-right-color: $palette-2;
         border-width: 10px;
     }
 }

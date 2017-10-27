@@ -68,9 +68,9 @@ h1, h2, h3, h4, h5, h6 {
   .is-child-theme [data-tooltip]:after {
     padding: .7em 1em;
     font-size: 16px;
-    background-color: #4db4e7; }
+    background-color: #0069b4; }
   .is-child-theme [data-tooltip]:before {
-    border-right-color: #4db4e7;
+    border-right-color: #0069b4;
     border-width: 10px; }
   .is-child-theme .virtual-section {
     max-height: 100vh !important; }
