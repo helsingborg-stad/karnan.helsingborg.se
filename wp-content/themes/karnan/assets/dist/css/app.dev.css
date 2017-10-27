@@ -128,11 +128,13 @@ h1, h2, h3, h4, h5, h6 {
       -webkit-animation-delay: 200ms;
               animation-delay: 200ms; }
     .is-child-theme .scroll-action.scroll-down {
-      bottom: 10px;
+      bottom: 80px;
       -webkit-animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
               animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
       -webkit-animation-delay: 200ms;
               animation-delay: 200ms; }
+  .is-child-theme.admin-bar .scroll-action.scroll-up {
+    top: 42px; }
   .is-child-theme .slide-in-blurred-bottom {
     -webkit-animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
             animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.23, 1, 0.32, 1) both; }

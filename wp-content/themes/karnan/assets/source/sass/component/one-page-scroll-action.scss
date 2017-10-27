@@ -15,11 +15,17 @@
     }
 
     &.scroll-down {
-        bottom: 10px;
+        bottom: 10px + $nav-height;
         animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
         animation-delay: 200ms;
     }
 
+}
+
+&.admin-bar {
+    .scroll-action.scroll-up {
+        top: 10px + $admin-bar-height;
+    }
 }
 
 .slide-in-blurred-bottom {

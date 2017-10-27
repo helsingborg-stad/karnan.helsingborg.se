@@ -25,6 +25,10 @@ Karnan.OnePage.Navigation = (function ($) {
             this.hightlightPagination(segmentIndex, segments);
         }.bind(this));
 
+        //Add active class to last item
+        if(!$(".scroll-evelator.active").length) {
+            $(".scroll-evelator.is-last").addClass("active");
+        }
     }
 
     Navigation.prototype.hightlightDirectionArrows = function (index, segments) {
