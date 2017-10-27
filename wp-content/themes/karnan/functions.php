@@ -7,6 +7,10 @@ if (file_exists(dirname(ABSPATH) . '/vendor/autoload.php')) {
     require_once dirname(ABSPATH) . '/vendor/autoload.php';
 }
 
+add_action('after_setup_theme', function () {
+    load_theme_textdomain('municipio', get_template_directory() . '/languages');
+});
+
 require_once KARNAN_PATH . 'library/Vendor/Psr4ClassLoader.php';
 $loader = new karnan\Vendor\Psr4ClassLoader();
 $loader->addPrefix('karnan', KARNAN_PATH . 'library');

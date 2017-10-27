@@ -20,15 +20,17 @@
                             <div class="grid-xs-12 grid-md-10 grid-lg-8">
 
                                 <article class="box box-filled box-filled-4 animate">
-                                    <span class="label"><span class="inner">{{ $section['section_title'] }}</span></span>
+                                    <span class="label hidden-xs"><span class="inner">{{ $section['section_title'] }}</span></span>
                                     <div class="box-content">
+
+                                        <h2 class="hidden-sm hidden-md hidden-lg rendered-header">{{ $section['section_title'] }}</h2>
+
                                         {!! $section['content'] !!}
                                         <p>
-                                            <a href="{{ $virtualGuidePage }}#{{ sanitize_title($section['section_title']) }}" class="btn btn-primary btn-lg virtual-guide"><?php _e("Show the virual guide", 'karnan'); ?> <i class="pricon pricon-chevron-right"></i></a>
+                                            <a href="{{ $virtualGuidePage }}#{{ sanitize_title($section['section_title']) }}" class="h2 virtual-guide"><?php _e("Show the virual guide", 'karnan'); ?> <i class="pricon pricon-chevron-right"></i></a>
                                         </p>
                                     </div>
                                 </article>
-
                             </div>
                         </div>
                     </div>
