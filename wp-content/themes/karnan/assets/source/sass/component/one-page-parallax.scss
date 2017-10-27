@@ -4,9 +4,10 @@
     div[id^="parallax-level-"],
     div[id*=" parallax-level-"] {
         background: top center no-repeat;
+        background-size: 105% auto;
 
         position: absolute;
-        height: 200vh;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;

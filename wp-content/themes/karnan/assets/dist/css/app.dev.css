@@ -164,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
     .is-child-theme .parallax-enabled div[id*=" parallax-level-"] {
       background: top center no-repeat;
       background-size: 105% auto;
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       right: 0;
@@ -178,8 +178,9 @@ h1, h2, h3, h4, h5, h6 {
       background-image: url("../../image/edge.png");
       background-size: 105% auto;
       background-position: bottom center;
+      position: absolute;
       top: auto;
-      height: 40vh; }
+      height: 100vh; }
   .is-child-theme #one-page-elevator {
     z-index: 4000;
     position: fixed;
