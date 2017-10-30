@@ -53,6 +53,8 @@
         background-color: rgba($palette-4, .85);
         backdrop-filter: blur(2px);
         -webkit-backdrop-filter: blur(2px);
+        max-height: 90vh;
+        overflow: auto;
 
         @media #{$screen-sm-up} {
             min-height: 400px;
