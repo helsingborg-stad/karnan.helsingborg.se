@@ -1,6 +1,6 @@
 <?php
 
-namespace karnan\Admin;
+namespace Karnan\Admin;
 
 class ThemeOptions
 {

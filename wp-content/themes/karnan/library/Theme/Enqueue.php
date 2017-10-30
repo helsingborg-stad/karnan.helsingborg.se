@@ -1,6 +1,6 @@
 <?php
 
-namespace karnan\Theme;
+namespace Karnan\Theme;
 
 class Enqueue
 {
