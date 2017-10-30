@@ -631,7 +631,9 @@ h1, h2, h3, h4, h5, h6 {
       margin-right: auto;
       background-color: rgba(0, 92, 134, 0.85);
       backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px); }
+      -webkit-backdrop-filter: blur(2px);
+      max-height: 90vh;
+      overflow: auto; }
       @media (min-width: 469px) {
         .is-child-theme #one-page-content article {
           min-height: 400px; } }
