@@ -7,6 +7,10 @@ if (file_exists(dirname(ABSPATH) . '/vendor/autoload.php')) {
     require_once dirname(ABSPATH) . '/vendor/autoload.php';
 }
 
+add_action('after_setup_theme', function () {
+    load_child_theme_textdomain('karnan', get_stylesheet_directory() . '/languages');
+});
+
 require_once KARNAN_PATH . 'library/Vendor/Psr4ClassLoader.php';
 $loader = new karnan\Vendor\Psr4ClassLoader();
 $loader->addPrefix('karnan', KARNAN_PATH . 'library');
@@ -24,5 +28,3 @@ add_action('init', function () {
     ));
     $acfExportManager->import();
 });
-
-new karnan\App();

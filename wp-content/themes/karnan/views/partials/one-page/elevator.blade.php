@@ -1,5 +1,5 @@
 @if (is_array($sections) && !empty($sections))
-    <ul id="one-page-elevator" class="hidden-xs">
+    <ul id="one-page-elevator" class="hidden-xs hidden-sm">
     @foreach ($sections as $elevatorKey => $elevatorItem)
         <li data-tooltip="{{ $elevatorItem['section_title'] }}" data-tooltip-right class="elevator-item @if($elevatorKey == 0) is-first @endif @if($elevatorKey == count($sections)-1) is-last @endif ">
             <a href="#{{ sanitize_title($elevatorItem['section_title']) }}">
