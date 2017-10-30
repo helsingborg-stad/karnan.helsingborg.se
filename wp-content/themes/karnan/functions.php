@@ -12,12 +12,12 @@ add_action('after_setup_theme', function () {
 });
 
 require_once KARNAN_PATH . 'library/Vendor/Psr4ClassLoader.php';
-$loader = new karnan\Vendor\Psr4ClassLoader();
-$loader->addPrefix('karnan', KARNAN_PATH . 'library');
-$loader->addPrefix('karnan', KARNAN_PATH . 'source/php/');
+$loader = new Karnan\Vendor\Psr4ClassLoader();
+$loader->addPrefix('Karnan', KARNAN_PATH . 'library');
+$loader->addPrefix('Karnan', KARNAN_PATH . 'source/php/');
 $loader->register();
 
-new karnan\App();
+new Karnan\App();
 
 add_action('init', function () {
     $acfExportManager = new \AcfExportManager\AcfExportManager();

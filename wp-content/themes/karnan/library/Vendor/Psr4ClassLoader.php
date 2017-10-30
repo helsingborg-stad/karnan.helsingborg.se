@@ -1,6 +1,6 @@
 <?php
 
-namespace karnan\Vendor;
+namespace Karnan\Vendor;
 
 /**
  * A PSR-4 compatible class loader.
