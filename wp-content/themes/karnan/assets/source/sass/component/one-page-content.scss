@@ -46,7 +46,6 @@
     }
 
     article {
-        margin-top: 20vh;
         border-radius: 0;
         z-index: $level-4;
         margin-left: auto;
@@ -120,6 +119,14 @@
 
             i.pricon {
                 vertical-align: text-top;
+            }
+
+            @media #{$screen-xs} {
+                font-size: 1.3em;
+            }
+
+            @media #{$screen-sm} {
+                font-size: 1.4em;
             }
         }
 

@@ -625,7 +625,6 @@ h1, h2, h3, h4, h5, h6 {
       margin-left: auto;
       margin-right: auto; }
     .is-child-theme #one-page-content article {
-      margin-top: 20vh;
       border-radius: 0;
       z-index: 4000;
       margin-left: auto;
@@ -682,6 +681,12 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 30px; }
         .is-child-theme #one-page-content article .virtual-guide i.pricon {
           vertical-align: text-top; }
+        @media (min-width: 0) and (max-width: 468px) {
+          .is-child-theme #one-page-content article .virtual-guide {
+            font-size: 1.3em; } }
+        @media (min-width: 469px) and (max-width: 768px) {
+          .is-child-theme #one-page-content article .virtual-guide {
+            font-size: 1.4em; } }
 
 @keyframes fade-in-fwd {
   0% {
