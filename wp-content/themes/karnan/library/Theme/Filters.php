@@ -22,15 +22,18 @@ class Filters
         }
 
         $socialIcons = get_field('karnan_social_icons', 'option');
+
         if (!is_array($socialIcons)) {
             return $items;
         }
 
+        $items = preg_replace('/\<\/ul\>$/', '', $items);
+
         foreach ($socialIcons as $icon) {
             $svg = \Municipio\Helper\Svg::extract(get_attached_file($icon['icon']['id']));
-            $items .= '<li class="menu-item-social"><a href="' . $icon['link'] . '"><span data-tooltip="' . $icon['tooltip'] .'">' . $svg . '</span></a></li>' . "\n";
+            $items .= '<li class="menu-item-social"><a href="' . $icon['link'] . '"><span data-tooltip="' . $icon['tooltip'] .'">' . "" . '</span></a></li>' . "\n";
         }
 
-        return $items;
+        return $items ."</ul>";
     }
 }
