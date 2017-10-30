@@ -31,7 +31,7 @@ class Filters
 
         foreach ($socialIcons as $icon) {
             $svg = \Municipio\Helper\Svg::extract(get_attached_file($icon['icon']['id']));
-            $items .= '<li class="menu-item-social"><a href="' . $icon['link'] . '"><span data-tooltip="' . $icon['tooltip'] .'">' . "" . '</span></a></li>' . "\n";
+            $items .= '<li class="menu-item-social"><a href="' . $icon['link'] . '"><span data-tooltip="' . $icon['tooltip'] .'">' . $svg . '</span></a></li>' . "\n";
         }
 
         return $items ."</ul>";
