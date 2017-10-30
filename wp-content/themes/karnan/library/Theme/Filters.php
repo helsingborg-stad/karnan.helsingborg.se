@@ -21,7 +21,7 @@ class Filters
             return $items;
         }
 
-        $socialIcons = get_field('fredriksdal_social_icons', 'option');
+        $socialIcons = get_field('karnan_social_icons', 'option');
         if (!is_array($socialIcons)) {
             return $items;
         }
