@@ -2,8 +2,10 @@
     <div class="grid">
 
 		<div class="grid-md-12">
+			<article>
 		        <h2>{{ $section['section_title'] }}</h2>
 		        {!! $section['content'] !!}
+		    </article>
 		</div>
 
 	    @if(!empty($section['google_maps']))
