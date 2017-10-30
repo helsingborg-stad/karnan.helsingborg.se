@@ -1,4 +1,4 @@
-Karnan = Karnan || {};
+/*Karnan = Karnan || {};
 Karnan.AsyncContentLoader = Karnan.AsyncContentLoader || {};
 
 Karnan.AsyncContentLoader.AsyncContentLoader = (function ($) {
@@ -21,6 +21,7 @@ Karnan.AsyncContentLoader.AsyncContentLoader = (function ($) {
         this.triggerAjaxOpenHash();
         this.watchAjaxClose();
         jQuery.each(AsyncContentTrigger,function(index,targetObject) {
+            console.log("test link");
             jQuery(targetObject).click(function(event) {
                 if(this.isLocalLink(jQuery(event.target).closest('a').attr('href'))) {
                     event.preventDefault();
@@ -32,7 +33,8 @@ Karnan.AsyncContentLoader.AsyncContentLoader = (function ($) {
     };
 
     AsyncContentLoader.prototype.loadContent = function (clickedObject) {
-        var $section = jQuery(clickedObject).parents("section");
+        var $section = jQuery('#dynamic-content-wrapper');
+
         jQuery('#ajax-response article.frame').html('<span class="spinner spinner-dark spinner-lg" style="font-size:3em;"></span>');
 
         jQuery("a").removeClass('ajax-is-active');
@@ -87,7 +89,7 @@ Karnan.AsyncContentLoader.AsyncContentLoader = (function ($) {
         return false;
     };
 
-    /* Spinner */
+
 
     AsyncContentLoader.prototype.startSpinner = function(targetItem) {
         targetItem.addClass("ajax-do-spin ajax-is-active");
@@ -99,13 +101,13 @@ Karnan.AsyncContentLoader.AsyncContentLoader = (function ($) {
         targetItem.find('.spinner-container').remove();
     };
 
-    /* Href */
+
 
     AsyncContentLoader.prototype.createIdFromHref = function(url) {
         return this.parsePostName(url).replace(new RegExp("/", 'g'),"-").replace('-blog-',"").replace(/\-$/, '').replace(/^\-/, '');
     };
 
-    /* Close */
+
 
     AsyncContentLoader.prototype.watchAjaxClose = function() {
         jQuery("section").on('click', '.ajax-response .close',function(event){
@@ -117,7 +119,6 @@ Karnan.AsyncContentLoader.AsyncContentLoader = (function ($) {
         }.bind(this));
     };
 
-    /* Onload trigger */
     AsyncContentLoader.prototype.triggerAjaxOpenHash = function() {
         jQuery(window).bind("load", function() {
             jQuery.each(AsyncContentTrigger,function(index,targetObject) {
@@ -133,7 +134,6 @@ Karnan.AsyncContentLoader.AsyncContentLoader = (function ($) {
         }.bind(this));
     };
 
-    /* Update hash */
     AsyncContentLoader.prototype.updateHash = function(hash) {
         if(history.pushState) {
             if(hash === "" ) {
@@ -148,4 +148,4 @@ Karnan.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
     new AsyncContentLoader();
 
-})(jQuery);
+})(jQuery); */
