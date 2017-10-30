@@ -127,6 +127,11 @@ h1, h2, h3, h4, h5, h6 {
     left: 0; }
     .is-child-theme header#site-header .logotype svg {
       width: auto; }
+    .is-child-theme header#site-header .navbar {
+      font-weight: bold; }
+    .is-child-theme header#site-header .navbar li.current a,
+    .is-child-theme header#site-header .navbar li.current-menu-item a {
+      text-decoration: none; }
   .is-child-theme .stripe {
     position: fixed; }
     .is-child-theme .stripe div {

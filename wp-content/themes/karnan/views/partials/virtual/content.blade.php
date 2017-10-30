@@ -1,6 +1,5 @@
 <div class="grid-lg-7">
     <div class="grid">
-
 		<div class="grid-md-12">
 			<article>
 		        <h2>{{ $section['section_title'] }}</h2>
@@ -39,7 +38,6 @@
 	        <div class="grid-md-12">
 	            <ul class="image-gallery grid grid-gallery">
 	                @foreach($section['gallery'] as $image)
-
 	                    <li class="grid-md-4 grid-xs-6">
 	                        <a class="box lightbox-trigger" href="{{ $image['sizes']['large'] }}">
 	                            {!! wp_get_attachment_image($image['ID'], array('250', '170')) !!}
