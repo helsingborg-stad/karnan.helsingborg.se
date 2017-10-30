@@ -675,6 +675,8 @@ h1, h2, h3, h4, h5, h6 {
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap; }
+        .is-child-theme #one-page-content article .label .inner .first-word {
+          font-weight: 600; }
       .is-child-theme #one-page-content article .virtual-guide {
         text-decoration: none;
         margin-top: 30px; }

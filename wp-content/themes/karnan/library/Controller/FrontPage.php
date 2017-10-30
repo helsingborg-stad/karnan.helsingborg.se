@@ -22,6 +22,13 @@ class FrontPage extends \Municipio\Controller\BaseController
             }
         }
 
+        //Create alternative span-wrapped title
+        if (is_array($this->data['sections']) && !empty($this->data['sections'])) {
+            foreach ($this->data['sections'] as $key => &$section) {
+                $section['section_title_span'] = '<span class="first-word">' . preg_replace('/ /', '</span> ', $section['section_title'], 1);
+            }
+        }
+
         //Virtual guide link
         if ($guideLink = $this->getVirtualGuideLink()) {
             $this->data['virtualGuidePage'] = $guideLink;

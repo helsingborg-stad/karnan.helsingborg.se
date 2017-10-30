@@ -20,7 +20,7 @@
                             <div class="grid-xs-12 grid-md-10 grid-lg-8">
 
                                 <article class="box box-filled box-filled-4 animate">
-                                    <span class="label hidden-xs"><span class="inner">{{ $section['section_title'] }}</span></span>
+                                    <span class="label hidden-xs"><span class="inner">{!! $section['section_title_span'] !!}</span></span>
                                     <div class="box-content">
 
                                         <h2 class="hidden-sm hidden-md hidden-lg rendered-header">{{ $section['section_title'] }}</h2>
