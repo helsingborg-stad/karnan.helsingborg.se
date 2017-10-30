@@ -1,6 +1,6 @@
 <?php
 
-namespace karnan\Controller;
+namespace Karnan\Controller;
 
 class FrontPage extends \Municipio\Controller\BaseController
 {

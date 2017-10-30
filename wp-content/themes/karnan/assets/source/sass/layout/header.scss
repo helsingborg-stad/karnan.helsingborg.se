@@ -11,4 +11,13 @@ header#site-header {
             width: auto;
         }
     }
+
+    .navbar {
+        font-weight: 500;
+    }
+
+    .navbar li.current a,
+    .navbar li.current-menu-item a{
+        text-decoration: none;
+    }
 }

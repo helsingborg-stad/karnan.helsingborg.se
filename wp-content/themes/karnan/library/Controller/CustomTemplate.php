@@ -1,6 +1,6 @@
 <?php
 
-namespace karnan\Controller;
+namespace Karnan\Controller;
 
 /**
  * To add a custom template and load it's controller do the following:

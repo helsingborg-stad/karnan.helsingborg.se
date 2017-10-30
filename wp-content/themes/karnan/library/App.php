@@ -1,15 +1,15 @@
 <?php
-namespace karnan;
+namespace Karnan;
 
 class App
 {
     public function __construct()
     {
-        new \karnan\Theme\Redirect();
-        new \karnan\Theme\Template();
-        new \karnan\Theme\Enqueue();
-        new \karnan\Theme\Api();
+        new \Karnan\Theme\Redirect();
+        new \Karnan\Theme\Template();
+        new \Karnan\Theme\Enqueue();
+        new \Karnan\Theme\Api();
 
-        new \karnan\Admin\ThemeOptions();
+        new \Karnan\Admin\ThemeOptions();
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace karnan\Controller;
+namespace Karnan\Controller;
 
-class VirtualSection extends \karnan\Controller\FrontPage
+class VirtualSection extends \Karnan\Controller\FrontPage
 {
 
 }
