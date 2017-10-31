@@ -10,6 +10,11 @@ class Redirect
         add_action('wp_footer', array($this, 'addAnchorLink'));
     }
 
+    /**
+     * Echo function that adds #start hash if not defined (start at bottom)
+     * @return void
+     */
+
     public function redirectToBottomSection()
     {
         echo '
@@ -20,6 +25,11 @@ class Redirect
         </script>
         ';
     }
+
+    /**
+     * Echos the anchor that above function uses as a default (in footer)
+     * @return void
+     */
 
     public function addAnchorLink()
     {

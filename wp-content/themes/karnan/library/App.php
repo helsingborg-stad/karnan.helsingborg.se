@@ -8,7 +8,6 @@ class App
         new \Karnan\Theme\Redirect();
         new \Karnan\Theme\Template();
         new \Karnan\Theme\Enqueue();
-        new \Karnan\Theme\Api();
         new \Karnan\Theme\Filters();
 
         new \Karnan\Admin\ThemeOptions();
