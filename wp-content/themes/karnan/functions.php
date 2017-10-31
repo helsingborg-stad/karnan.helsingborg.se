@@ -12,19 +12,20 @@ add_action('after_setup_theme', function () {
 });
 
 require_once KARNAN_PATH . 'library/Vendor/Psr4ClassLoader.php';
-$loader = new karnan\Vendor\Psr4ClassLoader();
-$loader->addPrefix('karnan', KARNAN_PATH . 'library');
-$loader->addPrefix('karnan', KARNAN_PATH . 'source/php/');
+$loader = new Karnan\Vendor\Psr4ClassLoader();
+$loader->addPrefix('Karnan', KARNAN_PATH . 'library');
+$loader->addPrefix('Karnan', KARNAN_PATH . 'source/php/');
 $loader->register();
 
-new karnan\App();
+new Karnan\App();
 
 add_action('init', function () {
     $acfExportManager = new \AcfExportManager\AcfExportManager();
     $acfExportManager->setTextdomain('karnan');
     $acfExportManager->setExportFolder(KARNAN_PATH . 'library/AcfFields');
     $acfExportManager->autoExport(array(
-        'theme-settings'    => 'group_59e8688a57908'
+        'theme-settings'    => 'group_59e8688a57908',
+        'social-settings'   => 'group_5825cca7a2d15'
     ));
     $acfExportManager->import();
 });
