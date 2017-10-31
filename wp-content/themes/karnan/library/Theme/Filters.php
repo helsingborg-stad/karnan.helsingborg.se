@@ -13,6 +13,9 @@ class Filters
 
         //Heeader styling
         add_filter('acf/load_value/name=header_layout', array($this, 'forceJumboHeader'), 10, 3);
+
+        //Filter data
+        add_filter('HbgBlade/data', array($this, 'filterHbgBladeData'), 10, 1);
     }
 
     public function addSocialIconsToMenu($items, $args = null)
@@ -48,5 +51,14 @@ class Filters
             return $value;
         }
         return 'jumbo';
+    }
+
+    public function filterHbgBladeData($data)
+    {
+        if (isset($data['headerLayout']) && isset($data['headerLayout']['classes'])) {
+            $data['headerLayout']['classes'] .= " nav-no-overflow";
+        }
+
+        return $data;
     }
 }
