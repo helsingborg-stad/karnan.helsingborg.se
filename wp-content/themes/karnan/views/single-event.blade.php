@@ -41,7 +41,6 @@
                     <div class="post post-single">
                         <article id="article">
                             <h2 class="weight-medium">{{ the_title() }}</h2>
-                            @include('partials.accessibility-menu')
 
                             @if (isset(get_extended($post->post_content)['main']) && !empty(get_extended($post->post_content)['main']) && isset(get_extended($post->post_content)['extended']) && !empty(get_extended($post->post_content)['extended']))
 
@@ -65,24 +64,9 @@
         </div>
 
         <div class="grid-md-12 grid-lg-12">
-            @include('partials.blog.post-footer')
-
             @if (is_single() && is_active_sidebar('content-area-top'))
                 <div class="grid sidebar-content-area sidebar-content-area-top">
                     <?php dynamic_sidebar('content-area-top'); ?>
-                </div>
-            @endif
-
-            @if (is_single() && comments_open())
-                <div class="grid">
-                    <div class="grid-sm-12">
-                        @include('partials.blog.comments-form')
-                    </div>
-                </div>
-                <div class="grid">
-                    <div class="grid-sm-12">
-                        @include('partials.blog.comments')
-                    </div>
                 </div>
             @endif
         </div>
