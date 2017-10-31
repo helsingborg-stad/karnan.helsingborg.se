@@ -2,7 +2,7 @@
 
 namespace Karnan\Controller;
 
-class Archive extends \Municipio\Controller\BaseController
+class ArchiveEvent extends \Municipio\Controller\BaseController
 {
     private static $gridSize;
 

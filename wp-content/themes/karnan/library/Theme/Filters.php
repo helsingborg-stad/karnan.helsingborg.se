@@ -14,9 +14,14 @@ class Filters
         //Heeader styling
         add_filter('acf/load_value/name=header_layout', array($this, 'forceJumboHeader'), 10, 3);
 
-        //Filter data
+        //Filter header data
         add_filter('HbgBlade/data', array($this, 'filterHbgBladeData'), 10, 1);
     }
+
+    /**
+     * Adds social icons to menu from settings page
+     * @return string - New markup for menu
+     */
 
     public function addSocialIconsToMenu($items, $args = null)
     {
@@ -45,6 +50,11 @@ class Filters
         return $items ."</ul>";
     }
 
+    /**
+     * Force the setting of jumbo header whatever the selected header is.
+     * @return void
+     */
+
     public function forceJumboHeader($value, $postId, $field)
     {
         if ($postId != 'option' && $postId != 'options') {
@@ -52,6 +62,11 @@ class Filters
         }
         return 'jumbo';
     }
+
+    /**
+     * Append class to the header that removes the js-overlay functionality.
+     * @return array - Containing view data
+     */
 
     public function filterHbgBladeData($data)
     {

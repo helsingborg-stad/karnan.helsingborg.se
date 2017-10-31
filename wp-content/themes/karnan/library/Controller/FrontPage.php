@@ -37,6 +37,11 @@ class FrontPage extends \Municipio\Controller\BaseController
         }
     }
 
+    /**
+     * Gets the permalink of the page with virtual-section template (first page in structure)
+     * @return mixed [bool, string]
+     */
+
     public function getVirtualGuideLink()
     {
         $page_id =  $this->db->get_var(
@@ -49,6 +54,13 @@ class FrontPage extends \Municipio\Controller\BaseController
 
         return false;
     }
+
+    /**
+     * Creates a local copy of the global instance
+     * @param string $global The name of global varable that should be made local
+     * @param string $local Handle the global with the name of this string locally
+     * @return void
+     */
 
     public function globalToLocal($global, $local = null)
     {
