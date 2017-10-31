@@ -6,8 +6,13 @@ class Filters
 {
     public function __construct()
     {
+
+        // Social media icons
         add_filter('wp_nav_menu_items', array($this, 'addSocialIconsToMenu'), 10, 2);
         add_filter('Municipio/main_menu/items', array($this, 'addSocialIconsToMenu'), 10, 2);
+
+        //Heeader styling
+        add_filter('acf/load_value/name=header_layout', array($this, 'forceJumboHeader'), 10, 3);
     }
 
     public function addSocialIconsToMenu($items, $args = null)
@@ -35,5 +40,13 @@ class Filters
         }
 
         return $items ."</ul>";
+    }
+
+    public function forceJumboHeader($value, $postId, $field)
+    {
+        if ($postId != 'option' && $postId != 'options') {
+            return $value;
+        }
+        return 'jumbo';
     }
 }
