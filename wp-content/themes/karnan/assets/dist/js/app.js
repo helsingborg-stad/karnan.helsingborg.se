@@ -1825,11 +1825,14 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
             sectionName : "section-name",
             scrollSpeed: scrollSpeed,
             before: function(index, sections) {
-                $(".container", "section").not(":eq(" + index + ")").addClass('fade-out-bck').removeClass('fade-in-fwd');
-                $(".container", "section:eq(" + index + ")").addClass('fade-in-fwd').removeClass('fade-out-bck');
+                $(".container", "section").not(":eq(" + index + ")").addClass('fade-out-bck');
+                $(".container", "section:eq(" + index + ")").removeClass('fade-out-bck').addClass('fade-in-fwd');
                 $(document).trigger('scrollifyStart', [index, sections, scrollSpeed, 'virtual']);
             }.bind(this),
             after: function(index, sections) {
+                setTimeout(function() {
+                    $(".container", "section:eq(" + index + ")").removeClass('fade-in-fwd');
+                }, 800);
                 $(document).trigger('scrollifyStop', [index, sections, scrollSpeed, 'virtual']);
             }.bind(this)
         });
