@@ -1814,7 +1814,6 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
                 $(document).trigger('scrollifyStop', [index, sections, scrollSpeed, 'onepage']);
             }.bind(this)
         });
-
     }
 
     ScrollSnapping.prototype.VirtualSections = function () {
@@ -1826,8 +1825,8 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
             sectionName : "section-name",
             scrollSpeed: scrollSpeed,
             before: function(index, sections) {
-                $(".container", "section").not(":eq(" + index + ")").fadeOut(100);
-                $(".container", "section:eq(" + index + ")").fadeIn(800);
+                $(".container", "section").not(":eq(" + index + ")").addClass('fade-out-bck').removeClass('fade-in-fwd');
+                $(".container", "section:eq(" + index + ")").addClass('fade-in-fwd').removeClass('fade-out-bck');
                 $(document).trigger('scrollifyStart', [index, sections, scrollSpeed, 'virtual']);
             }.bind(this),
             after: function(index, sections) {
