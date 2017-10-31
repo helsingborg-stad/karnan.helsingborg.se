@@ -35,7 +35,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
 
     ScrollSnapping.prototype.VirtualSections = function () {
 
-        var scrollSpeed = 550;
+        var scrollSpeed = 800;
 
         $.scrollify({
             section : ".virtual-section",
