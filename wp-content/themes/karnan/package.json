@@ -11,6 +11,7 @@
     "jquery.stellar": "^0.6.2"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.13",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-concat": "^2.6.1",
@@ -19,6 +20,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^1.5.4",
     "imagemin-pngquant": "^4.2.0"
   },

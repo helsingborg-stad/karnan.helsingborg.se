@@ -16,9 +16,11 @@ var node_modules = 'node_modules/';
 // Compile Our Sass
 gulp.task('sass-dist', function() {
     return gulp.src('assets/source/sass/app.scss')
+            .pipe(sourcemaps.init())
             .pipe(sass())
             .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
             .pipe(rename({suffix: '.min'}))
+            .pipe(sourcemaps.write())
             .pipe(cssnano({
                 mergeLonghand: false,
                 zindex: false
@@ -73,4 +75,5 @@ gulp.task('browser-sync', function() {
 gulp.task('watch-live', ['browser-sync'], function () {
     gulp.watch('assets/source/js/**/*.js', ['scripts-dist', browserSync.reload]);
     gulp.watch('assets/source/sass/**/*.scss', ['sass-dist', 'sass-dev']);
+    gulp.watch('**/*.php', browserSync.reload);
 });
