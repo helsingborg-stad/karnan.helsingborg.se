@@ -1,10 +1,25 @@
-<?php global $post; ?>
+<?php
+    global $post;
+    $gallery = \Karnan\Controller\SingleEvent::getAttachedImages($post->ID);
+?>
 @extends('templates.master')
-
 @section('content')
-<div class="hero" style="height: 300px; background-image:url('https://unsplash.it/1200/800/?image=513');">
-@include ('partials/stripe')
-</div>
+@if($gallery)
+    <div class="slider ratio-36-7 slider-layout-default">
+        <div data-flickity='{"cellSelector": ".slide", "cellAlign": "center", "wrapAround": true, "pageDots": true, "freeScroll": false, "groupCells": false, "setGallerySize": false, "prevNextButtons": false}' class="flickity-enabled is-draggable" tabindex="0">
+            <div class="flickity-viewport">
+                <div class="flickity-slider">
+                    @foreach($gallery as $image)
+                        <div class="slide type-image">
+                            <div class="slider-image" style="background-image:url({{ $image[0] }})"></div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
+@include('partials/stripe')
 
 <div class="container main-container">
     <div class="grid event-single">
