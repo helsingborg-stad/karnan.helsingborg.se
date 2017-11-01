@@ -1,6 +1,9 @@
 @import 'config';
 @import 'master';
 
+/* Mixins */
+@import 'mixin/positioning';
+
 /* Animations */
 @import 'animation/fadein';
 @import 'animation/fadeout';
@@ -13,6 +16,7 @@
     @import 'component/virtual-section';
 	@import 'component/timeline';
     @import 'component/event';
+    @import 'component/search';
 
     @import 'component/one-page-scroll-action';
     @import 'component/one-page-parallax';
