@@ -11,11 +11,28 @@ class Filters
         add_filter('wp_nav_menu_items', array($this, 'addSocialIconsToMenu'), 20, 2);
         add_filter('Municipio/main_menu/items', array($this, 'addSocialIconsToMenu'), 10, 2);
 
+        // Nav tooltip
+        add_filter('wp_nav_menu_items', array($this, 'navigationTooltip'), 15, 2);
+
         //Heeader styling
         add_filter('acf/load_value/name=header_layout', array($this, 'forceJumboHeader'), 10, 3);
 
         //Filter header data
         add_filter('HbgBlade/data', array($this, 'filterHbgBladeData'), 10, 1);
+    }
+
+    /**
+     * Set tooltip top for nav items
+     * @param  string   $items  The HTML list content for the menu items
+     * @param  stdClass $args   An object containing wp_nav_menu() arguments
+     * @return string           Modified nav string
+     */
+    public function navigationTooltip($items, $args = null)
+    {
+        $pattern = '/(data-tooltip="[^"]+")/i';
+        $items = preg_replace($pattern, '$1 data-tooltip-top ', $items);
+
+        return $items;
     }
 
     /**
