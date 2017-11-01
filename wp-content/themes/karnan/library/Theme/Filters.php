@@ -8,7 +8,7 @@ class Filters
     {
 
         // Social media icons
-        add_filter('wp_nav_menu_items', array($this, 'addSocialIconsToMenu'), 10, 2);
+        add_filter('wp_nav_menu_items', array($this, 'addSocialIconsToMenu'), 20, 2);
         add_filter('Municipio/main_menu/items', array($this, 'addSocialIconsToMenu'), 10, 2);
 
         //Heeader styling
