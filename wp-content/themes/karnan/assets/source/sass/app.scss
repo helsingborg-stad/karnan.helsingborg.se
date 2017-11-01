@@ -1,6 +1,10 @@
 @import 'config';
 @import 'master';
 
+/* Animations */
+@import 'animation/fadein';
+@import 'animation/fadeout';
+
 .is-child-theme {
 	@import 'layout/header';
 
