@@ -10,6 +10,7 @@
 
 .is-child-theme {
 	@import 'layout/header';
+    @import 'layout/mobilemenu';
 
     @import 'component/stripe';
     @import 'component/tooltip';
