@@ -14,12 +14,6 @@
         }
     }
 
-    li + li {
-        @media #{$screen-md-up} {
-            padding-left: 14px;
-        }
-    }
-
     .menu-item-search {
         float: none;
     }
@@ -32,6 +26,16 @@
 
         @media #{$screen-xl-up} {
              width: 25px;
+        }
+    }
+}
+
+.header-jumbo {
+    .logotype {
+        svg {
+            max-width: 100% !important;
+            height: auto !important;
+            max-height: 50px;
         }
     }
 }
