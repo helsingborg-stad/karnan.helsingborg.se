@@ -11,6 +11,7 @@
 .is-child-theme {
 	@import 'layout/header';
     @import 'layout/mobilemenu';
+    @import 'layout/mainmenu';
 
     @import 'component/stripe';
     @import 'component/tooltip';
