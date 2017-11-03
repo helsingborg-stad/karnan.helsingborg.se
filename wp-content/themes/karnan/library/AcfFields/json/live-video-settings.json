@@ -1,0 +1,41 @@
+[{
+    "key": "group_59fc5d9c59512",
+    "title": "Youtube Live Video",
+    "fields": [
+        {
+            "key": "field_59fc5defae4f9",
+            "label": "Youtube live video url (full share url)",
+            "name": "youtube_live_video_url",
+            "type": "url",
+            "value": null,
+            "instructions": "A live feed url from the top of the tower",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/youtube.com\/yourvieoid"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-karnan"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": ""
+}]
+
