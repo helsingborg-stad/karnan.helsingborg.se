@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kärnan in Helsingborg\n"
-"POT-Creation-Date: 2017-10-30 09:03+0100\n"
-"PO-Revision-Date: 2017-10-30 09:03+0100\n"
+"POT-Creation-Date: 2017-11-03 13:36+0100\n"
+"PO-Revision-Date: 2017-11-03 13:39+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -20,55 +20,91 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
+#: library/AcfFields/php/live-video-settings.php:6
+msgid "Youtube Live Video"
+msgstr "Youtube livefeed"
+
+#: library/AcfFields/php/live-video-settings.php:10
+msgid "Youtube live video url (full share url)"
+msgstr "Youtube live feed url (hela adressen med https://)"
+
+#: library/AcfFields/php/live-video-settings.php:14
+msgid "A live feed url from the top of the tower"
+msgstr "En live youtubeström från toppen av tornet"
+
+#: library/AcfFields/php/live-video-settings.php:23
+msgid "https://youtube.com/yourvieoid"
+msgstr "https://youtube.com/videoid"
+
+#: library/AcfFields/php/social-settings.php:6
+msgid "Social icons"
+msgstr "Sociala ikoner"
+
+#: library/AcfFields/php/social-settings.php:10
+msgid "Social icons in menu"
+msgstr "Sociala ikoner i meny"
+
+#: library/AcfFields/php/social-settings.php:26
+msgid "Lägg till rad"
+msgstr ""
+
+#: library/AcfFields/php/social-settings.php:30
+msgid "SVG Icon"
+msgstr "Ikon i svg format"
+
+#: library/AcfFields/php/social-settings.php:55
+msgid "Tooltip"
+msgstr "Beskrivning"
+
+#: library/AcfFields/php/social-settings.php:75
+msgid "Link"
+msgstr "Länk"
+
 #: library/AcfFields/php/theme-settings.php:6 library/Admin/ThemeOptions.php:24
 msgid "Kärnan options"
 msgstr "Kärnan inställningar"
 
 #: library/AcfFields/php/theme-settings.php:10
-msgid "Sections"
-msgstr "Sektioner"
+msgid "Sektioner"
+msgstr ""
 
-#: library/AcfFields/php/theme-settings.php:29
+#: library/AcfFields/php/theme-settings.php:30
 msgid "Section title"
 msgstr "Sektionens titel"
 
-#: library/AcfFields/php/theme-settings.php:48
+#: library/AcfFields/php/theme-settings.php:50
 msgid "Content"
 msgstr "Innehåll"
 
-#: library/AcfFields/php/theme-settings.php:67
+#: library/AcfFields/php/theme-settings.php:70
+msgid "Content - Virtual Guide"
+msgstr "Innehåll i virtuell guide"
+
+#: library/AcfFields/php/theme-settings.php:90
 msgid "Height indicator"
 msgstr "Höjdindikator"
 
-#: library/AcfFields/php/theme-settings.php:88
+#: library/AcfFields/php/theme-settings.php:112
 msgid "Google maps URL"
 msgstr "Google karta webbadress"
 
-#: library/AcfFields/php/theme-settings.php:104
+#: library/AcfFields/php/theme-settings.php:129
 msgid "Soundcloud"
 msgstr ""
 
-#: library/AcfFields/php/theme-settings.php:107
+#: library/AcfFields/php/theme-settings.php:133
 msgid "Iframe script"
 msgstr "Inbäddningsscript"
 
-#: library/AcfFields/php/theme-settings.php:123
+#: library/AcfFields/php/theme-settings.php:149
 msgid "Section image"
 msgstr "Sektionens bild"
 
-#: library/AcfFields/php/theme-settings.php:126
-msgid "Full overview"
-msgstr "Översiktsvy"
-
-#: library/AcfFields/php/theme-settings.php:142
+#: library/AcfFields/php/theme-settings.php:169
 msgid "Section image (part)"
 msgstr "Sektionsbild"
 
-#: library/AcfFields/php/theme-settings.php:145
-msgid "Section part"
-msgstr "Sektion"
-
-#: library/AcfFields/php/theme-settings.php:161
+#: library/AcfFields/php/theme-settings.php:189
 msgid "Gallery"
 msgstr "Galleri"
 
@@ -76,7 +112,7 @@ msgstr "Galleri"
 msgid "Kärnan"
 msgstr ""
 
-#: library/Theme/Template.php:10
+#: library/Theme/Template.php:11
 msgid "Virtual sections"
 msgstr "Virtuella sektioner"
 
@@ -84,13 +120,18 @@ msgstr "Virtuella sektioner"
 msgid "No posts to show"
 msgstr "Inga inlägg att visa"
 
-#: views/front-page.blade.php:30
-msgid "Show the virual guide"
-msgstr "Följ med in - virtuell guide"
-
+#: views/front-page.blade.php:28 views/front-page.blade.php:35
 #: views/partials/one-page/elevator.blade.php:8
 msgid "m"
 msgstr "m"
+
+#: views/front-page.blade.php:41
+msgid "Show the virual guide"
+msgstr "Följ med in - virtuell guide"
+
+#: views/partials/header.blade.php:31
+msgid "More"
+msgstr "Visa mer"
 
 #: views/partials/one-page/scroll-down.blade.php:2
 msgid "Go down"
@@ -100,13 +141,14 @@ msgstr "Gå ner"
 msgid "Go up"
 msgstr "Gå upp"
 
-#: views/partials/virtual/content.blade.php:11
-msgid "Open virtual map"
-msgstr "Öppna virtuell karta"
-
-#: views/partials/virtual/content.blade.php:22
+#: views/partials/search/top-search.blade.php:6
+#: views/partials/virtual/content.blade.php:23
 msgid "Close"
 msgstr "Stäng"
+
+#: views/partials/virtual/content.blade.php:12
+msgid "Open virtual map"
+msgstr "Öppna virtuell karta"
 
 #. Theme Name of the plugin/theme
 msgid "Kärnan in Helsingborg"
@@ -123,6 +165,15 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://github.com/helsingborg-stad/karnan/"
 msgstr ""
+
+#~ msgid "Sections"
+#~ msgstr "Sektioner"
+
+#~ msgid "Full overview"
+#~ msgstr "Översiktsvy"
+
+#~ msgid "Section part"
+#~ msgstr "Sektion"
 
 #~ msgid "Hang on - Show the virual guide"
 #~ msgstr "Följ med in - Visa virtuell guide"

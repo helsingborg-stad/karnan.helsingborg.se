@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_59e86b9c72989",
-            "label": "Sections",
+            "label": "Sektioner",
             "name": "karnan_sections",
             "type": "repeater",
             "value": null,
@@ -60,6 +60,26 @@
                     "tabs": "all",
                     "toolbar": "basic",
                     "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_59fc603fdca4f",
+                    "label": "Content - Virtual Guide",
+                    "name": "content_guide",
+                    "type": "wysiwyg",
+                    "value": null,
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
                     "delay": 0
                 },
                 {

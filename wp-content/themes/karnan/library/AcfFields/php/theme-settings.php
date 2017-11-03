@@ -7,7 +7,7 @@
     'fields' => array(
         0 => array(
             'key' => 'field_59e86b9c72989',
-            'label' => __('Sections', 'karnan'),
+            'label' => __('Sektioner', 'karnan'),
             'name' => 'karnan_sections',
             'type' => 'repeater',
             'value' => NULL,
@@ -66,6 +66,26 @@
                     'delay' => 0,
                 ),
                 2 => array(
+                    'key' => 'field_59fc603fdca4f',
+                    'label' => __('Content - Virtual Guide', 'karnan'),
+                    'name' => 'content_guide',
+                    'type' => 'wysiwyg',
+                    'value' => NULL,
+                    'instructions' => '',
+                    'required' => 1,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'default_value' => '',
+                    'tabs' => 'all',
+                    'toolbar' => 'full',
+                    'media_upload' => 0,
+                    'delay' => 0,
+                ),
+                3 => array(
                     'key' => 'field_59e86decb571d',
                     'label' => __('Height indicator', 'karnan'),
                     'name' => 'height_indicator',
@@ -87,7 +107,7 @@
                     'max' => '',
                     'step' => '',
                 ),
-                3 => array(
+                4 => array(
                     'key' => 'field_59e86e9021927',
                     'label' => __('Google maps URL', 'karnan'),
                     'name' => 'google_maps',
@@ -104,7 +124,7 @@
                     'default_value' => '',
                     'placeholder' => '',
                 ),
-                4 => array(
+                5 => array(
                     'key' => 'field_59e86eb921928',
                     'label' => __('Soundcloud', 'karnan'),
                     'name' => 'soundcloud',
@@ -124,7 +144,7 @@
                     'rows' => 4,
                     'new_lines' => 'wpautop',
                 ),
-                5 => array(
+                6 => array(
                     'key' => 'field_59e86ecd21929',
                     'label' => __('Section image', 'karnan'),
                     'name' => 'section_image',
@@ -144,7 +164,7 @@
                     'max_size' => '',
                     'mime_types' => 'jpg, jpeg, gif, png',
                 ),
-                6 => array(
+                7 => array(
                     'key' => 'field_59fc1e2738a67',
                     'label' => __('Section image (part)', 'karnan'),
                     'name' => 'section_image_part',
@@ -164,7 +184,7 @@
                     'max_size' => '',
                     'mime_types' => 'jpg, jpeg, gif, png',
                 ),
-                7 => array(
+                8 => array(
                     'key' => 'field_59e86f909b9d9',
                     'label' => __('Gallery', 'karnan'),
                     'name' => 'gallery',
