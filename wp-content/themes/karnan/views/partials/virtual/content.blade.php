@@ -3,7 +3,7 @@
 		<div class="grid-md-12">
 			<article>
 		        <h2>{{ $section['section_title'] }}</h2>
-		        {!! $section['content'] !!}
+		        {!! $section['content_guide'] !!}
 		    </article>
 		</div>
 
