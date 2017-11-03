@@ -62,7 +62,7 @@
                     'default_value' => '',
                     'tabs' => 'all',
                     'toolbar' => 'basic',
-                    'media_upload' => 1,
+                    'media_upload' => 0,
                     'delay' => 0,
                 ),
                 2 => array(
