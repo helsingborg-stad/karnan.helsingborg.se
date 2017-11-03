@@ -13,7 +13,7 @@
 
     <div id="inner">
         @if(is_array($sections) && !empty($sections))
-            @foreach ($sections as $section)
+            @foreach ($sections as $key => $section)
                 <section data-section-name="{{ sanitize_title($section['section_title']) }}" class="onepage-section" style="background-image: url('{{ $section['background'] }}');" >
                     <div class="container">
                         <div class="grid">
@@ -40,6 +40,10 @@
                                         <p>
                                             <a href="{{ $virtualGuidePage }}#{{ sanitize_title($section['section_title']) }}" class="h2 virtual-guide"><?php _e("Show the virual guide", 'karnan'); ?> <i class="pricon pricon-chevron-right"></i></a>
                                         </p>
+
+                                        @if($key == 0 )
+                                            @include ('partials/one-page/live')
+                                        @endif
                                     </div>
                                 </article>
                             </div>

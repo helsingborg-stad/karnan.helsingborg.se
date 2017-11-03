@@ -12,6 +12,9 @@ class FrontPage extends \Municipio\Controller\BaseController
         //Define global as local value
         $this->globalToLocal("wpdb", "db");
 
+        //Get youtube live feed
+        $this->data['live'] = !empty(get_field('youtube_live_video_url', 'option')) ? $this->getYoutubeId(get_field('youtube_live_video_url', 'option')) : null;
+
         //Get entered details
         $this->data['sections'] = is_array(get_field('karnan_sections', 'option')) ? get_field('karnan_sections', 'option') : array();
 
@@ -50,6 +53,21 @@ class FrontPage extends \Municipio\Controller\BaseController
 
         if (is_numeric($page_id) && $permalink = get_permalink($page_id)) {
             return $permalink;
+        }
+
+        return false;
+    }
+
+    /**
+     * Parses a youtube url to get the id from it
+     * @param string $youtubeurl A url to a youtube video
+     * @return mixed [bool, string]
+     */
+
+    public function getYoutubeId($youtubeurl)
+    {
+        if (preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $url, $match)) {
+            return isset($match[1]) ? $match[1] : false;
         }
 
         return false;
