@@ -9,16 +9,6 @@ deny from 5.188.211.170
 deny from 46.161.14.99
 </Files>
 
-# Redirect kärnan domain
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{HTTP_HOST} ^xn--krnan-gra.se$ [OR]
-  RewriteCond %{HTTP_HOST} ^www.xn--krnan-gra.se$ [OR]
-  RewriteCond %{HTTP_HOST} ^kärnan.se$ [OR]
-  RewriteCond %{HTTP_HOST} ^www.kärnan.se$
-  RewriteRule (.*)$ https://karnan.se/$1 [R=301,L]
-</IfModule>
-
 # Force use of SSL (SERVER)
 <IfModule mod_rewrite.c>
   RewriteEngine On
