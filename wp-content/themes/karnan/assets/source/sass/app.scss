@@ -7,6 +7,7 @@
 /* Animations */
 @import 'animation/fadein';
 @import 'animation/fadeout';
+@import 'animation/animate';
 
 .is-child-theme {
 	@import 'layout/header';
@@ -16,6 +17,7 @@
     @import 'component/stripe';
     @import 'component/tooltip';
     @import 'component/virtual-section';
+    @import 'component/modularity-section';
 	@import 'component/timeline';
     @import 'component/event';
     @import 'component/search';
