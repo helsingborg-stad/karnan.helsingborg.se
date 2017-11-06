@@ -19,6 +19,25 @@ class Filters
 
         //Filter header data
         add_filter('HbgBlade/data', array($this, 'filterHbgBladeData'), 10, 1);
+
+        //Set custom classes to timeline module
+        add_filter('Modularity/Module/Classes', array($this, 'timelineClasses'), 10, 3);
+    }
+
+    /**
+     * Set custom classes to timeline module
+     * @param  array $classes      The classes (array)
+     * @param  string $moduleType  The module type
+     * @param  array $sidebarArgs  The sidebar's args
+     * @return array               Modified array of classes
+     */
+    public function timelineClasses($classes, $moduleType, $sidebarArgs)
+    {
+        if ($moduleType == 'mod-timeline') {
+            $classes[] = 'animate';
+        }
+
+        return $classes;
     }
 
     /**
