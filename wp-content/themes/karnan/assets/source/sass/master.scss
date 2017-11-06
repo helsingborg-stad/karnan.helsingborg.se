@@ -7,12 +7,6 @@ body {
     min-height: 100vh;
     padding-bottom: 70px;
 
-    &[class*="one-page"] {
-        .section-featured .section-image img[src$=".svg"], .section-featured .section-image svg  {
-             max-width: 200px !important;
-        }
-    }
-
     @media #{$screen-sm-up} {
         &[class*="virtual-section"] {
             margin-left: 80px;

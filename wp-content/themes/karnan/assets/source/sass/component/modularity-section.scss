@@ -1,0 +1,12 @@
+div[class*="modularity-mod-section"] {
+    .section-featured .section-image img[src$=".svg"], .section-featured .section-image svg  {
+         max-width: 200px !important;
+    }
+
+	.opening-hours {
+		padding: 1em;
+		text-align: center;
+		font-size: 20px !important;
+		color: $white;
+	}
+}
