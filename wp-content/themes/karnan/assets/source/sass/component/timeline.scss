@@ -1,11 +1,6 @@
 .modularity-mod-timeline {
     margin-top: 2em;
 
-    .box-panel, .box-content  {
-        box-shadow: none !important;
-        border: none !important;
-    }
-
     .timeline-date {
         @media screen and (min-width: 769px) {
             font-weight: 700;
