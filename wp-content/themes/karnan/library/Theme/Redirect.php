@@ -17,6 +17,10 @@ class Redirect
 
     public function redirectToBottomSection()
     {
+        if (!is_front_page() && !is_post_type_archive('virtual-section')) {
+            return;
+        }
+
         echo '
         <script>
             if (window.location.hash == "") {
@@ -33,6 +37,11 @@ class Redirect
 
     public function addAnchorLink()
     {
+
+        if (!is_front_page() && !is_post_type_archive('virtual-section')) {
+            return;
+        }
+
         echo '<a name="start"></a>';
     }
 }
