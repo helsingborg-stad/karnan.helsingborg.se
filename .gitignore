@@ -18,6 +18,10 @@ wp-content/*
 !wp-content/object-cache.php
 composer.lock
 
+# Site dependencies #
+##########################
+!wp-content/sunrise.php
+
 # Themes dependencies #
 ##########################
 wp-content/themes/*

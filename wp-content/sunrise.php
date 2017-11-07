@@ -13,13 +13,13 @@ class punyCodeRedirect
 {
     public function __construct()
     {
-        add_filter('muplugins_loaded', array($this, 'redirectToNonPunycode'), 50);
+        $this->redirectToNonPunycode();
     }
 
     public function redirectToNonPunycode()
     {
-        if (strpos($_SERVER['HTTP_HOST'], "xn--krnan-gra") !== false) {
-            header("Location: https://kärnan.se" . $_SERVER['REQUEST_URI']);
+        if (preg_match("/xn--krnan-gra.se/i", $_SERVER['HTTP_HOST'])) {
+            header("Location: https://karnan.se" . $_SERVER['REQUEST_URI']);
             exit;
         }
     }
