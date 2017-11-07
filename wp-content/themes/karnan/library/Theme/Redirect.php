@@ -17,10 +17,14 @@ class Redirect
 
     public function redirectToBottomSection()
     {
+        if (!is_front_page() && !is_post_type_archive('virtual-section')) {
+            return;
+        }
+
         echo '
         <script>
             if (window.location.hash == "") {
-                window.location.hash = "start";
+                window.location.hash = "r";
             }
         </script>
         ';
@@ -33,6 +37,11 @@ class Redirect
 
     public function addAnchorLink()
     {
-        echo '<a name="start"></a>';
+
+        if (!is_front_page() && !is_post_type_archive('virtual-section')) {
+            return;
+        }
+
+        echo '<a name="r"></a>';
     }
 }
