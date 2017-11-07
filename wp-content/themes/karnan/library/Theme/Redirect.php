@@ -17,13 +17,18 @@ class Redirect
 
     public function redirectToBottomSection()
     {
-        echo '
-        <script>
-            if (window.location.hash == "") {
-                window.location.hash = "start";
-            }
-        </script>
-        ';
+        global $post;
+        $template = get_page_template_slug($post->ID);
+
+        if (is_front_page() ||strpos($template, 'virtual') !== false) {
+            echo '
+            <script>
+                if (window.location.hash == "") {
+                    window.location.hash = "start";
+                }
+            </script>
+            ';
+        }
     }
 
     /**
