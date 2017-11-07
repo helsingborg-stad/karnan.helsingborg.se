@@ -16,31 +16,16 @@
     }
 
     section {
-        height: 100vh;
+        min-height: calc(100vh - 70px);
         width: 100%;
-        display: block;
         position: relative;
         background-position: center;
         background-size: auto 100%;
         background-repeat: no-repeat;
-
-        @media #{$screen-xs} {
-            min-height: 100vh;
-        }
-
-        @media #{$screen-sm} {
-            min-height: 100vh;
-        }
     }
 
     section + section {
         margin-top: 0;
-    }
-
-    section .container {
-        @media #{$screen-sm-up} {
-            padding-left: 100px;
-        }
     }
 
     section > .container > .grid > [class*=" grid-"] {
@@ -48,24 +33,71 @@
         margin-right: auto;
     }
 
+    .layer-karnan {
+        transition: transform 500ms ease;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        left: 0;
+        bottom: 0;
+        z-index: $level-bottom;
+        display: block;
+        position: fixed;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .btn {
+        display: none;
+    }
+
+    &.active-section-3 .layer-karnan {
+        transform: translateY(10%);
+    }
+
+    &.active-section-2 .layer-karnan {
+        transform: translateY(40%);
+    }
+
+    &.active-section-1 .layer-karnan {
+        transform: translateY(65%);
+    }
+
+    &.active-section-0 .layer-karnan {
+        transform: translateY(85%);
+    }
+
+    .onepage-section .container {
+        transition: opacity 500ms ease-in;
+        transition-delay: 300ms;
+        opacity: 0;
+    }
+
+    .onepage-section.active-section .container {
+        opacity: 1;
+    }
+
+    #inner {
+        @media screen and #{$screen-md-up} {
+            padding-left: 100px;
+        }
+    }
+
+    #inner .onepage-section {
+        position: relative;
+        z-index: $level-1;
+        -webkit-transform: translate3d(0, 0, 0);
+        overflow: hidden;
+    }
+
     article {
         border-radius: 0;
         z-index: $level-4;
         margin-left: auto;
         margin-right: auto;
-        background-color: rgba($palette-4, .85);
-        backdrop-filter: blur(2px);
-        -webkit-backdrop-filter: blur(2px);
-        max-height: 90vh;
         overflow: auto;
-
-        @media #{$screen-sm-up} {
-            min-height: 400px;
-        }
-
-        @media #{$screen-sm-up} {
-            padding-left: 60px;
-        }
 
         h1, h2, h3, h4, h5, h6 {
             color: #fff;
@@ -82,7 +114,7 @@
         }
 
         &.animated {
-            animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
         }
 
         .box-content {

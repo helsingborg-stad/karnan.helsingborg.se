@@ -8,7 +8,7 @@ $border-size: 3px;
     right: auto;
     bottom: 70px;
     left: 10px;
-    max-width: 100px;
+    width: 100px;
     background: rgba(#fff, 0.5);
     display: flex;
     flex-direction: column;
@@ -30,6 +30,7 @@ $border-size: 3px;
         flex-grow: 1;
         display: flex;
         align-items: center;
+        justify-content: center;
         position: relative;
 
         &.active {
@@ -43,14 +44,18 @@ $border-size: 3px;
         }
 
         a {
-            display: table-cell;
+            display: flex;
+            align-items: center;
             line-height: $dot-size;
             text-decoration: none;
             font-weight: bold;
             color: $palette-2;
             vertical-align: middle;
             height: 100%;
-            padding: 0 ($grid-gutter-md / 2);
+
+            span.height-indicator {
+                margin-left: .2em;
+            }
         }
 
         .blipper-disabled,

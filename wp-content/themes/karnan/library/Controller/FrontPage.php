@@ -28,7 +28,7 @@ class FrontPage extends \Municipio\Controller\BaseController
         //Create alternative span-wrapped title
         if (is_array($this->data['sections']) && !empty($this->data['sections'])) {
             foreach ($this->data['sections'] as $key => &$section) {
-                $section['section_title_span'] = '<span class="first-word">' . preg_replace('/ /', '</span> ', $section['section_title'] . " ", 1);
+                $section['section_title_span'] = '<span class="bolder">' . preg_replace('/ /', '</span> ', $section['section_title'] . " ", 1);
             }
         }
 

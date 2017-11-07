@@ -1,17 +1,26 @@
+/* Flex stripes */
 .stripe {
-    position: fixed;
+    display: flex;
+    flex-direction: column;
 
-    div {
-    	height: calc((100vh - #{$nav-height}) / 5);
+    > div {
+        height: auto;
+        flex-grow: 1;
+    }
+
+    padding-bottom: 50px;
+
+    @media screen and #{$screen-md-up} {
+        padding-bottom: 70px;
     }
 }
 
+.stripe {
+    position: fixed;
+}
 
 &.admin-bar {
     .stripe {
         margin-top: $admin-bar-height;
-        div {
-            height: calc((100vh - #{$nav-height} - #{$admin-bar-height}) / 5);
-        }
     }
 }
