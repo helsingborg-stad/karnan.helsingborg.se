@@ -7,18 +7,22 @@
 @include ('partials/one-page/scroll-up')
 
 <div id="one-page-content" class="parallax-enabled">
+    <!--
     <div id="parallax-level-1" data-stellar-ratio="0.1"></div>
     <div id="parallax-level-2" data-stellar-ratio="1"></div>
     <div id="parallax-level-3" data-stellar-ratio="1.8"></div>
+    -->
+
+    <div class="layer-karnan"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/image/karnan-full-with-grass.png"></div>
 
     <div id="inner">
         @if(is_array($sections) && !empty($sections))
             @foreach ($sections as $key => $section)
-                <section data-section-name="{{ sanitize_title($section['section_title']) }}" class="onepage-section" style="background-image: url('{{ $section['background'] }}');" >
-                    <div class="container">
+                <section data-section-name="{{ sanitize_title($section['section_title']) }}" class="onepage-section">
+                    <div class="flex v-center full-height">
+                        <div class="container full-width">
                         <div class="grid">
-                            <div class="grid-xs-12 grid-md-10 grid-lg-8">
-
+                            <div class="grid-xs-12 grid-md-12">
                                 <article class="box box-filled box-filled-4 animate">
                                     <span class="label hidden-xs">
                                         <span class="inner">
@@ -49,6 +53,8 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+
                 </section>
             @endforeach
         @endif
