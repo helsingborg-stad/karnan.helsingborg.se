@@ -153,9 +153,16 @@
         }
     }
 
+    .layer-karnan {
+        background-image: url('../../image/karnan/png/karnan-full-with-grass_400.png');
 
-
-
+        $size-list: 600 800 1000 1200 1400 1600;
+        @each $current-size in $size-list {
+            @media (min-width: #{$current-size}px) {
+                background-image: url('../../image/karnan/png/karnan-full-with-grass_#{$current-size}.png');
+            }
+        }
+    }
 
     &.active-section-4 {
         .layer-karnan {
