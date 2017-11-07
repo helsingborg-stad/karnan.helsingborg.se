@@ -18,7 +18,7 @@
     <div id="inner">
         @if(is_array($sections) && !empty($sections))
             @foreach ($sections as $key => $section)
-                <section data-section-name="{{ sanitize_title($section['section_title']) }}" class="onepage-section">
+                <section data-section-name="{{ sanitize_title($section['section_title']) }}" class="onepage-section fluid-type">
                     <div class="flex v-center full-height">
                         <div class="container full-width">
                         <div class="grid">

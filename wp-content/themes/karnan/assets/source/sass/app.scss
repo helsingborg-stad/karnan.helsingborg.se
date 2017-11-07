@@ -13,6 +13,8 @@
 .is-child-theme {
     @import 'utility/flex';
 
+    @import 'typography/fluid-type';
+
 	@import 'layout/header';
     @import 'layout/mobilemenu';
     @import 'layout/mainmenu';
