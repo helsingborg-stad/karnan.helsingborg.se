@@ -1,0 +1,45 @@
+.fluid-type {
+    $map: ($screen-xs-max: 12px, $screen-lg-max: 19px);
+
+    @include poly-fluid-sizing("font-size", $map);
+
+    p {
+        font-size: 1em;
+
+        @media only screen and #{$screen-below-md} and (orientation: landscape) {
+            font-size: 0.5em;
+        }
+    }
+
+    h1 {}
+
+    h2 {
+        font-weight: 400;
+        font-size: 2em;
+        margin-top: 0;
+        padding-bottom: .25em;
+    }
+
+    h3 {}
+
+    h4 {}
+
+    .bolder {
+        font-weight: 600;
+    }
+
+    .btn i {
+        line-height: 1;
+        font-size: 1em;
+    }
+
+    .container-fixed-fluid {
+        width: 90%;
+        max-width: 50em;
+        margin: auto;
+        max-height: 80vh;
+        overflow: hidden;
+    }
+}
+
+
