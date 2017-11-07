@@ -80,6 +80,8 @@
     }
 
     #inner {
+        @include overlay($palette-4, 0.8);
+
         @media screen and #{$screen-md-up} {
             padding-left: 100px;
         }
@@ -99,6 +101,7 @@
         margin-right: auto;
         overflow: auto;
 
+        color: white;
         h1, h2, h3, h4, h5, h6 {
             color: #fff;
         }
