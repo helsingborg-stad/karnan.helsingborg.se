@@ -24,7 +24,7 @@ class Redirect
         echo '
         <script>
             if (window.location.hash == "") {
-                window.location.hash = "start";
+                window.location.hash = "r";
             }
         </script>
         ';
@@ -42,6 +42,6 @@ class Redirect
             return;
         }
 
-        echo '<a name="start"></a>';
+        echo '<a name="r"></a>';
     }
 }
