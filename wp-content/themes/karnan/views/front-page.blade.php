@@ -23,31 +23,16 @@
                         <div class="container full-width">
                         <div class="grid">
                             <div class="grid-xs-12 grid-md-12">
-                                <article class="box box-filled box-filled-4 animate">
-                                    <span class="label hidden-xs">
-                                        <span class="inner">
-                                            {!! $section['section_title_span'] !!}
+                                <article>
+                                    <header>
 
-                                            <span class="hidden-md hidden-lg h5" style="display: inline-block;">
-                                                ({{ $section['height_indicator'] }}<?php _e("m", 'karnan'); ?>)
-                                            </span>
-                                        </span>
-                                    </span>
-                                    <div class="box-content">
-
-                                        <h2 class="hidden-sm hidden-md hidden-lg rendered-header">
-                                            {{ $section['height_indicator'] }}<?php _e("m", 'karnan'); ?> -
-                                            {{ $section['section_title'] }}
-                                        </h2>
-
+                                        <h2>{!! $section['section_title_span'] !!} ({{ $section['height_indicator'] }}<?php _e("m", 'karnan'); ?>)</h2>
+                                    </header>
+                                    <div class="content">
                                         {!! $section['content'] !!}
                                         <p>
                                             <a href="{{ $virtualGuidePage }}#{{ sanitize_title($section['section_title']) }}" class="h2 virtual-guide"><?php _e("Show the virual guide", 'karnan'); ?> <i class="pricon pricon-chevron-right"></i></a>
                                         </p>
-
-                                        @if($key == 0 )
-                                            @include ('partials/one-page/live')
-                                        @endif
                                     </div>
                                 </article>
                             </div>
