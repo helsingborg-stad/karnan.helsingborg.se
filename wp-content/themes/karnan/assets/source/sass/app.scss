@@ -3,12 +3,18 @@
 
 /* Mixins */
 @import 'mixin/positioning';
+@import 'mixin/poly-fluid-sizing';
+@import 'mixin/overlay';
 
 /* Animations */
 @import 'animation/fadein';
 @import 'animation/fadeout';
 
 .is-child-theme {
+    @import 'utility/flex';
+
+    @import 'typography/fluid-type';
+
 	@import 'layout/header';
     @import 'layout/mobilemenu';
     @import 'layout/mainmenu';

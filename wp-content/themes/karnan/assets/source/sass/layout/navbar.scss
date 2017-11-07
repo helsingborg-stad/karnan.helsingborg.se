@@ -1,0 +1,19 @@
+/* Navigation height */
+@media only screen and #{$screen-below-md} {
+    .nav-group-overflow {
+        height: 30px;
+        max-height: 30px;
+    }
+
+    .site-header.header-jumbo .logotype svg, .site-header.header-jumbo .logotype img {
+        height: 30px;
+    }
+
+    .site-header.header-jumbo .menu-trigger {
+        margin-top: 8px;
+    }
+
+    .onepage-section {
+        padding-bottom: 20px;
+    }
+}
