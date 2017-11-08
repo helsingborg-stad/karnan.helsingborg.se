@@ -30,6 +30,10 @@ class Enqueue
     {
         if (file_exists(get_stylesheet_directory() . '/assets/dist/js/app.min.js')) {
             wp_enqueue_script('karnan-js', get_stylesheet_directory_uri(). '/assets/dist/js/app.min.js', '', filemtime(get_stylesheet_directory() . '/assets/dist/js/app.min.js'), true);
+
+            // Set YouTube video ID variable
+            $videoId = !empty(get_field('youtube_live_video_url', 'option')) ? \Karnan\Controller\FrontPage::getYoutubeId(get_field('youtube_live_video_url', 'option')) : '';
+            wp_add_inline_script('karnan-js', 'var videoId = "' . $videoId . '";', 'before' );
         }
     }
 }
