@@ -38,22 +38,23 @@
                             <div class="grid-xs-12 grid-md-12">
                                 <article class="full">
                                     <header>
-                                        <h2>{!! $section['section_title_span'] !!}
-                                            <!--
+                                        <h2>
+                                            {!! $section['section_title_span'] !!}
                                             ({{ $section['height_indicator'] }}<?php _e("m", 'karnan'); ?>)
-                                        -->
                                         </h2>
                                     </header>
                                     <div class="content">
-                                        {!! $section['content'] !!}
-                                        <p>
-                                            <a href="{{ $virtualGuidePage }}#{{ sanitize_title($section['section_title']) }}" class="btn btn-light"><?php _e("Show the virual guide", 'karnan'); ?>
-
-                                            </a>
-                                        </p>
+                                        <div class="grid">
+                                            @if ($key != 0)
+                                                @include ('partials/one-page/content-default')
+                                            @else
+                                                @include ('partials/one-page/content-live')
+                                            @endif
+                                        </div>
                                     </div>
                                 </article>
                             </div>
+
                         </div>
                     </div>
                     </div>
