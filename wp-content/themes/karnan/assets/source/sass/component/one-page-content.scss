@@ -29,6 +29,7 @@
     }
 
     #inner {
+        overflow: hidden;
         @media screen and #{$screen-md-up} {
             padding-left: 100px;
         }
@@ -51,7 +52,12 @@
 
 #one-page-content article {
 
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 800px;
+
         color: white;
+
         h1, h2, h3, h4, h5, h6 {
             color: #fff;
         }

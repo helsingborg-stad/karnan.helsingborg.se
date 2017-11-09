@@ -9,8 +9,17 @@
 
 .layer {
     bottom: 50px;
-    left: 0;
-    width: 100%;
+    left: 10px;
+    width: calc(100% - 10px);
+    @media #{$screen-md-up} and (orientation: portrait) {
+        left: 17px;
+        width: calc(100% - 17px);
+    }
+    @media #{$screen-md-up} {
+        left: 125px;
+        width: calc(100% - 125px);
+    }
+
     position: fixed;
     transition: transform 500ms ease;
 }
