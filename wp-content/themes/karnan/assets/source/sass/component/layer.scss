@@ -70,11 +70,11 @@
             active-section-0: translateY(200vw)
         ),
         layer-gras: (
-            active-section-4: translateY(0),
-            active-section-3: translateY(3vw),
-            active-section-2: translateY(6vw),
-            active-section-1: translateY(9vw),
-            active-section-0: translateY(12vw)
+            active-section-4: translateY(3vw),
+            active-section-3: translateY(6vw),
+            active-section-2: translateY(9vw),
+            active-section-1: translateY(12vw),
+            active-section-0: translateY(15vw)
         )
     );
     @include transformLayer($layers);
