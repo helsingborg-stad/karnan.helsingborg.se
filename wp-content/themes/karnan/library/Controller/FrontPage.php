@@ -13,7 +13,7 @@ class FrontPage extends \Municipio\Controller\BaseController
         $this->globalToLocal("wpdb", "db");
 
         //Get youtube live feed
-        $this->data['live'] = !empty(get_field('youtube_live_video_url', 'option')) ? \Karnan\Controller\FrontPage::getYoutubeId(get_field('youtube_live_video_url', 'option')) : null;
+        $this->data['live'] = !empty(get_field('youtube_live_video_url', 'option')) ? $this->getYoutubeId(get_field('youtube_live_video_url', 'option')) : null;
 
         //Get entered details
         $this->data['sections'] = is_array(get_field('karnan_sections', 'option')) ? get_field('karnan_sections', 'option') : array();
@@ -64,7 +64,7 @@ class FrontPage extends \Municipio\Controller\BaseController
      * @return mixed [bool, string]
      */
 
-    public static function getYoutubeId($youtubeurl)
+    public function getYoutubeId($youtubeurl)
     {
         if (preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $youtubeurl, $match)) {
             return isset($match[1]) ? $match[1] : false;
