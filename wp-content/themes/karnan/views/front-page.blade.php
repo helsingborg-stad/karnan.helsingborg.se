@@ -29,6 +29,8 @@
     </div>
 
     <div id="inner">
+        @include ('partials/one-page/live-section')
+
         @if(is_array($sections) && !empty($sections))
             @foreach ($sections as $key => $section)
                 <section data-section-name="{{ sanitize_title($section['section_title']) }}" class="onepage-section fluid-type">
@@ -44,13 +46,10 @@
                                         </h2>
                                     </header>
                                     <div class="content">
-                                        <div class="grid">
-                                            @if ($key != 0)
-                                                @include ('partials/one-page/content-default')
-                                            @else
-                                                @include ('partials/one-page/content-live')
-                                            @endif
-                                        </div>
+                                        {!! $section['content'] !!}
+                                        <p>
+                                            <a href="{{ $virtualGuidePage }}#{{ sanitize_title($section['section_title']) }}" class="btn btn btn-light"><?php _e("Show the virual guide", 'karnan'); ?></a>
+                                        </p>
                                     </div>
                                 </article>
                             </div>
