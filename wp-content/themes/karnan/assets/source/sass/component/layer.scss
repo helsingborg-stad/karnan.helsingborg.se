@@ -25,7 +25,12 @@
 }
 
 .layer-gras {
-    bottom: 120px;
+    @media screen and #{$screen-md-up} {
+        bottom: 0;
+    }
+    @media screen and #{$screen-xl-up} {
+        bottom: 100px;
+    }
     transition: transform 500ms linear;
 }
 
@@ -70,11 +75,11 @@
             active-section-0: translateY(200vw)
         ),
         layer-gras: (
-            active-section-4: translateY(3vw),
-            active-section-3: translateY(6vw),
-            active-section-2: translateY(9vw),
-            active-section-1: translateY(12vw),
-            active-section-0: translateY(15vw)
+            active-section-4: translateY(0),
+            active-section-3: translateY(3vw),
+            active-section-2: translateY(6vw),
+            active-section-1: translateY(9vw),
+            active-section-0: translateY(12vw)
         )
     );
     @include transformLayer($layers);
