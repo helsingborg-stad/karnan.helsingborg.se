@@ -21,7 +21,7 @@
     }
 
     position: fixed;
-    transition: transform 500ms ease-out;
+    transition: transform 500ms ease-out, opacity 500ms ease-in;
 }
 
 .layer-gras {
@@ -31,7 +31,7 @@
     @media screen and #{$screen-xl-up} {
         bottom: 100px;
     }
-    transition: transform 500ms linear;
+    transition: transform 500ms linear, opacity 500ms ease-in;
 }
 
 .layer img {
@@ -66,7 +66,7 @@
 }
 
 @media screen {
-    $layers: (
+    $transform: (
         layer-tower: (
             active-section-4: translateY(0),
             active-section-3: translateY(30vw),
@@ -82,11 +82,28 @@
             active-section-0: translateY(12vw)
         )
     );
-    @include transformLayer($layers);
+    @include transformLayer($transform);
 }
 
+.layer-tower-top {
+    opacity: 0;
+    transition: transform 500ms ease-out, opacity 500ms ease;
+
+     transform: translateY(5vw);
+
+}
+.active-section-0 {
+    .layer-tower, .layer-gras {
+        opacity: 0;
+    }
+    .layer-tower-top {
+             transform: translateY(0);
+        opacity: 1;
+    }
+
+}
 @media screen and (orientation: portrait) {
-    $layers: (
+    $transform: (
         layer-tower: (
             active-section-4: translateY(0),
             active-section-3: translateY(-20vw) scale(1.5),
@@ -95,5 +112,5 @@
             active-section-0: translateY(180vw)
         )
     );
-    @include transformLayer($layers);
+    @include transformLayer($transform);
 }

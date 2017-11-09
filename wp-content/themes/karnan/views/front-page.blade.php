@@ -20,6 +20,9 @@
         <div class="layer depth-2 layer-tower">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/image/karnan-full-with-grass.png">
         </div>
+        <div class="layer depth-2 layer-tower-top">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/image/karnan-top.png">
+        </div>
     </div>
 
     <div id="inner">
@@ -42,7 +45,9 @@
                                     <div class="content">
                                         {!! $section['content'] !!}
                                         <p>
-                                            <a href="{{ $virtualGuidePage }}#{{ sanitize_title($section['section_title']) }}" class="btn btn btn-light"><?php _e("Show the virual guide", 'karnan'); ?></a>
+                                            <a href="{{ $virtualGuidePage }}#{{ sanitize_title($section['section_title']) }}" class="virtual-guide"><?php _e("Show the virual guide", 'karnan'); ?>
+                                                <i class="pricon"></i>
+                                            </a>
                                         </p>
                                     </div>
                                 </article>

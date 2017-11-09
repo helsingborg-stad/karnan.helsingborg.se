@@ -1893,6 +1893,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
                 $(document).trigger('scrollifyStart', [index, sections, scrollSpeed, 'onepage']);
             }.bind(this),
             after: function(index, sections) {
+
                 $(document).trigger('scrollifyStop', [index, sections, scrollSpeed, 'onepage']);
             }.bind(this)
         });

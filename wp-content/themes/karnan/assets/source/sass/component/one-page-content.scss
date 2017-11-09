@@ -51,7 +51,6 @@
 }
 
 #one-page-content article {
-
         margin-left: auto;
         margin-right: auto;
         max-width: 800px;
@@ -60,10 +59,6 @@
 
         h1, h2, h3, h4, h5, h6 {
             color: #fff;
-        }
-
-        .btn {
-            display: none;
         }
 
         .rendered-header {
@@ -141,6 +136,16 @@
     .onepage-section.active-section .container {
         opacity: 1;
     }
+}
+
+
+#inner:before {
+    transition: opacity 250ms ease;
+    opacity: 1;
+}
+.motion #inner:before {
+    opacity: 0 !important;
+        transition: none;
 }
 
 
