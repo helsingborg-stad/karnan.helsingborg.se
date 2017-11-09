@@ -29,7 +29,7 @@
     </div>
 
     <div id="inner">
-        @include ('partials/one-page/live-section')
+        <!--@include ('partials/one-page/live-section')-->
 
         @if(is_array($sections) && !empty($sections))
             @foreach ($sections as $key => $section)
