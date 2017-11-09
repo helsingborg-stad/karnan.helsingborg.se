@@ -44,6 +44,14 @@
     }
 }
 
+#one-page-content .live-container article {
+    .player {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
 #one-page-content {
     article {
         opacity: 1;
@@ -117,17 +125,10 @@
                 font-size: 1.4em;
             }
         }
-
-        .box-live {
-            .btn {
-                text-decoration: none;
-            }
-        }
     }
 }
 
 #one-page-content {
-
 
     .layers {
         width: 100%;
@@ -218,7 +219,10 @@
         transition-delay: 300ms;
         opacity: 0;
         padding: 10px;
-        background-color: rgba($palette-4, 0.8);
+
+        &:not(.live-container) {
+            background-color: rgba($palette-4, 0.8);
+        }
     }
 
     .onepage-section.active-section .container {
