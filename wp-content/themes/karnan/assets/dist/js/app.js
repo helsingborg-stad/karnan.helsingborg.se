@@ -1804,8 +1804,9 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
     }
 
     ScrollSnapping.prototype.startState = function () {
+        console.log(window.location.hash);
         //Set last section as current if no hash is defined
-        if(window.location.hash == "#start") {
+        if(window.location.hash == "#r") {
             $.scrollify.instantMove(this.sectionCount);
         }
 
