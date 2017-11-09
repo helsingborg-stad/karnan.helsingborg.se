@@ -1,0 +1,73 @@
+.layer-wrapper {
+    width: 100%;
+    height: auto;
+    left: 0;
+    bottom: 0;
+    z-index: $level-bottom;
+    postion: relative;
+}
+
+.layer {
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    transition: transform 500ms ease;
+}
+
+.layer img {
+    width: 100%;
+    height: auto;
+}
+
+.layer.depth-1 {
+    z-index: $level-1;
+}
+
+.layer.depth-2 {
+    z-index: $level-2;
+}
+
+.layer.depth-3 {
+    z-index: $level-3;
+}
+
+.layer.depth-4 {
+    z-index: $level-4;
+}
+
+@mixin animateLayer($layer-map) {
+    @each $key, $value in $layer-map {
+        @each $selector, $transform in map-get($layer-map, $key) {
+            .#{$selector} .#{$key} {
+                transform: $transform;
+            }
+        }
+    }
+}
+
+@media screen {
+    $layers: (
+        layer-tower: (
+            active-section-4: translateY(0),
+            active-section-3: translateY(30vw),
+            active-section-2: translateY(90vw),
+            active-section-1: translateY(160vw),
+            active-section-0: translateY(200vw)
+        )
+    );
+    @include animateLayer($layers);
+}
+
+@media screen and (orientation: portrait) {
+    $layers: (
+        layer-tower: (
+            active-section-4: translateY(0),
+            active-section-3: translateY(-20vw) scale(1.5),
+            active-section-2: translateY(60vw),
+            active-section-1: translateY(120vw),
+            active-section-0: translateY(180vw)
+        )
+    );
+    @include animateLayer($layers);
+}
