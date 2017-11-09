@@ -29,25 +29,27 @@
     }
 
     #inner {
-        //@include overlay($palette-4, 0.8);
-
         @media screen and #{$screen-md-up} {
             padding-left: 100px;
         }
     }
 
+    #inner {
+        @include overlay($palette-4, 0.8);
+        &:before {
+            z-index: $level-2;
+        }
+    }
+
     #inner .onepage-section {
         position: relative;
-        z-index: $level-1;
+        z-index: $level-2;
         -webkit-transform: translate3d(0, 0, 0);
         overflow: hidden;
     }
 }
 
-#one-page-content {
-    article {
-        opacity: 0;
-        z-index: $level-4;
+#one-page-content article {
 
         color: white;
         h1, h2, h3, h4, h5, h6 {
@@ -121,7 +123,6 @@
                 font-size: 1.4em;
             }
         }
-    }
 }
 
 #one-page-content {

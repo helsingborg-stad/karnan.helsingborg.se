@@ -11,12 +11,6 @@
     <div id="parallax-level-1" data-stellar-ratio="0.1"></div>
     <div id="parallax-level-2" data-stellar-ratio="1"></div>
     <div id="parallax-level-3" data-stellar-ratio="1.8"></div>
-
-    <div class="layers" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/image/grass-bottom-1.png"')">
-        <div class="layer-karnan">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/image/karnan-full-with-grass.png">
-        </div>
-    </div>
         -->
 
     <div class="layer-wrapper">

@@ -36,7 +36,7 @@
     z-index: $level-4;
 }
 
-@mixin animateLayer($layer-map) {
+@mixin transformLayer($layer-map) {
     @each $key, $value in $layer-map {
         @each $selector, $transform in map-get($layer-map, $key) {
             .#{$selector} .#{$key} {
@@ -56,7 +56,7 @@
             active-section-0: translateY(200vw)
         )
     );
-    @include animateLayer($layers);
+    @include transformLayer($layers);
 }
 
 @media screen and (orientation: portrait) {
@@ -69,5 +69,5 @@
             active-section-0: translateY(180vw)
         )
     );
-    @include animateLayer($layers);
+    @include transformLayer($layers);
 }
