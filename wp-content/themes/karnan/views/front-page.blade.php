@@ -46,14 +46,16 @@
                                     <header>
                                         <h2>
                                             {!! $section['section_title_span'] !!}
+                                            <small>
                                             ({{ $section['height_indicator'] }}<?php _e("m", 'karnan'); ?>)
+                                            </small>
                                         </h2>
                                     </header>
                                     <div class="content">
                                         {!! $section['content'] !!}
                                         <p>
                                             <a href="{{ $virtualGuidePage }}#{{ sanitize_title($section['section_title']) }}" class="virtual-guide"><?php _e("Show the virual guide", 'karnan'); ?>
-                                                <i class="pricon"></i>
+                                                <i class="pricon pricon-chevron-right"></i>
                                             </a>
                                         </p>
                                     </div>

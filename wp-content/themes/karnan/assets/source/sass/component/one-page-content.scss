@@ -36,7 +36,7 @@
     }
 
     #inner {
-        @include overlay($palette-4, 0.8);
+        @include overlay($palette-4, 0.0);
         &:before {
             z-index: $level-2;
         }

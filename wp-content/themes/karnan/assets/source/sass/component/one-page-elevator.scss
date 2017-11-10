@@ -8,8 +8,8 @@ $border-size: 3px;
     right: auto;
     bottom: 70px;
     left: 10px;
-    width: 100px;
-    background: rgba(#fff, 0.5);
+    width: $elevator-nav-width;
+    background: white;
     display: flex;
     flex-direction: column;
     align-content: stretch;
@@ -49,13 +49,17 @@ $border-size: 3px;
             line-height: $dot-size;
             text-decoration: none;
             font-weight: bold;
-            color: $palette-2;
+
             vertical-align: middle;
             height: 100%;
 
             span.height-indicator {
                 margin-left: .2em;
             }
+        }
+
+        .blipper-theme-1, .blipper-theme-1:after, .blipper-theme-1:before {
+            background-color: $palette-3;
         }
 
         .blipper-disabled,
@@ -66,7 +70,7 @@ $border-size: 3px;
             width: calc(#{$dot-size} - #{$border-size}/2);
             height: calc(#{$dot-size} - #{$border-size}/2);
             border-radius: 50%;
-            border: $border-size solid $palette-2;
+            border: $border-size solid $palette-4;
         }
 
         .blipper-disabled {
@@ -88,6 +92,8 @@ $border-size: 3px;
         }
     }
 }
+
+
 
 &.admin-bar {
     #one-page-elevator {
