@@ -21,7 +21,7 @@
     }
 
     position: fixed;
-    transition: transform 500ms ease-out, opacity 500ms ease-in;
+    transition: transform 500ms ease-out, opacity 450ms ease;
 }
 
 .layer-gras {
@@ -31,7 +31,7 @@
     @media screen and #{$screen-xl-up} {
         bottom: 100px;
     }
-    transition: transform 500ms linear, opacity 500ms ease-in;
+    transition: transform 500ms linear, opacity 400ms ease-in;
 }
 
 .layer img {
@@ -87,20 +87,49 @@
 
 .layer-tower-top {
     opacity: 0;
-    transition: transform 500ms ease-out, opacity 500ms ease;
+    transition: transform 500ms ease-out 300ms, opacity 500ms ease;
 
      transform: translateY(5vw);
+}
+
+.layer-greenarea-top {
+     opacity: 0;
+     transform: translateY(0);
+         transition: transform 500ms ease-out, opacity 500ms ease-out;
+}
+.layer-city-top {
+
+     transform: translateY(-12vw) scale(1.02);
+         transition: transform 500ms ease-out, opacity 450ms ease-out;
+     opacity: 0;
 
 }
+
+
+
 .active-section-0 {
     .layer-tower, .layer-gras {
+        transition: transform 500ms ease-out, opacity 500ms ease;
         opacity: 0;
     }
+
     .layer-tower-top {
-             transform: translateY(0);
+        transition: transform 500ms ease-out 50ms, opacity 500ms ease;
+        transform: translateY(0);
         opacity: 1;
     }
 
+    .layer-city-top {
+        transition: transform 500ms ease-out 50ms, opacity 350ms ease 100ms;
+        transform: translateY(-10vw) scale(1);
+        opacity: 1;
+    }
+
+    .layer-greenarea-top {
+        transition: transform 500ms ease-out 50ms, opacity 350ms ease 100ms;
+        transform: translateY(3vw) scale(1);
+        opacity: 1;
+    }
 }
 @media screen and (orientation: portrait) {
     $transform: (

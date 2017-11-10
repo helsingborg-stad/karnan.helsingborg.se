@@ -20,8 +20,15 @@
         <div class="layer depth-2 layer-tower">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/image/karnan-full-with-grass.png">
         </div>
+
+        <div class="layer depth-1 layer-city-top">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/image/top-city-2.png">
+        </div>
+        <div class="layer depth-1 layer-greenarea-top">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/image/top-greenarea-2.png">
+        </div>
         <div class="layer depth-2 layer-tower-top">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/image/karnan-top.png">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/image/top-tower-2.png">
         </div>
     </div>
 
