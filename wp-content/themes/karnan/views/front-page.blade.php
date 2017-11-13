@@ -7,11 +7,6 @@
 @include ('partials/one-page/scroll-up')
 
 <div id="one-page-content" class="parallax-enabled">
-    <!--
-    <div id="parallax-level-1" data-stellar-ratio="0.1"></div>
-    <div id="parallax-level-2" data-stellar-ratio="1"></div>
-    <div id="parallax-level-3" data-stellar-ratio="1.8"></div>
-        -->
 
     <div class="layer-wrapper">
         <div class="layer depth-1 layer-gras">
