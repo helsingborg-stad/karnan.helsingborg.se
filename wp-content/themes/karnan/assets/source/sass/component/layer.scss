@@ -118,8 +118,6 @@
 
 }
 
-
-
 .active-section-0 {
     .layer-tower, .layer-gras {
         transition: transform 500ms ease-out, opacity 500ms ease;
@@ -145,3 +143,67 @@
     }
 }
 
+/* General background styling */
+.layer-gras,
+.layer-tower,
+.layer-city-top,
+.layer-greenarea-top,
+.layer-tower-top {
+    background-size: 100% auto;
+    background-repeat: none;
+
+    img {
+        opacity: 0;
+    }
+}
+
+
+/* Media query background images */
+
+$sizes-list: 400 600 800 1000 1200 1400 1600;
+@each $size in $sizes-list {
+
+    @media (min-width: #{$size}px) {
+
+        .layer-gras {
+            background-image: url('../../image/grass/png/#{$size}.png');
+
+            .webp & {
+                background-image: url('../../image/grass/webp/#{$size}.webp');
+            }
+        }
+
+        .layer-tower {
+            background-image: url('../../image/karnan/png/#{$size}.png');
+
+            .webp & {
+                background-image: url('../../image/karnan/webp/#{$size}.webp');
+            }
+        }
+
+        .layer-city-top {
+            background-image: url('../../image/top/city/png/#{$size}.png');
+
+            .webp & {
+                background-image: url('../../image/top/city/webp/#{$size}.webp');
+            }
+        }
+
+        .layer-greenarea-top {
+            background-image: url('../../image/top/greenarea/png/#{$size}.png');
+
+            .webp & {
+                background-image: url('../../image/top/greenarea/webp/#{$size}.webp');
+            }
+        }
+
+        .layer-tower-top {
+            background-image: url('../../image/top/tower/png/#{$size}.png');
+
+            .webp & {
+                background-image: url('../../image/top/tower/webp/#{$size}.webp');
+            }
+        }
+
+    }
+}
