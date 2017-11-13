@@ -35,32 +35,30 @@
                 <section data-section-name="{{ sanitize_title($section['section_title']) }}" class="onepage-section fluid-type">
                     <div class="flex v-center full-height">
                         <div class="container full-width">
-                        <div class="grid">
-                            <div class="grid-xs-12 grid-md-12">
-                                <article class="full">
-                                    <header>
-                                        <h2>
-                                            {!! $section['section_title_span'] !!}
-                                            <small>
-                                            ({{ $section['height_indicator'] }}<?php _e("m", 'karnan'); ?>)
-                                            </small>
-                                        </h2>
-                                    </header>
-                                    <div class="content">
-                                        {!! $section['content'] !!}
-                                        <p>
-                                            <a href="{{ $virtualGuidePage }}#{{ sanitize_title($section['section_title']) }}" class="virtual-guide"><?php _e("Show the virual guide", 'karnan'); ?>
-                                                <i class="pricon pricon-chevron-right"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </article>
+                            <div class="grid">
+                                <div class="grid-xs-12 grid-md-12">
+                                    <article class="full">
+                                        <header>
+                                            <h2>
+                                                {!! $section['section_title_span'] !!}
+                                                <small>
+                                                ({{ $section['height_indicator'] }}<?php _e("m", 'karnan'); ?>)
+                                                </small>
+                                            </h2>
+                                        </header>
+                                        <div class="content">
+                                            {!! $section['content'] !!}
+                                            <p>
+                                                <a href="{{ $virtualGuidePage }}#{{ sanitize_title($section['section_title']) }}" class="virtual-guide"><?php _e("Show the virual guide", 'karnan'); ?>
+                                                    <i class="pricon pricon-chevron-right"></i>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </article>
+                                </div>
                             </div>
-
                         </div>
                     </div>
-                    </div>
-
                 </section>
             @endforeach
         @endif
