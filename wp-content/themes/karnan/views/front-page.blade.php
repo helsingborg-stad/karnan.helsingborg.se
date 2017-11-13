@@ -3,6 +3,7 @@
 @section('content')
 
 @include ('partials/stripe')
+@include ('partials/one-page/preloader')
 @include ('partials/one-page/elevator')
 @include ('partials/one-page/scroll-up')
 
