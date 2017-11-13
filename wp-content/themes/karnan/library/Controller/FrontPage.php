@@ -22,7 +22,9 @@ class FrontPage extends \Municipio\Controller\BaseController
         if (is_array($this->data['sections']) && !empty($this->data['sections'])) {
             foreach ($this->data['sections'] as $key => &$section) {
                 if (is_numeric($section['section_audioguide_albumbart'])) {
-                    $section['section_audioguide_albumbart'] = municipio_get_thumbnail_source($section['section_audioguide_albumbart'], array(50,50));
+                    if (is_array($image = wp_get_attachment_image_src($section['section_audioguide_albumbart'], array(50,50)))) {
+                        $section['section_audioguide_albumbart'] = $image[0];
+                    }
                 }
             }
         }
@@ -40,6 +42,7 @@ class FrontPage extends \Municipio\Controller\BaseController
         } else {
             $this->data['virtualGuidePage'] = null;
         }
+
     }
 
     /**
