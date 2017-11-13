@@ -1,10 +1,11 @@
 .fluid-type {
-    $map: ($screen-xs-max: 12px, $screen-lg-max: 19px);
+    $map: ($screen-xs-max: 12px, $screen-lg-max: 20px);
 
     @include poly-fluid-sizing("font-size", $map);
 
     p {
         font-size: 1em;
+        font-weight: 300;
 
         @media only screen and #{$screen-below-md} and (orientation: landscape) {
             font-size: 0.5em;
@@ -28,9 +29,21 @@
         font-weight: 600;
     }
 
-    .btn i {
+
+
+    .virtual-guide {
         line-height: 1;
-        font-size: 1em;
+        color: $palette-1;
+        font-weight: 400;
+
+        i {
+            margin-left: .5em;
+        }
+
+        i:before {
+            font-size: 80%;
+            line-height: 1;
+        }
     }
 
     .container-fixed-fluid {

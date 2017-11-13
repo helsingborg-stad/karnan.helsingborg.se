@@ -9,8 +9,8 @@
 
 .layer {
     bottom: 50px;
-    left: 10px;
-    width: calc(100% - 10px);
+    left: 0;
+    width: calc(100% - 0);
     @media #{$screen-md-up} and (orientation: portrait) {
         left: 17px;
         width: calc(100% - 17px);
@@ -85,6 +85,19 @@
     @include transformLayer($transform);
 }
 
+@media screen and (orientation: portrait) {
+    $transform: (
+        layer-tower: (
+            active-section-4: translateY(0),
+            active-section-3: translateY(-20vw) scale(1.5),
+            active-section-2: translateY(60vw),
+            active-section-1: translateY(120vw),
+            active-section-0: translateY(180vw)
+        )
+    );
+    @include transformLayer($transform);
+}
+
 .layer-tower-top {
     opacity: 0;
     transition: transform 500ms ease-out 300ms, opacity 500ms ease;
@@ -131,15 +144,4 @@
         opacity: 1;
     }
 }
-@media screen and (orientation: portrait) {
-    $transform: (
-        layer-tower: (
-            active-section-4: translateY(0),
-            active-section-3: translateY(-20vw) scale(1.5),
-            active-section-2: translateY(60vw),
-            active-section-1: translateY(120vw),
-            active-section-0: translateY(180vw)
-        )
-    );
-    @include transformLayer($transform);
-}
+
