@@ -18,10 +18,12 @@ class FrontPage extends \Municipio\Controller\BaseController
         //Get entered details
         $this->data['sections'] = is_array(get_field('karnan_sections', 'option')) ? get_field('karnan_sections', 'option') : array();
 
-        //Get background images url
+        //Get album art miniature
         if (is_array($this->data['sections']) && !empty($this->data['sections'])) {
             foreach ($this->data['sections'] as $key => &$section) {
-                $section['background'] = get_stylesheet_directory_uri() . '/assets/image/sections/' . ($key+1) . '.png';
+                if (is_numeric($section['section_audioguide_albumbart'])) {
+                    $section['section_audioguide_albumbart'] = municipio_get_thumbnail_source($section['section_audioguide_albumbart'], array(50,50));
+                }
             }
         }
 
