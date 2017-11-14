@@ -44,7 +44,7 @@
                                     <p>Här måste du bara titta upp i taket, för när såg du åtta takbjälkar av ek senast? Och har du överhuvudtaget någonsin sett takbjälkar från 1300-talets början? Här är sådana. Våningen har främst fungerat som vaktvåning, i dag betalar du entré här.</p>
                                     <!--{!! $section['content'] !!}-->
                                     <p>
-                                        <a href="#modal-target-{{ sanitize_title($section['section_title']) }}" class="btn btn-primary btn-block"><?php _e('Read more', 'karnan'); ?></a>
+                                        <a href="#modal-target-{{ sanitize_title($section['section_title']) }}" class="btn btn-primary btn-block open"><?php _e('Read more', 'karnan'); ?></a>
                                         <div class="nav-links horizontal white">
                                             <a href="#">
                                                 <i class="pricon pricon-volume"></i>

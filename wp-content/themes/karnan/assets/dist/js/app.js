@@ -1860,7 +1860,19 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
         this.sectionCount = $(".onepage-section").length - 1;
 
         this.startState();
+        this.watchModal();
     }
+
+    ScrollSnapping.prototype.watchModal = function () {
+        $(document).on('click touchstart', '.open', function() {
+            $.scrollify.disable();
+        });
+
+        $(document).on('click touchstart', '.close', function() {
+            $.scrollify.enable();
+        });
+    }
+
 
     ScrollSnapping.prototype.startState = function () {
         console.log(window.location.hash);
@@ -1943,6 +1955,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
             sectionName : "section-name",
             scrollSpeed: scrollSpeed,
             easing: "easeOutExpo",
+            standardScrollElements: ".modal-karnan",
             before: function(index, sections) {
                 this.updateActive(index, sections);
                 this.updateNext(index, sections);
