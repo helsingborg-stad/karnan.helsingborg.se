@@ -1,11 +1,15 @@
 .fluid-type {
-    $map: (320px: 14px, 375px: 16px);
+    $map: (320px: 14px, 375px: 16px, $screen-md-max: 16px, $screen-lg-min: 19px);
 
     @include poly-fluid-sizing("font-size", $map);
 
     p {
         font-size: 1em;
         font-weight: 400;
+
+        @media screen and #{$screen-lg-up} {
+            font-weight: 300;
+        }
 
         //Landscape phone
         @media only screen and #{$screen-below-md} and (orientation: landscape) {
@@ -21,7 +25,7 @@
 
         }
         @media screen and #{$screen-md-up} {
-
+                    font-size: 1.8em;
         }
         font-weight: 400;
 
