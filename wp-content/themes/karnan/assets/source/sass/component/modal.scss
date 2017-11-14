@@ -4,8 +4,8 @@
 }
 
 .modal-karnan .btn-close {
-    top: 1rem;
-    right: 1rem;
+    top: 2rem;
+    right: 2rem;
 }
 
 .modal-karnan .modal-header {
@@ -29,7 +29,7 @@
         max-height: 80vh;
     }
 
-    .content + .gallery {
+    [class*="grid-"] > * + * {
         margin-top: 1rem;
     }
 
@@ -57,5 +57,7 @@
 
     @media screen and #{$screen-lg-up} {
         margin-top: 10vh;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
