@@ -7,23 +7,30 @@
 		    </article>
 		</div>
 
-	    @if(!empty($section['google_maps']))
+	    @if(!empty($section['google_maps'])||!empty($section['section_audioguide']))
 	    <div class="grid">
+
+            @if(!empty($section['google_maps']))
 	        <div class="grid-md-6 gutter">
 	            <a href="#modal-target-{{ $elevatorKey }}" class="btn btn-block btn-primary"><i class="pricon pricon-compass"></i> <?php _e('Open virtual map', 'karnan'); ?></a>
 	        </div>
-	        <div class="grid-md-6 gutter gutter-vertical gutter-margin">
+            @endif
+
+            @if(!empty($section['section_audioguide']))
+	        <div class="grid-md-6">
 	            <div class="audio-player">
 					<audio controls controlsList="nodownload">
-				    	<source src="/dist/audio/test2.mp3" type="audio/mpeg">
+				    	<source src="{{ $section['section_audioguide'] }}" type="audio/mpeg">
 				 	</audio>
-				 	<div class="album-art" style="background-image: url('https://picsum.photos/50/50?image=996');">
+				 	<div class="album-art" style="background-image: url('{{ $section['section_audioguide_albumbart'] }}');">
 				     	<a href="#play" class="toggle-action-play pricon pricon-play"></a>
 				     	<a href="#play" class="toggle-action-pause pricon pricon-pause"></a>
 				 	</div>
 				 	<input type="range" class="action-seek" value="0" max="100" step="0.01"/>
 				</div>
 	        </div>
+            @endif
+
 	    </div>
 	    @endif
 
@@ -49,7 +56,7 @@
 	        <div class="grid-md-12">
 	            <ul class="image-gallery grid grid-gallery">
 	                @foreach($section['gallery'] as $image)
-	                    <li class="grid-md-4 grid-xs-6">
+	                    <li class="grid-md-3 grid-xs-6">
 	                        <a class="box lightbox-trigger" href="{{ $image['sizes']['large'] }}">
 	                            {!! wp_get_attachment_image($image['ID'], array('250', '170')) !!}
 	                        </a>

@@ -122,26 +122,6 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_59e86eb921928",
-                    "label": "Soundcloud",
-                    "name": "soundcloud",
-                    "type": "textarea",
-                    "value": null,
-                    "instructions": "Iframe script",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 4,
-                    "new_lines": "wpautop"
-                },
-                {
                     "key": "field_59e86ecd21929",
                     "label": "Section image",
                     "name": "section_image",
@@ -206,6 +186,51 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "jpg, jpeg, gif, png"
+                },
+                {
+                    "key": "field_5a05c29b88db8",
+                    "label": "Audioguide - Audiofile",
+                    "name": "section_audioguide",
+                    "type": "file",
+                    "value": null,
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": 15,
+                    "mime_types": "mp3, aac, ogg"
+                },
+                {
+                    "key": "field_5a05c2dd88db9",
+                    "label": "Audioguide - Miniature image",
+                    "name": "section_audioguide_albumbart",
+                    "type": "image",
+                    "value": null,
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": 50,
+                    "min_height": 50,
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "jpg, jpeg, png"
                 }
             ]
         }

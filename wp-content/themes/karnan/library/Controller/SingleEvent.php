@@ -7,8 +7,8 @@ class SingleEvent extends \Municipio\Controller\SingleEvent
     public function init()
     {
         global $post;
-    	$this->data['date'] = $this->singleEventDate($post->ID);
-    	$this->data['location'] = get_post_meta($post->ID, 'location', true);
+        $this->data['date'] = $this->singleEventDate($post->ID);
+        $this->data['location'] = get_post_meta($post->ID, 'location', true);
     }
 
     /**
@@ -31,7 +31,7 @@ class SingleEvent extends \Municipio\Controller\SingleEvent
         $images = get_posts($args);
 
         if (!empty($images)) {
-            foreach($images as &$image) {
+            foreach ($images as &$image) {
                 $image = wp_get_attachment_image_src($image->ID, 'full');
             }
         }
