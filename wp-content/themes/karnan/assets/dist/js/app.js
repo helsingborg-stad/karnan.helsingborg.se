@@ -1614,14 +1614,14 @@ Karnan.OnePage = Karnan.OnePage || {};
 Karnan.OnePage.Preloader = (function ($) {
 
     function Preloader() {
-        if(this.inCache()) {
+        /*if(this.inCache()) {
             $('body').addClass("page-loaded preload-quick");
         } else {
             $(document).ready(function($) {
                 $('body').addClass("page-loaded");
                 this.markAsCached();
             }.bind(this));
-        }
+        }*/
     }
 
     Preloader.prototype.inCache = function () {
