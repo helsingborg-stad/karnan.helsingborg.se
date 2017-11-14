@@ -5,7 +5,7 @@ Karnan.OnePage.Preloader = (function ($) {
 
     function Preloader() {
         if(this.inCache()) {
-            $('body').addClass("page-loaded");
+            $('body').addClass("page-loaded preload-quick");
         } else {
             $(document).ready(function($) {
                 $('body').addClass("page-loaded");
@@ -15,6 +15,7 @@ Karnan.OnePage.Preloader = (function ($) {
     }
 
     Preloader.prototype.inCache = function () {
+        return false;
         if(this.getCookie("karnanExistsInCache") == 1) {
             return true;
         }
