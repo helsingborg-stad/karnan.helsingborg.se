@@ -1,6 +1,5 @@
 #preloader {
-    width: 100%;
-    height: 100%;
+    @include cover();
     position: fixed;
 
     z-index: $level-9;
@@ -51,6 +50,10 @@
   #preloader-text {
     animation: fade-out 1s ease-out 1s both;
   }
+}
+
+&.preload-quick #preloader {
+  display: none !important;
 }
 
 @keyframes slide-out-blurred-top {
