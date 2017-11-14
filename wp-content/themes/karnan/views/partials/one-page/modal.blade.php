@@ -33,10 +33,6 @@
                                 @endforeach
                             </ul>
                         </div>
-
-                        <div class="virtual-360">
-                               <iframe src="{{ $section['google_maps'] }}" width="100%" height="100vh" frameborder="0" style="border:0" allowfullscreen></iframe>
-                        </div>
                     @endif
                 </div>
             </div>
