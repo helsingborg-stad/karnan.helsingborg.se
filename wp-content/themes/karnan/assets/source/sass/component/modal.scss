@@ -51,3 +51,11 @@
         }
 }
 
+
+.modal-karnan .container {
+    max-width: 900px;
+
+    @media screen and #{$screen-lg-up} {
+        margin-top: 10vh;
+    }
+}

@@ -207,3 +207,8 @@ $sizes-list: 400 600 800 1000 1200 1400 1600;
 
     }
 }
+
+.onepage-section.next-section,
+.onepage-section.prev-section {
+    transition: opacity 0s 0s;
+}
