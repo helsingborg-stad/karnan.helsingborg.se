@@ -1,17 +1,21 @@
 .modal-karnan {
-
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 .modal-karnan .btn-close {
     top: 1rem;
     right: 1rem;
 }
+
 .modal-karnan .modal-header {
     border-bottom: none;
     padding: 2rem;
 }
+
 .modal-karnan .modal-body {
     background: none;
+    padding-bottom: 6rem;
 
     .content img {
         float: left;
@@ -27,6 +31,10 @@
     .content + .gallery {
         margin-top: 1rem;
     }
+
+    .content {
+        clear: both;
+    }
 }
 
 .modal-karnan .modal-footer {
@@ -34,3 +42,4 @@
     bottom: 0;
     left: 0;
 }
+

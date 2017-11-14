@@ -18,22 +18,24 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
         this.sectionCount = $(".onepage-section").length - 1;
 
         this.startState();
-        this.watchModal();
+        this.modalEvents();
     }
 
-    ScrollSnapping.prototype.watchModal = function () {
-        $(document).on('click touchstart', '.open', function() {
+    ScrollSnapping.prototype.modalEvents = function () {
+
+        $(document).on('click touch', '.open', function() {
             $.scrollify.disable();
-        });
+        }.bind(this));
 
-        $(document).on('click touchstart', '.close', function() {
+        $(document).on('click touch', '.close', function(e) {
+            $('html').removeClass('overflow-hidden');
             $.scrollify.enable();
-        });
+            $.scrollify.update();
+            $.scrollify.instantMove('#' + $(e.target).parents('.modal').attr('data-section-name'));
+        }.bind(this));
     }
-
 
     ScrollSnapping.prototype.startState = function () {
-        console.log(window.location.hash);
         //Set last section as current if no hash is defined
         if(window.location.hash == "#r") {
             $.scrollify.instantMove(this.sectionCount);
