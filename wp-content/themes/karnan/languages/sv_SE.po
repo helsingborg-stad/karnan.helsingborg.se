@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kärnan in Helsingborg\n"
-"POT-Creation-Date: 2017-11-03 13:36+0100\n"
-"PO-Revision-Date: 2017-11-03 13:39+0100\n"
+"POT-Creation-Date: 2017-11-14 15:21+0100\n"
+"PO-Revision-Date: 2017-11-14 15:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -89,24 +89,24 @@ msgid "Google maps URL"
 msgstr "Google karta webbadress"
 
 #: library/AcfFields/php/theme-settings.php:129
-msgid "Soundcloud"
-msgstr ""
-
-#: library/AcfFields/php/theme-settings.php:133
-msgid "Iframe script"
-msgstr "Inbäddningsscript"
-
-#: library/AcfFields/php/theme-settings.php:149
 msgid "Section image"
 msgstr "Sektionens bild"
 
-#: library/AcfFields/php/theme-settings.php:169
+#: library/AcfFields/php/theme-settings.php:149
 msgid "Section image (part)"
 msgstr "Sektionsbild"
 
-#: library/AcfFields/php/theme-settings.php:189
+#: library/AcfFields/php/theme-settings.php:169
 msgid "Gallery"
 msgstr "Galleri"
+
+#: library/AcfFields/php/theme-settings.php:195
+msgid "Audioguide - Audiofile"
+msgstr ""
+
+#: library/AcfFields/php/theme-settings.php:215
+msgid "Audioguide - Miniature image"
+msgstr ""
 
 #: library/Admin/ThemeOptions.php:25
 msgid "Kärnan"
@@ -120,18 +120,27 @@ msgstr "Virtuella sektioner"
 msgid "No posts to show"
 msgstr "Inga inlägg att visa"
 
-#: views/front-page.blade.php:28 views/front-page.blade.php:35
-#: views/partials/one-page/elevator.blade.php:8
+#: views/front-page.blade.php:39 views/partials/one-page/elevator.blade.php:8
 msgid "m"
 msgstr "m"
 
-#: views/front-page.blade.php:41
-msgid "Show the virual guide"
-msgstr "Följ med in - virtuell guide"
+#: views/front-page.blade.php:47
+msgid "Read more"
+msgstr ""
 
 #: views/partials/header.blade.php:31
 msgid "More"
 msgstr "Visa mer"
+
+#: views/partials/one-page/modal.blade.php:41
+#: views/partials/search/top-search.blade.php:6
+#: views/partials/virtual/content.blade.php:48
+msgid "Close"
+msgstr "Stäng"
+
+#: views/partials/one-page/preloader.blade.php:12
+msgid "Loading…"
+msgstr "Laddar…"
 
 #: views/partials/one-page/scroll-down.blade.php:2
 msgid "Go down"
@@ -141,12 +150,7 @@ msgstr "Gå ner"
 msgid "Go up"
 msgstr "Gå upp"
 
-#: views/partials/search/top-search.blade.php:6
-#: views/partials/virtual/content.blade.php:23
-msgid "Close"
-msgstr "Stäng"
-
-#: views/partials/virtual/content.blade.php:12
+#: views/partials/virtual/content.blade.php:15
 msgid "Open virtual map"
 msgstr "Öppna virtuell karta"
 
@@ -165,6 +169,12 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://github.com/helsingborg-stad/karnan/"
 msgstr ""
+
+#~ msgid "Iframe script"
+#~ msgstr "Inbäddningsscript"
+
+#~ msgid "Show the virual guide"
+#~ msgstr "Följ med in - virtuell guide"
 
 #~ msgid "Sections"
 #~ msgstr "Sektioner"

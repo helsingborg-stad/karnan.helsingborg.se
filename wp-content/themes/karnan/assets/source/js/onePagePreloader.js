@@ -5,9 +5,9 @@ Karnan.OnePage.Preloader = (function ($) {
 
     function Preloader() {
         if(this.inCache()) {
-            $('body').addClass("page-loaded");
+            $('body').addClass("page-loaded preload-quick");
         } else {
-            $(document).ready(function($) {
+            $(window).on("load", function() {
                 $('body').addClass("page-loaded");
                 this.markAsCached();
             }.bind(this));
