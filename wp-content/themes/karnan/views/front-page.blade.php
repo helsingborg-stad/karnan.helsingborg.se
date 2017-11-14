@@ -23,7 +23,7 @@
         </div>
     </div>
     <div id="inner">
-        <!--@include ('partials/one-page/live-section')-->
+        @include ('partials/one-page/live-section')
         @if(is_array($sections) && !empty($sections))
         @foreach ($sections as $key => $section)
         <section data-section-name="{{ sanitize_title($section['section_title']) }}" class="onepage-section fluid-type">
