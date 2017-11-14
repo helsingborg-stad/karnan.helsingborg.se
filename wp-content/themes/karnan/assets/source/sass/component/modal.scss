@@ -1,0 +1,27 @@
+.modal-karnan {
+
+}
+
+.modal-karnan .btn-close {}
+.modal-karnan .modal-header {
+    border-bottom: none;
+    padding: 3rem;
+}
+.modal-karnan .modal-body {
+    background: none;
+
+    @media screen and #{$screen-md-up} {
+        display: flex;
+
+        .content {
+            flex-grow: 1;
+        }
+    }
+
+    .content img {
+        float: left;
+        max-width: 33vw;
+        margin-right: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}

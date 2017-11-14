@@ -15,10 +15,9 @@
 
     @import 'typography/fluid-type';
 
-	@import 'layout/header';
-    @import 'layout/mobilemenu';
-    @import 'layout/mainmenu';
+	@import 'layout/navbar';
 
+    @import 'component/navlinks';
     @import 'component/stripe';
     @import 'component/tooltip';
     @import 'component/virtual-section';
@@ -27,6 +26,7 @@
     @import 'component/event';
     @import 'component/search';
     @import 'component/layer';
+    @import 'component/modal';
 
     @import 'component/one-page-scroll-action';
     @import 'component/one-page-parallax';
