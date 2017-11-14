@@ -33,3 +33,36 @@
     @import 'component/one-page-elevator';
     @import 'component/one-page-content';
 }
+
+#one-page-content {
+    transition: opacity 200ms ease;
+}
+
+.overflow-hidden {
+    -webkit-overflow-scrolling: auto;
+    body {
+        -webkit-overflow-scrolling: auto;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        overflow-y: hidden;
+    }
+
+    #one-page-content {
+        opacity: 0;
+    }
+
+    #site-header {
+        opacity: 0;
+    }
+}
+
+
+div#cookie-consent {
+    display: none !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999999;
+}
