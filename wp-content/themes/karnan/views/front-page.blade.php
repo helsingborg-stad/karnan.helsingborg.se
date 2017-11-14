@@ -46,7 +46,7 @@
                                     <p>
                                         <a href="#modal-target-{{ sanitize_title($section['section_title']) }}" class="btn btn-primary btn-block open"><?php _e('Read more', 'karnan'); ?></a>
                                         <div class="nav-links horizontal white">
-                                            <a href="#">
+                                            <a href="#modal-target-{{ sanitize_title($section['section_title']) }}-360">
                                                 <i class="pricon pricon-360"></i>
                                                 Virtuell guide
                                             </a>
