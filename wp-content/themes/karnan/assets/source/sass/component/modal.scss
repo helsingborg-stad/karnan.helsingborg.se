@@ -2,10 +2,13 @@
 
 }
 
-.modal-karnan .btn-close {}
+.modal-karnan .btn-close {
+    top: 1rem;
+    right: 1rem;
+}
 .modal-karnan .modal-header {
     border-bottom: none;
-    padding: 3rem;
+    padding: 2rem;
 }
 .modal-karnan .modal-body {
     background: none;
