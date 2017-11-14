@@ -9,6 +9,6 @@
                 <path fill="#FFF" d="M211 202v90h90v-90h-90zm60 60h-30v-30h30v30z"/>
             </svg>
         </span>
-        <span id="preloader-text"><?php _e("Loading…"); ?></span>
+        <span id="preloader-text"><?php _e("Loading…", 'karnan'); ?></span>
     </div>
 </div>
