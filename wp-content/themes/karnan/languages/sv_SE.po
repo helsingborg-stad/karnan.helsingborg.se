@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kärnan in Helsingborg\n"
-"POT-Creation-Date: 2017-11-14 15:21+0100\n"
-"PO-Revision-Date: 2017-11-14 15:21+0100\n"
+"POT-Creation-Date: 2017-11-15 15:10+0100\n"
+"PO-Revision-Date: 2017-11-15 15:11+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -25,14 +25,18 @@ msgid "Youtube Live Video"
 msgstr "Youtube livefeed"
 
 #: library/AcfFields/php/live-video-settings.php:10
+msgid "Live placeholder"
+msgstr "Platshållarbild"
+
+#: library/AcfFields/php/live-video-settings.php:35
 msgid "Youtube live video url (full share url)"
 msgstr "Youtube live feed url (hela adressen med https://)"
 
-#: library/AcfFields/php/live-video-settings.php:14
+#: library/AcfFields/php/live-video-settings.php:39
 msgid "A live feed url from the top of the tower"
 msgstr "En live youtubeström från toppen av tornet"
 
-#: library/AcfFields/php/live-video-settings.php:23
+#: library/AcfFields/php/live-video-settings.php:48
 msgid "https://youtube.com/yourvieoid"
 msgstr "https://youtube.com/videoid"
 
@@ -102,11 +106,11 @@ msgstr "Galleri"
 
 #: library/AcfFields/php/theme-settings.php:195
 msgid "Audioguide - Audiofile"
-msgstr ""
+msgstr "Audioguide - Ljudfil\t"
 
 #: library/AcfFields/php/theme-settings.php:215
 msgid "Audioguide - Miniature image"
-msgstr ""
+msgstr "Audioguide - Miniatyrbild"
 
 #: library/Admin/ThemeOptions.php:25
 msgid "Kärnan"
@@ -120,23 +124,34 @@ msgstr "Virtuella sektioner"
 msgid "No posts to show"
 msgstr "Inga inlägg att visa"
 
-#: views/front-page.blade.php:39 views/partials/one-page/elevator.blade.php:8
+#: views/front-page.blade.php:39 views/partials/one-page/elevator.blade.php:12
 msgid "m"
 msgstr "m"
 
 #: views/front-page.blade.php:47
 msgid "Read more"
-msgstr ""
+msgstr "Läs mer"
+
+#: views/front-page.blade.php:54
+msgid "Virtual guide"
+msgstr "Virtuell guide"
+
+#: views/front-page.blade.php:60
+msgid "Audioguide"
+msgstr "Ljudguide"
+
+#: views/front-page.blade.php:65
+msgid "Live video feed"
+msgstr "Live video"
 
 #: views/partials/header.blade.php:31
 msgid "More"
 msgstr "Visa mer"
 
-#: views/partials/one-page/modal.blade.php:41
-#: views/partials/search/top-search.blade.php:6
-#: views/partials/virtual/content.blade.php:48
-msgid "Close"
-msgstr "Stäng"
+#: views/partials/one-page/modal-360.blade.php:18
+#: views/partials/one-page/modal.blade.php:54
+msgid "Go back"
+msgstr "Gå tillbaka"
 
 #: views/partials/one-page/preloader.blade.php:12
 msgid "Loading…"
@@ -149,6 +164,11 @@ msgstr "Gå ner"
 #: views/partials/one-page/scroll-up.blade.php:2
 msgid "Go up"
 msgstr "Gå upp"
+
+#: views/partials/search/top-search.blade.php:6
+#: views/partials/virtual/content.blade.php:48
+msgid "Close"
+msgstr "Stäng"
 
 #: views/partials/virtual/content.blade.php:15
 msgid "Open virtual map"

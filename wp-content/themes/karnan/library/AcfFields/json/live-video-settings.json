@@ -3,6 +3,31 @@
     "title": "Youtube Live Video",
     "fields": [
         {
+            "key": "field_5a0c3db4aa9c0",
+            "label": "Live placeholder",
+            "name": "youtube_live_video_placeholder",
+            "type": "image",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_59fc5defae4f9",
             "label": "Youtube live video url (full share url)",
             "name": "youtube_live_video_url",
@@ -12,7 +37,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "70",
                 "class": "",
                 "id": ""
             },
