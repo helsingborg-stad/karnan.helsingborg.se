@@ -1737,6 +1737,15 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
         $('#one-page-content').addClass('active-section-' + index);
     }
 
+    ScrollSnapping.prototype.updateBody = function (index, sections) {
+        //Remove old wrapper class
+        $('body').removeClass (function (index, className) {
+            return (className.match (/(^|\s)active-item-\S+/g) || []).join(' ');
+        });
+
+        //Add active
+        $('body').addClass('active-item-' + index);
+    }
 
     ScrollSnapping.prototype.updateActive = function (index, sections) {
         //Remove active class
@@ -1790,6 +1799,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
                 this.updateNext(index, sections);
                 this.updatePrev(index, sections);
                 this.updateWrapper(index, sections);
+                this.updateBody(index, sections);
 
                 $(document).trigger('scrollifyStart', [index, sections, scrollSpeed, 'onepage']);
             }.bind(this),
