@@ -1,4 +1,5 @@
-<a class="scroll-action scroll-up btn btn-theme-fourth disabled hidden-xs hidden-sm" href="#up">
-    <span aria-hidden="true" class="sr-only"><?php _e("Go up", 'karnan'); ?></span>
-    <i class="pricon pricon-chevron-up"></i>
+<div class="scroll-action-wrapper up">
+<a class="scroll-action scroll-up disabled btn btn-plain" href="#up">
+    <span class="hidden-xs"><?php _e("Gå upp en våning", 'karnan'); ?></span>
 </a>
+</div>

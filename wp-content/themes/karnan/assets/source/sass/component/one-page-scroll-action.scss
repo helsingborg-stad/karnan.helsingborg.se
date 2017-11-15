@@ -1,23 +1,77 @@
-.scroll-action {
-    position: fixed;
+.scroll-action-wrapper {
     z-index: $level-top;
+    position: fixed;
     left: 50%;
+    transform: translateX(-50%);
+
+    &.up {
+        top: 1.5rem;
+    }
+
+    &.down {
+        bottom: calc(1.5rem + #{$nav-height});
+    }
+
+    @media screen and #{$screen-md-up} {
+        margin-left: $stripe-md-width * 1.2;
+
+        &.up {
+            top: 1.5rem * 2;
+        }
+
+        &.down {
+            bottom: calc((1.5rem + #{$nav-height}) * 1.2);
+        }
+    }
+}
+
+
+.scroll-action {
+    @include antialias();
     opacity: 1;
+    color: white !important;
+    font-size: 15px;
+    font-weight: bold;
+
+    &:focus, &:active {
+        text-decoration: none;
+    }
 
     &.disabled {
         display: none;
     }
 
     &.scroll-up {
-        top: 40px;
+
         animation: slide-in-blurred-top 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
         animation-delay: 200ms;
+
+        @include pr-icon(after, pricon-arrow-up) {
+            font-size: 18px;
+        }
+
+        @media screen and #{$screen-md-up} {
+            &:after {
+                font-size: inherit;
+                margin-left: 0.5em;
+            }
+        }
     }
 
     &.scroll-down {
-        bottom: 40px + $nav-height;
+
         animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
         animation-delay: 200ms;
+
+        @include pr-icon(after, pricon-arrow-down) {
+            font-size: 18px;
+        }
+        @media screen and #{$screen-md-up} {
+            &:after {
+                font-size: inherit;
+                margin-left: 0.5em;
+            }
+        }
     }
 
 }

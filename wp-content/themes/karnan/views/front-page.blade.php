@@ -49,18 +49,18 @@
                                             @if(!empty($section['google_maps']))
                                                 <a href="#modal-target-{{ sanitize_title($section['section_title']) }}-360">
                                                     <i class="pricon pricon-360"></i>
-                                                    Virtuell guide
+                                                    <span class="hidden-xs inline-block-sm">Virtuell guide</span>
                                                 </a>
                                             @endif
                                             @if(!empty($section['section_audioguide']))
                                                 <a href="#">
                                                     <i class="pricon pricon-volume"></i>
-                                                    Ljudguide
+                                                    <span class="hidden-xs inline-block-sm">Ljudguide<span>
                                                 </a>
                                             @endif
                                             <a href="#">
                                                 <i class="pricon pricon-camera"></i>
-                                                Live kamera
+                                                <span class="hidden-xs inline-block-sm">Live kamera<span>
                                             </a>
                                         </div>
                                     </div>

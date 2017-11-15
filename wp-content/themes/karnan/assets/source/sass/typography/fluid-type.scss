@@ -1,5 +1,5 @@
 .fluid-type {
-    $map: (320px: 14px, 375px: 16px, $screen-md-max: 16px, $screen-lg-min: 19px);
+    $map: (320px: 14px, 375px: 16px, $screen-md-max: 16px, $screen-lg-min: 18px);
 
     @include poly-fluid-sizing("font-size", $map);
 

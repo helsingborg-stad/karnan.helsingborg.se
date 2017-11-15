@@ -167,6 +167,7 @@ $pr-icons: (
           text-rendering: auto;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
+          vertical-align: middle;
         }
         // Include any extra rules supplied for the pseudo-element
         @content;
