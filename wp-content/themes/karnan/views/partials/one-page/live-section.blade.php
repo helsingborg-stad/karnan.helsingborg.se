@@ -4,7 +4,7 @@
         <div class="container full-width live-container">
 	        <div class="grid">
 	            <div class="grid-xs-12 grid-md-12">
-					<div class="player ratio-16-9" style="background-image:url('https://unsplash.it/800/800/?image=890');">
+					<div class="player ratio-16-9" style="background-image:url('{{ $live_placeholder_url }}');">
 					    <a href="#video-player-{{ $live }}" data-video-id="{{ $live }}" data-unavailable="Video playback unavailable, activate enable JavaScript to enable."></a>
 					</div>
 	            </div>

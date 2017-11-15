@@ -14,7 +14,16 @@ class FrontPage extends \Municipio\Controller\BaseController
 
         //Get youtube live feed
         $this->data['live'] = !empty(get_field('youtube_live_video_url', 'option')) ? $this->getYoutubeId(get_field('youtube_live_video_url', 'option')) : null;
+
+        //Get youtube live feed url & id
         $this->data['live_placeholder'] = !empty(get_field('youtube_live_video_placeholder', 'option')) ? $this->getYoutubeId(get_field('youtube_live_video_placeholder', 'option')) : null;
+
+        if (is_array($image = wp_get_attachment_image_src($this->data['live_placeholder'], array(1250,704)))) {
+            $section['live_placeholder_url'] = $image[0];
+        } else {
+            $section['live_placeholder_url'] = null;
+        }
+
 
         //Get entered details
         $this->data['sections'] = is_array(get_field('karnan_sections', 'option')) ? get_field('karnan_sections', 'option') : array();
