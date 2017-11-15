@@ -37,7 +37,7 @@
     }
 
     #inner {
-        @include overlay($palette-4, 0.8);
+        @include overlay($palette-2, 0.8);
         &:before {
             z-index: $level-2;
         }
@@ -60,7 +60,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 0;
-        max-width: 800px;
+        max-width: 35em;
 
         color: white;
 

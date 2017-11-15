@@ -41,28 +41,26 @@
                                     </h2>
                                 </header>
                                 <div class="content">
-                                    {!! $section['content_truncated'] !!}
+                                    <p>Här måste du bara titta upp i taket, för när såg du åtta takbjälkar av ek senast? Och har du överhuvudtaget någonsin sett takbjälkar från 1300-talets början? Här är sådana. Våningen har främst fungerat som vaktvåning, i dag betalar du entré här.</p>
+                                    <!--{!! $section['content'] !!}-->
                                     <p>
-                                        @if($section['show_read_more'])
                                         <a href="#modal-target-{{ sanitize_title($section['section_title']) }}" class="btn btn-primary btn-block open"><?php _e('Read more', 'karnan'); ?></a>
-                                        @endif
-
                                         <div class="nav-links horizontal white">
                                             @if(!empty($section['google_maps']))
                                                 <a href="#modal-target-{{ sanitize_title($section['section_title']) }}-360">
                                                     <i class="pricon pricon-360"></i>
-                                                    <?php _e("Virtual guide", 'karnan'); ?>
+                                                    <span class="hidden-xs inline-block-sm">Virtuell guide</span>
                                                 </a>
                                             @endif
                                             @if(!empty($section['section_audioguide']))
                                                 <a href="#">
                                                     <i class="pricon pricon-volume"></i>
-                                                    <?php _e("Audioguide", 'karnan'); ?>
+                                                    <span class="hidden-xs inline-block-sm">Ljudguide<span>
                                                 </a>
                                             @endif
                                             <a href="#">
                                                 <i class="pricon pricon-camera"></i>
-                                                <?php _e("Live video feed", 'karnan'); ?>
+                                                <span class="hidden-xs inline-block-sm">Live kamera<span>
                                             </a>
                                         </div>
                                     </div>
