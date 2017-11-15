@@ -45,6 +45,21 @@ class FrontPage extends \Municipio\Controller\BaseController
             }
         }
 
+        //Create truncated versions of the content
+        if (is_array($this->data['sections']) && !empty($this->data['sections'])) {
+            foreach ($this->data['sections'] as $key => &$section) {
+                $section['content_truncated'] = wp_trim_words($section['content'], 40, "…");
+
+                if ($section['content_truncated'] !== wp_trim_words($section['content'], 3000, "…")) {
+                    $section['show_read_more'] = true;
+                } else {
+                    $section['show_read_more'] = false;
+                }
+
+                $section['content_truncated'] = apply_filters('the_content', $section['content_truncated']);
+            }
+        }
+
         //Virtual guide link
         if ($guideLink = $this->getVirtualGuideLink()) {
             $this->data['virtualGuidePage'] = $guideLink;

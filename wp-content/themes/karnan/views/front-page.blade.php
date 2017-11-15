@@ -41,10 +41,12 @@
                                     </h2>
                                 </header>
                                 <div class="content">
-                                    <p>Här måste du bara titta upp i taket, för när såg du åtta takbjälkar av ek senast? Och har du överhuvudtaget någonsin sett takbjälkar från 1300-talets början? Här är sådana. Våningen har främst fungerat som vaktvåning, i dag betalar du entré här.</p>
-                                    <!--{!! $section['content'] !!}-->
+                                    {!! $section['content_truncated'] !!}
                                     <p>
+                                        @if($section['show_read_more'])
                                         <a href="#modal-target-{{ sanitize_title($section['section_title']) }}" class="btn btn-primary btn-block open"><?php _e('Read more', 'karnan'); ?></a>
+                                        @endif
+
                                         <div class="nav-links horizontal white">
                                             @if(!empty($section['google_maps']))
                                                 <a href="#modal-target-{{ sanitize_title($section['section_title']) }}-360">
