@@ -46,14 +46,18 @@
                                     <p>
                                         <a href="#modal-target-{{ sanitize_title($section['section_title']) }}" class="btn btn-primary btn-block open"><?php _e('Read more', 'karnan'); ?></a>
                                         <div class="nav-links horizontal white">
-                                            <a href="#modal-target-{{ sanitize_title($section['section_title']) }}-360">
-                                                <i class="pricon pricon-360"></i>
-                                                Virtuell guide
-                                            </a>
-                                            <a href="#">
-                                                <i class="pricon pricon-volume"></i>
-                                                Ljudguide
-                                            </a>
+                                            @if(!empty($section['google_maps']))
+                                                <a href="#modal-target-{{ sanitize_title($section['section_title']) }}-360">
+                                                    <i class="pricon pricon-360"></i>
+                                                    Virtuell guide
+                                                </a>
+                                            @endif
+                                            @if(!empty($section['section_audioguide']))
+                                                <a href="#">
+                                                    <i class="pricon pricon-volume"></i>
+                                                    Ljudguide
+                                                </a>
+                                            @endif
                                             <a href="#">
                                                 <i class="pricon pricon-camera"></i>
                                                 Live kamera
@@ -73,7 +77,9 @@
     @if(is_array($sections) && !empty($sections))
         @foreach ($sections as $key => $section)
             @include ('partials/one-page/modal')
-            @include ('partials/one-page/modal-360')
+            @if(!empty($section['google_maps']))
+                @include ('partials/one-page/modal-360')
+            @endif
         @endforeach
     @endif
     @include ('partials/one-page/scroll-down')
