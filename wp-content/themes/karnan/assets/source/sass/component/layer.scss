@@ -163,7 +163,15 @@
 $sizes-list: 400 600 800 1000 1200 1400 1600;
 @each $size in $sizes-list {
 
-    @media (min-width: #{$size}px) {
+    $mqsize: #{$size}px;
+    $mqtype: min;
+
+    @if $size == 400 {
+        $mqsize: 600px;
+        $mqtype: max;
+    }
+
+    @media (#{$mqtype}-width: $mqsize) {
 
         .layer-gras {
             background-image: url('../../image/grass/png/#{$size}.png');
