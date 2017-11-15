@@ -130,13 +130,13 @@
 
     .layer-tower-top {
         transition: transform 500ms ease-out 50ms, opacity 500ms ease;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
         opacity: 1;
     }
 
     .layer-city-top {
         transition: transform 500ms ease-out 50ms, opacity 350ms ease 100ms;
-        transform: translateY(-10vw) scale(1);
+        transform: translateY(-9.8vw) scale(1);
         opacity: 1;
     }
 
@@ -150,15 +150,15 @@
 .active-section-1  {
 
     .layer-tower-top {
-        transform: translateY(0);
+        transform: translateY(0) scale(1.05);
     }
 
     .layer-city-top {
-        transform: translateY(-9vw) scale(1);
+        transform: translateY(-10vw) scale(1.01);
     }
 
     .layer-greenarea-top {
-        transform: translateY(3vw) scale(1);
+        transform: translateY(3vw) scale(1.02);
     }
 }
 
