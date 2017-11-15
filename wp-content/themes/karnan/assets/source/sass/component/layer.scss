@@ -68,17 +68,19 @@
 @media screen {
     $transform: (
         layer-tower: (
-            active-section-4: translateY(0),
-            active-section-3: translateY(30vw),
-            active-section-2: translateY(90vw),
-            active-section-1: translateY(160vw),
+            active-section-5: translateY(0),
+            active-section-4: translateY(30vw),
+            active-section-3: translateY(90vw),
+            active-section-2: translateY(160vw),
+            active-section-1: translateY(200vw),
             active-section-0: translateY(200vw)
         ),
         layer-gras: (
-            active-section-4: translateY(0),
-            active-section-3: translateY(3vw),
-            active-section-2: translateY(6vw),
-            active-section-1: translateY(9vw),
+            active-section-5: translateY(0),
+            active-section-4: translateY(3vw),
+            active-section-3: translateY(6vw),
+            active-section-2: translateY(9vw),
+            active-section-1: translateY(12vw),
             active-section-0: translateY(12vw)
         )
     );
@@ -88,10 +90,11 @@
 @media screen and (orientation: portrait) {
     $transform: (
         layer-tower: (
-            active-section-4: translateY(0),
-            active-section-3: translateY(-20vw) scale(1.5),
-            active-section-2: translateY(60vw),
-            active-section-1: translateY(120vw),
+            active-section-5: translateY(0),
+            active-section-4: translateY(-20vw) scale(1.5),
+            active-section-3: translateY(60vw),
+            active-section-2: translateY(120vw),
+            active-section-1: translateY(180vw),
             active-section-0: translateY(180vw)
         )
     );
@@ -118,7 +121,8 @@
 
 }
 
-.active-section-0 {
+.active-section-0,
+.active-section-1  {
     .layer-tower, .layer-gras {
         transition: transform 500ms ease-out, opacity 500ms ease;
         opacity: 0;
@@ -138,8 +142,23 @@
 
     .layer-greenarea-top {
         transition: transform 500ms ease-out 50ms, opacity 350ms ease 100ms;
-        transform: translateY(3vw) scale(1);
+        transform: translateY(3.5vw) scale(1);
         opacity: 1;
+    }
+}
+
+.active-section-1  {
+
+    .layer-tower-top {
+        transform: translateY(0);
+    }
+
+    .layer-city-top {
+        transform: translateY(-9vw) scale(1);
+    }
+
+    .layer-greenarea-top {
+        transform: translateY(3vw) scale(1);
     }
 }
 
