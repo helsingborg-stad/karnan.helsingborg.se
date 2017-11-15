@@ -14,6 +14,7 @@ class FrontPage extends \Municipio\Controller\BaseController
 
         //Get youtube live feed
         $this->data['live'] = !empty(get_field('youtube_live_video_url', 'option')) ? $this->getYoutubeId(get_field('youtube_live_video_url', 'option')) : null;
+        $this->data['live_placeholder'] = !empty(get_field('youtube_live_video_placeholder', 'option')) ? $this->getYoutubeId(get_field('youtube_live_video_placeholder', 'option')) : null;
 
         //Get entered details
         $this->data['sections'] = is_array(get_field('karnan_sections', 'option')) ? get_field('karnan_sections', 'option') : array();

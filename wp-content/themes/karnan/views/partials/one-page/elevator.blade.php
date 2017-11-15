@@ -1,6 +1,6 @@
 @if (is_array($sections) && !empty($sections))
     <ul id="one-page-elevator" class="hidden-xs hidden-sm">
-    @if($live)
+    @if($live && $live_placeholder)
         <li data-tooltip-right class="elevator-item hidden-xs hidden-sm hidden-md hidden-lg"></li>
     @endif
 
