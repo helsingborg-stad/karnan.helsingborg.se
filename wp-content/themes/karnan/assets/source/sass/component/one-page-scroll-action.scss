@@ -32,13 +32,14 @@
     color: white !important;
     font-size: 15px;
     font-weight: bold;
+    transition: 200ms opacity;
 
     &:focus, &:active {
         text-decoration: none;
     }
 
     &.disabled {
-        display: none;
+        opacity: 0;
     }
 
     &.scroll-up {

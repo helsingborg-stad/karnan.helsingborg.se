@@ -1,5 +1,5 @@
 @if ($live && $live_placeholder)
-<section id="live-section" data-section-name="live-section" class="onepage-section fluid-type">
+<section id="live-section" data-section-name="live-video-section" class="onepage-section fluid-type">
     <div class="flex v-center full-height">
         <div class="container full-width live-container">
 	        <div class="grid">
