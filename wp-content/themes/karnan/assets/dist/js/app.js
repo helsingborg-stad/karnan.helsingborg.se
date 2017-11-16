@@ -1533,20 +1533,20 @@ Karnan.OnePage.Navigation = (function ($) {
 
         //This is the first item
         if(index == 0) {
-            $('.scroll-action.scroll-up').fadeOut(700,function(){
-                $(this).addClass('disabled').removeAttr('style');
+            $('.scroll-action.scroll-up').addClass('animation-disable').fadeOut(700,function(){
+                $(this).addClass('disabled').removeAttr('style').removeClass('animation-disable');
             });
         } else {
-            $('.scroll-action.scroll-up').removeClass('disabled');
+            $('.scroll-action.scroll-up').removeClass('disabled animation-disable');
         }
 
         //This is the last item
         if(segments == index + 1) {
-            $('.scroll-action.scroll-down').fadeOut(700,function(){
-                $(this).addClass('disabled').removeAttr('style');
+            $('.scroll-action.scroll-down').addClass('animation-disable').fadeOut(700,function(){
+                $(this).addClass('disabled').removeAttr('style').removeClass('animation-disable');
             });
         } else {
-            $('.scroll-action.scroll-down').removeClass('disabled');
+            $('.scroll-action.scroll-down').removeClass('disabled animation-disable');
         }
 
     }.bind(this);

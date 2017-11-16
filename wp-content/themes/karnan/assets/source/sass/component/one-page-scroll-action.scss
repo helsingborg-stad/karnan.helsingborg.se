@@ -32,20 +32,23 @@
     color: white !important;
     font-size: 15px;
     font-weight: bold;
-    transition: 200ms opacity;
 
     &:focus, &:active {
         text-decoration: none;
     }
 
     &.disabled {
-        opacity: 0;
+        display: none;
     }
 
     &.scroll-up {
 
         animation: slide-in-blurred-top 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
         animation-delay: 200ms;
+
+        &.animation-disable {
+            animation: none;
+        }
 
         @include pr-icon(after, pricon-arrow-up) {
             font-size: 18px;
@@ -63,6 +66,10 @@
 
         animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
         animation-delay: 200ms;
+
+        &.animation-disable {
+            animation: none;
+        }
 
         @include pr-icon(after, pricon-arrow-down) {
             font-size: 18px;
