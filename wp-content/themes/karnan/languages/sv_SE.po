@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kärnan in Helsingborg\n"
-"POT-Creation-Date: 2017-11-16 12:55+0100\n"
-"PO-Revision-Date: 2017-11-16 12:56+0100\n"
+"POT-Creation-Date: 2017-11-16 16:01+0100\n"
+"PO-Revision-Date: 2017-11-16 16:01+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -138,6 +138,7 @@ msgid "Virtual guide"
 msgstr "Virtuell guide"
 
 #: views/front-page.blade.php:63
+#: views/partials/one-page/modals/modal-audio.blade.php:4
 msgid "Audioguide"
 msgstr "Ljudguide"
 
@@ -153,23 +154,31 @@ msgstr "Kika in"
 msgid "More"
 msgstr "Visa mer"
 
+#: views/partials/one-page/modals/modal-360.blade.php:4
+msgid "360 view"
+msgstr "Virtuell guide"
+
 #: views/partials/one-page/modals/modal-360.blade.php:12
-#: views/partials/one-page/modals/modal-audio.blade.php:17
+#: views/partials/one-page/modals/modal-audio.blade.php:18
 #: views/partials/one-page/modals/modal-content.blade.php:53
 msgid "Go back"
 msgstr "Gå tillbaka"
+
+#: views/partials/one-page/modals/modal-content.blade.php:4
+msgid "Look inside"
+msgstr "Kika in"
 
 #: views/partials/one-page/preloader.blade.php:12
 msgid "Loading…"
 msgstr "Laddar…"
 
 #: views/partials/one-page/scroll-down.blade.php:3
-msgid "Go up a floor"
-msgstr "Gå upp en våning"
-
-#: views/partials/one-page/scroll-up.blade.php:3
 msgid "Go down a floor"
 msgstr "Gå ner en våning"
+
+#: views/partials/one-page/scroll-up.blade.php:3
+msgid "Go up a floor"
+msgstr "Gå upp en våning"
 
 #: views/partials/one-page/scroll-up.blade.php:4
 msgid "Go to live video"
