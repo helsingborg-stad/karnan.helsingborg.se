@@ -69,6 +69,12 @@
                                                 <span class="hidden-xs inline-block-sm"><?php _e("Live video feed", 'karnan'); ?><span>
                                             </a>
                                             @endif
+
+
+                                            <a href="#">
+                                                <i class="pricon pricon-enter"></i>
+                                                <span class="hidden-xs inline-block-sm"><?php _e("Go inside", 'karnan'); ?><span>
+                                            </a>
                                         </div>
                                     </div>
                                 </article>

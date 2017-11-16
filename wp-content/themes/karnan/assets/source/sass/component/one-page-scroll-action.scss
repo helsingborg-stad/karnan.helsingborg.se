@@ -16,7 +16,7 @@
         margin-left: $stripe-md-width * 1.2;
 
         &.up {
-            top: 1.5rem * 2;
+            top: 1.5rem;
         }
 
         &.down {
@@ -86,7 +86,7 @@
 
 &.admin-bar {
     .scroll-action.scroll-up {
-        top: 10px + $admin-bar-height;
+        margin-top: $admin-bar-height;
     }
 }
 
