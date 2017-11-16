@@ -1710,6 +1710,12 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
         this.startState();
         this.modalEvents();
 
+        if ($('body').hasClass('.home')) {
+            $('a[href="#"]').on('click', function (e) {
+                e.preventDefault();
+            });
+        }
+
     }
 
     ScrollSnapping.prototype.modalEvents = function () {
