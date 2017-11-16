@@ -43,7 +43,7 @@
 
     &.scroll-up {
 
-        animation: slide-in-blurred-top 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+        animation: slide-in-blurred-top 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
         animation-delay: 200ms;
 
         &.animation-disable {
@@ -64,7 +64,7 @@
 
     &.scroll-down {
 
-        animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+        animation: slide-in-blurred-bottom 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
         animation-delay: 200ms;
 
         &.animation-disable {
@@ -88,10 +88,6 @@
     .scroll-action.scroll-up {
         top: 10px + $admin-bar-height;
     }
-}
-
-.slide-in-blurred-bottom {
-    animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
 .scroll-action.scroll-up .video-text {
