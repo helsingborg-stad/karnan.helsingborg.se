@@ -46,6 +46,9 @@
     }
     iframe {
         height: calc(100vh - 6rem);
+        @media screen and #{$screen-md-up} {
+            height: calc(100vh - 300px);
+        }
     }
 }
 
