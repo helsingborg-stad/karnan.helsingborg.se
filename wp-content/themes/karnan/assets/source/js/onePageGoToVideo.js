@@ -7,6 +7,10 @@ Karnan.OnePage.GoToVideo = (function ($) {
             e.preventDefault();
             $.scrollify.move($(this).attr('href'));
         });
+
+        if(!$("#live-section").length) {
+            $("#go-to-live").hide(0);
+        }
     }
     new GoToVideo();
 
