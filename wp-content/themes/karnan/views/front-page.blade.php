@@ -49,22 +49,27 @@
                                         @endif
 
                                         <div class="nav-links horizontal white">
+
                                             @if(!empty($section['google_maps']))
                                                 <a href="#modal-target-{{ sanitize_title($section['section_title']) }}-360">
                                                     <i class="pricon pricon-360"></i>
-                                                    <span class="hidden-xs inline-block-sm">Virtuell guide</span>
+                                                    <span class="hidden-xs inline-block-sm"><?php _e("Virtual guide", 'karnan'); ?></span>
                                                 </a>
                                             @endif
+
                                             @if(!empty($section['section_audioguide']))
                                                 <a href="#">
                                                     <i class="pricon pricon-volume"></i>
-                                                    <span class="hidden-xs inline-block-sm">Ljudguide<span>
+                                                    <span class="hidden-xs inline-block-sm"><?php _e("Audioguide", 'karnan'); ?><span>
                                                 </a>
                                             @endif
+
+                                            @if($section['show_live_icon'])
                                             <a href="#">
                                                 <i class="pricon pricon-camera"></i>
-                                                <span class="hidden-xs inline-block-sm">Live kamera<span>
+                                                <span class="hidden-xs inline-block-sm"><?php _e("Live video feed", 'karnan'); ?><span>
                                             </a>
+                                            @endif
                                         </div>
                                     </div>
                                 </article>
