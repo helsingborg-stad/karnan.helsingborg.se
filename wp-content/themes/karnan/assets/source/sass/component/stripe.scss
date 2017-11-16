@@ -25,7 +25,9 @@
     }
 }
 
-#main-content {
+#main-content,
+.page-template-one-page-blade #site-header + .container,
+.page-template-one-page-blade #site-header + #hero + .container  {
     margin-left: 10px;
 
     @media #{$screen-sm-up} {
