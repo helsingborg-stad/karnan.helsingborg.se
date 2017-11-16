@@ -1,4 +1,4 @@
-<div id="modal-target-{{ sanitize_title($section['section_title']) }}-360" data-section-name="{{ sanitize_title($section['section_title']) }}" class="modal modal-backdrop-white modal-medium modal-karnan modal-360" tabindex="-1" role="dialog" aria-hidden="true">
+<div id="modal-target-{{ sanitize_title($section['section_title']) }}-360" data-section-name="{{ sanitize_title($section['section_title']) }}" class="modal modal-backdrop-4 modal-medium modal-karnan modal-360" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content material-shadow-lg">
         <div class="modal-header">
             <a data-action="modal-close" class="btn btn-close" href="#{{ sanitize_title($section['section_title']) }}"></a>
