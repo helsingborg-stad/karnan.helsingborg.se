@@ -1,7 +1,7 @@
 <div id="modal-target-{{ sanitize_title($section['section_title']) }}" data-section-name="{{ sanitize_title($section['section_title']) }}" class="modal modal-backdrop-4 modal-medium modal-karnan" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content material-shadow-lg">
         <div class="modal-header">
-
+            <span class="h2">{{ $section['section_title'] }} - <?php _e("Look inside", 'karnan'); ?></span>
             <a class="btn btn-close close" href="#{{ sanitize_title($section['section_title']) }}"></a>
         </div>
         <div class="modal-body container">

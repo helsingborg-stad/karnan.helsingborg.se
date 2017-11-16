@@ -1,7 +1,8 @@
 <div id="modal-target-{{ sanitize_title($section['section_title']) }}-audio" data-section-name="{{ sanitize_title($section['section_title']) }}" class="modal modal-backdrop-4 modal-medium modal-karnan modal-audio" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content material-shadow-lg">
         <div class="modal-header">
-            <a  data-action="modal-close" class="btn btn-close close" href="#{{ sanitize_title($section['section_title']) }}"></a>
+            <span class="h2">{{ $section['section_title'] }} - <?php _e("Audioguide", 'karnan'); ?></span>
+            <a data-action="modal-close" class="btn btn-close close" href="#{{ sanitize_title($section['section_title']) }}"></a>
         </div>
         <div class="modal-body container">
             <div class="grid">
