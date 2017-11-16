@@ -60,31 +60,6 @@ class FrontPage extends \Municipio\Controller\BaseController
             }
         }
 
-        //Virtual guide link
-        if ($guideLink = $this->getVirtualGuideLink()) {
-            $this->data['virtualGuidePage'] = $guideLink;
-        } else {
-            $this->data['virtualGuidePage'] = null;
-        }
-
-    }
-
-    /**
-     * Gets the permalink of the page with virtual-section template (first page in structure)
-     * @return mixed [bool, string]
-     */
-
-    public function getVirtualGuideLink()
-    {
-        $page_id =  $this->db->get_var(
-                        "SELECT post_id FROM ". $this->db->postmeta  ." WHERE meta_key = '_wp_page_template' AND meta_value = 'virtual-section.blade.php' LIMIT 1"
-                    );
-
-        if (is_numeric($page_id) && $permalink = get_permalink($page_id)) {
-            return $permalink;
-        }
-
-        return false;
     }
 
     /**
