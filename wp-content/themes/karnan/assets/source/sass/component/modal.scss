@@ -19,10 +19,6 @@
         max-height: 80vh;
     }
 
-    [class*="grid-"] > * + * {
-        margin-top: 1rem;
-    }
-
     .content {
         clear: both;
     }
