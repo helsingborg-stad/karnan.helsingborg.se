@@ -59,7 +59,7 @@ class FrontPage extends \Municipio\Controller\BaseController
         //Create truncated versions of the content
         if (is_array($this->data['sections']) && !empty($this->data['sections'])) {
             foreach ($this->data['sections'] as $key => &$section) {
-                $section['content_truncated'] = wp_trim_words($section['content'], 52, "…");
+                $section['content_truncated'] = wp_trim_words($section['content'], 80, "…");
 
                 if ($section['content_truncated'] !== wp_trim_words($section['content'], 3000, "…")) {
                     $section['show_read_more'] = true;
