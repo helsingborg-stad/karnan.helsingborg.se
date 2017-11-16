@@ -56,12 +56,11 @@
                                                     <span class="hidden-xs inline-block-sm"><?php _e("Virtual guide", 'karnan'); ?></span>
                                                 </a>
                                             @endif
-
-                                            @if(!empty($section['soundcloud']))
-                                                <a href="#">
+                                                <a href="#modal-target-{{ sanitize_title($section['section_title']) }}-audio">
                                                     <i class="pricon pricon-volume"></i>
                                                     <span class="hidden-xs inline-block-sm"><?php _e("Audioguide", 'karnan'); ?><span>
                                                 </a>
+                                            @if(!empty($section['section_audioguide']))
                                             @endif
 
                                             @if($section['show_live_icon'])
@@ -70,6 +69,7 @@
                                                 <span class="hidden-xs inline-block-sm"><?php _e("Live video feed", 'karnan'); ?><span>
                                             </a>
                                             @endif
+
 
                                             <a href="#">
                                                 <i class="pricon pricon-enter"></i>
@@ -89,10 +89,13 @@
     </div>
     @if(is_array($sections) && !empty($sections))
         @foreach ($sections as $key => $section)
-            @include ('partials/one-page/modal')
+            @include ('partials/one-page/modals/modal-content')
+            @include ('partials/one-page/modals/modal-audio')
+
             @if(!empty($section['google_maps']))
-                @include ('partials/one-page/modal-360')
+                @include ('partials/one-page/modals/modal-360')
             @endif
+
         @endforeach
     @endif
     @include ('partials/one-page/scroll-down')

@@ -11,6 +11,7 @@
 .modal-karnan .modal-header {
     border-bottom: none;
     padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 .modal-karnan .modal-body {
@@ -44,11 +45,14 @@
     left: 0;
 }
 
-.modal-karnan {
-            iframe {
-            height: auto;
-            min-height: 70vh;
-        }
+.modal-360 {
+    overflow: hidden;
+    .modal-body {
+        padding-bottom: 0px;
+    }
+    iframe {
+        height: calc(100vh - 6rem);
+    }
 }
 
 
