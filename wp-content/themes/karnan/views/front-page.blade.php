@@ -57,7 +57,7 @@
                                                 </a>
                                             @endif
 
-                                            @if(!empty($section['section_audioguide']))
+                                            @if(!empty($section['soundcloud']))
                                                 <a href="#">
                                                     <i class="pricon pricon-volume"></i>
                                                     <span class="hidden-xs inline-block-sm"><?php _e("Audioguide", 'karnan'); ?><span>
@@ -70,7 +70,6 @@
                                                 <span class="hidden-xs inline-block-sm"><?php _e("Live video feed", 'karnan'); ?><span>
                                             </a>
                                             @endif
-
 
                                             <a href="#">
                                                 <i class="pricon pricon-enter"></i>

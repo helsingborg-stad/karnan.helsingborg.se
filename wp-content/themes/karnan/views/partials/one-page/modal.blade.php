@@ -1,7 +1,7 @@
 <div id="modal-target-{{ sanitize_title($section['section_title']) }}" data-section-name="{{ sanitize_title($section['section_title']) }}" class="modal modal-backdrop-white modal-large modal-karnan" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content material-shadow-lg">
         <div class="modal-header">
-
+            <h2 class="modal-title">{{ $section['section_title'] }}</h2>
             <a class="btn btn-close close" href="#{{ sanitize_title($section['section_title']) }}"></a>
         </div>
         <div class="modal-body container">
@@ -15,7 +15,6 @@
                 </div>
                 <div class="grid-sm-7">
                     <div class="content">
-                        <h2 class="modal-title">{{ $section['section_title'] }}</h2>
                         @if(!empty($section['section_image']['url']))
                         <img class="hidden-sm hidden-md hidden-lg" src="{{ $section['section_image']['url'] }}" alt="{{ $section['section_title'] }}">
                         @endif
