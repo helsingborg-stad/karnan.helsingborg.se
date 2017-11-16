@@ -65,3 +65,17 @@
         margin-right: auto;
     }
 }
+
+@media screen and #{$screen-sm} {
+    .modal-medium {
+        min-height: 100vh;
+    }
+}
+
+@media screen and #{$screen-xs} {
+    .modal-medium {
+        min-height: 100vh;
+    }
+}
+
+
