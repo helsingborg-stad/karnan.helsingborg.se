@@ -1618,7 +1618,10 @@ Karnan.OnePage.Preloader = (function ($) {
             $('body').addClass("page-loaded preload-quick");
         } else {
             $(window).on("load", function() {
-                $('body').addClass("page-loaded");
+                $('body').addClass("page-loaded").delay(1500).queue(function(next){
+                    $("#preloader").hide(0);
+                    next();
+                });;
                 this.markAsCached();
             }.bind(this));
         }
