@@ -65,7 +65,7 @@
                                             @endif
 
                                             @if($section['show_live_icon'])
-                                            <a href="#">
+                                            <a id="go-to-live" href="#live-video-section">
                                                 <i class="pricon pricon-camera"></i>
                                                 <span class="hidden-xs inline-block-sm"><?php _e("Live video feed", 'karnan'); ?><span>
                                             </a>
