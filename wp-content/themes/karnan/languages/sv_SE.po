@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kärnan in Helsingborg\n"
-"POT-Creation-Date: 2017-11-15 15:10+0100\n"
-"PO-Revision-Date: 2017-11-15 15:11+0100\n"
+"POT-Creation-Date: 2017-11-16 11:42+0100\n"
+"PO-Revision-Date: 2017-11-16 11:43+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -128,21 +128,25 @@ msgstr "Inga inlägg att visa"
 msgid "m"
 msgstr "m"
 
-#: views/front-page.blade.php:47
+#: views/front-page.blade.php:48
 msgid "Read more"
 msgstr "Läs mer"
 
-#: views/front-page.blade.php:54
+#: views/front-page.blade.php:56
 msgid "Virtual guide"
 msgstr "Virtuell guide"
 
-#: views/front-page.blade.php:60
+#: views/front-page.blade.php:63
 msgid "Audioguide"
 msgstr "Ljudguide"
 
-#: views/front-page.blade.php:65
+#: views/front-page.blade.php:70
 msgid "Live video feed"
 msgstr "Live video"
+
+#: views/front-page.blade.php:77
+msgid "Go inside"
+msgstr "Kika in"
 
 #: views/partials/header.blade.php:31
 msgid "More"
@@ -157,13 +161,17 @@ msgstr "Gå tillbaka"
 msgid "Loading…"
 msgstr "Laddar…"
 
-#: views/partials/one-page/scroll-down.blade.php:2
-msgid "Go down"
-msgstr "Gå ner"
+#: views/partials/one-page/scroll-down.blade.php:3
+msgid "Go up a floor"
+msgstr "Gå upp en våning"
 
-#: views/partials/one-page/scroll-up.blade.php:2
-msgid "Go up"
-msgstr "Gå upp"
+#: views/partials/one-page/scroll-up.blade.php:3
+msgid "Go down a floor"
+msgstr "Gå ner en våning"
+
+#: views/partials/one-page/scroll-up.blade.php:4
+msgid "Go to live video"
+msgstr "Gå till live video"
 
 #: views/partials/search/top-search.blade.php:6
 #: views/partials/virtual/content.blade.php:48
@@ -189,6 +197,12 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://github.com/helsingborg-stad/karnan/"
 msgstr ""
+
+#~ msgid "Go down"
+#~ msgstr "Gå ner"
+
+#~ msgid "Go up"
+#~ msgstr "Gå upp"
 
 #~ msgid "Iframe script"
 #~ msgstr "Inbäddningsscript"
