@@ -60,6 +60,7 @@
         @each $selector, $transform in map-get($layer-map, $key) {
             .#{$selector} .#{$key} {
                 transform: $transform;
+                transition-timing-function: cubic-bezier(.58,0,.43,1);
             }
         }
     }
@@ -104,8 +105,7 @@
 .layer-tower-top {
     opacity: 0;
     transition: transform 500ms ease-out 300ms, opacity 500ms ease;
-
-     transform: translateY(5vw);
+    transform: translateY(5vw);
 }
 
 .layer-greenarea-top {
@@ -142,7 +142,7 @@
 
     .layer-greenarea-top {
         transition: transform 500ms ease-out 50ms, opacity 350ms ease 100ms;
-        transform: translateY(3.5vw) scale(1);
+        transform: translateY(3.5vw) scale(0.98);
         opacity: 1;
     }
 }
