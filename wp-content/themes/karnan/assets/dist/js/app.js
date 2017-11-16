@@ -1695,13 +1695,18 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
     }
 
     ScrollSnapping.prototype.modalEvents = function () {
+        this.currentSection = $.scrollify.currentIndex();
+
         $('html').on('openModal', function() {
+            this.currentSection = $.scrollify.currentIndex();
             $.scrollify.disable();
         });
 
         $('html').on('closeModal', function() {
             $.scrollify.enable();
             $.scrollify.update();
+            $.scrollify.instantMove(this.currentSection);
+
         });
     }
 

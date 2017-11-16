@@ -71,7 +71,7 @@
                                             </a>
                                             @endif
 
-                                            <a href="#">
+                                            <a href="#modal-target-{{ sanitize_title($section['section_title']) }}">
                                                 <i class="pricon pricon-enter"></i>
                                                 <span class="hidden-xs inline-block-sm"><?php _e("Go inside", 'karnan'); ?><span>
                                             </a>
