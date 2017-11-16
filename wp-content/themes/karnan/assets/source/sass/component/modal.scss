@@ -1,17 +1,6 @@
-.modal-karnan {
-    min-width: 100vw;
-    min-height: 100vh;
-}
-
-.modal-karnan .btn-close {
-    top: 2rem;
-    right: 2rem;
-}
 
 .modal-karnan .modal-header {
     border-bottom: none;
-    padding: 2rem;
-    margin-bottom: 2rem;
 }
 
 .modal-karnan .modal-body {
@@ -35,10 +24,13 @@
     }
 }
 
-.modal-karnan .modal-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+@media screen and #{$screen-below-md} {
+    .modal-karnan .modal-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }
 
 .modal-360 {
@@ -48,6 +40,9 @@
     }
     iframe {
         height: calc(100vh - 6rem);
+        @media screen and #{$screen-md-up} {
+            height: calc(100vh - 300px);
+        }
     }
 }
 
@@ -61,3 +56,12 @@
         margin-right: auto;
     }
 }
+
+@media screen and #{$screen-below-md} {
+    .modal-medium .modal-content {
+        min-height: 100vh;
+        width: 100%;
+        margin-top: 0;
+    }
+}
+

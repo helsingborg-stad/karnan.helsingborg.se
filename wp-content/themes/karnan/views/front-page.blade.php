@@ -44,9 +44,6 @@
                                     <span class="hidden-xs hidden-sm">{!! $section['content'] !!}</span>
                                     <span class="hidden-md hidden-lg">{!! $section['content_truncated'] !!}</span>
                                     <p>
-                                        @if($section['show_read_more'])
-                                            <a href="#modal-target-{{ sanitize_title($section['section_title']) }}" class="btn btn-primary btn-block open hidden-md hidden-lg"><?php _e('Read more', 'karnan'); ?></a>
-                                        @endif
 
                                         <div class="nav-links horizontal white">
 
