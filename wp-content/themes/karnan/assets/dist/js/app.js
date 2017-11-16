@@ -1691,25 +1691,23 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
 
         this.startState();
         this.modalEvents();
+
     }
 
     ScrollSnapping.prototype.modalEvents = function () {
-
-        $(document).on('click touch', '.open', function() {
+        $('html').on('openModal', function() {
             $.scrollify.disable();
-        }.bind(this));
+        });
 
-        $(document).on('click touch', '.close', function(e) {
-            $('html').removeClass('overflow-hidden');
+        $('html').on('closeModal', function() {
             $.scrollify.enable();
             $.scrollify.update();
-            $.scrollify.instantMove('#' + $(e.target).parents('.modal').attr('data-section-name'));
-        }.bind(this));
+        });
     }
 
     ScrollSnapping.prototype.startState = function () {
         //Set last section as current if no hash is defined
-        if(window.location.hash == "#r") {
+        if (window.location.hash == "#r") {
             $.scrollify.instantMove(this.sectionCount);
         }
 
