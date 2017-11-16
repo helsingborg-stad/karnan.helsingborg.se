@@ -142,7 +142,7 @@
 
     .layer-greenarea-top {
         transition: transform 500ms ease-out 50ms, opacity 350ms ease 100ms;
-        transform: translateY(3.5vw) scale(0.98);
+        transform: translateY(3.5vw) scale(1);
         opacity: 1;
     }
 }
