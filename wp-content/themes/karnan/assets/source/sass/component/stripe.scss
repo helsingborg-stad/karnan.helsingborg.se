@@ -25,18 +25,20 @@
     }
 }
 
-#main-content {
-    margin-left: 10px;
+#main-content,
+.page-template-one-page-blade #site-header + .container,
+.page-template-one-page-blade #site-header + .hero + .container  {
+    padding-left: 10px;
 
     @media #{$screen-sm-up} {
-        margin-left: 17px;
+        padding-left: 17px;
     }
 
     @media #{$screen-md-up} {
-        margin-left: 20px;
+        padding-left: 20px;
     }
 
     @media #{$screen-lg-up} {
-        margin-left: 25px;
+        padding-left: 25px;
     }
 }

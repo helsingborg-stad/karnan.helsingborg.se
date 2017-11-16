@@ -60,7 +60,11 @@
   0% {
     opacity: 1;
   }
+  99% {
+    opacity: 0;
+  }
   100% {
+    display: none !important;
     opacity: 0;
   }
 }

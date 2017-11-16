@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kärnan in Helsingborg\n"
-"POT-Creation-Date: 2017-11-16 11:42+0100\n"
-"PO-Revision-Date: 2017-11-16 11:43+0100\n"
+"POT-Creation-Date: 2017-11-16 12:55+0100\n"
+"PO-Revision-Date: 2017-11-16 12:56+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -105,12 +105,13 @@ msgid "Gallery"
 msgstr "Galleri"
 
 #: library/AcfFields/php/theme-settings.php:195
-msgid "Audioguide - Audiofile"
-msgstr "Audioguide - Ljudfil\t"
+msgid "Soundcloudembed code"
+msgstr "Soundcloud inbäddningskod"
 
-#: library/AcfFields/php/theme-settings.php:215
-msgid "Audioguide - Miniature image"
-msgstr "Audioguide - Miniatyrbild"
+#: library/AcfFields/php/theme-settings.php:199
+msgid ""
+"Paste soundcloud embed code (click on share button for any soundcloud file)"
+msgstr "Klistra in inbäddningskoden för soundcloud-ljudklippet här"
 
 #: library/Admin/ThemeOptions.php:25
 msgid "Kärnan"
@@ -144,7 +145,7 @@ msgstr "Ljudguide"
 msgid "Live video feed"
 msgstr "Live video"
 
-#: views/front-page.blade.php:77
+#: views/front-page.blade.php:76
 msgid "Go inside"
 msgstr "Kika in"
 
@@ -152,8 +153,9 @@ msgstr "Kika in"
 msgid "More"
 msgstr "Visa mer"
 
-#: views/partials/one-page/modal-360.blade.php:18
-#: views/partials/one-page/modal.blade.php:54
+#: views/partials/one-page/modals/modal-360.blade.php:12
+#: views/partials/one-page/modals/modal-audio.blade.php:17
+#: views/partials/one-page/modals/modal-content.blade.php:53
 msgid "Go back"
 msgstr "Gå tillbaka"
 
@@ -197,6 +199,12 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://github.com/helsingborg-stad/karnan/"
 msgstr ""
+
+#~ msgid "Audioguide - Audiofile"
+#~ msgstr "Audioguide - Ljudfil\t"
+
+#~ msgid "Audioguide - Miniature image"
+#~ msgstr "Audioguide - Miniatyrbild"
 
 #~ msgid "Go down"
 #~ msgstr "Gå ner"
