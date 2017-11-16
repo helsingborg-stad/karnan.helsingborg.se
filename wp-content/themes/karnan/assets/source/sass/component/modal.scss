@@ -64,6 +64,8 @@
 @media screen and #{$screen-below-md} {
     .modal-medium .modal-content {
         min-height: 100vh;
+        width: 100%;
+        margin-top: 0;
     }
 }
 
