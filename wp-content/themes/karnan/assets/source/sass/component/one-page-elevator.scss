@@ -2,17 +2,15 @@ $dot-size: 15px;
 $border-size: 3px;
 
 #one-page-elevator {
-    z-index: $level-4;
+    z-index: $level-8;
     position: fixed;
     top: 0;
     right: auto;
     bottom: 70px;
     left: 10px;
     width: $elevator-nav-width;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    align-content: stretch;
+    height: calc(100% - $nav-height);
+    background-color: #fff;
 
     @media #{$screen-sm-up} {
         left: 17px;
@@ -27,11 +25,8 @@ $border-size: 3px;
     }
 
     li {
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
+        display: block;
+        height: 20%;
 
         &.active {
             .blipper-disabled {
@@ -44,14 +39,13 @@ $border-size: 3px;
         }
 
         a {
-            display: flex;
-            align-items: center;
             line-height: $dot-size;
             text-decoration: none;
             font-weight: bold;
+            white-space: nowrap;
 
-            vertical-align: middle;
-            height: 100%;
+            @include center();
+            @include antialias();
 
             span.height-indicator {
                 margin-left: .2em;
