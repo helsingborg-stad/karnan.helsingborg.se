@@ -24,8 +24,10 @@
 
     #inner {
         @include overlay($palette-2, 0.8);
+        overflow: hidden;
         &:before {
             z-index: $level-2;
+            height: 110%;
         }
     }
 
