@@ -16,7 +16,6 @@
     }
 
     #inner {
-        overflow: hidden;
         @media screen and #{$screen-md-up} {
             padding-left: 100px;
         }
@@ -24,7 +23,6 @@
 
     #inner {
         @include overlay($palette-2, 0.8);
-        overflow: hidden;
         &:before {
             z-index: $level-2;
             height: 110%;
