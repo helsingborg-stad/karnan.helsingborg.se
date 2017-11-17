@@ -28,6 +28,7 @@
         &:before {
             z-index: $level-2;
             height: 110%;
+            min-height: 110vh;
         }
     }
 
