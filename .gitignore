@@ -30,6 +30,9 @@ wp-content/themes/*
 !wp-content/themes/karnan/library/Vendor/
 wp-content/themes/karnan/node_modules
 
+
+vendor/
+!wp-content/themes/karnan/assets/source/js/vendor
 # Compiled source #
 ###################
 *.com
