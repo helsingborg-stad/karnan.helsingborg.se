@@ -1,5 +1,5 @@
 $dot-size: 15px;
-$border-size: 3px;
+$border-size: 2px;
 
 #one-page-elevator {
     z-index: $level-8;
@@ -10,7 +10,7 @@ $border-size: 3px;
     left: 10px;
     width: $elevator-nav-width;
     height: calc(100% - $nav-height);
-    background-color: #fff;
+    background-color: $palette-3;
 
     @media #{$screen-sm-up} {
         left: 17px;
@@ -39,6 +39,7 @@ $border-size: 3px;
         }
 
         a {
+            color: #fff;
             line-height: $dot-size;
             text-decoration: none;
             font-weight: bold;
@@ -53,7 +54,7 @@ $border-size: 3px;
         }
 
         .blipper-theme-1, .blipper-theme-1:after, .blipper-theme-1:before {
-            background-color: $palette-3;
+            background-color: #fff;
         }
 
         .blipper-disabled,
@@ -64,7 +65,7 @@ $border-size: 3px;
             width: calc(#{$dot-size} - #{$border-size}/2);
             height: calc(#{$dot-size} - #{$border-size}/2);
             border-radius: 50%;
-            border: $border-size solid $palette-4;
+            border: $border-size solid #fff;
         }
 
         .blipper-disabled {
