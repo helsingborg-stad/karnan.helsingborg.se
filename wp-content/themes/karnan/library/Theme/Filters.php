@@ -22,6 +22,25 @@ class Filters
 
         //Set custom classes to timeline module
         add_filter('Modularity/Module/Classes', array($this, 'timelineClasses'), 10, 3);
+
+        //Set custom attributes to timeline module
+        add_filter('Modularity/Module/Attributes', array($this, 'timelineAttributes'), 10, 3);
+    }
+
+    /**
+     * Set data attribute to timeline module
+     * @param  array $attributes   The attributes (array)
+     * @param  string $moduleType  The module type
+     * @param  array $sidebarArgs  The sidebar's args
+     * @return array               Modified array of classes
+     */
+    public function timelineAttributes($attributes, $moduleType, $sidebarArgs)
+    {
+        if ($moduleType == 'mod-timeline') {
+            $attributes[] = 'data-animation="animate fadeInUp"';
+        }
+
+        return $attributes;
     }
 
     /**
@@ -34,7 +53,7 @@ class Filters
     public function timelineClasses($classes, $moduleType, $sidebarArgs)
     {
         if ($moduleType == 'mod-timeline') {
-            $classes[] = 'animate';
+            $classes[] = 'js-reveal-animation';
         }
 
         return $classes;
