@@ -1,6 +1,14 @@
 .modal-karnan {
-    .grid [class*="grid-"] {
+    .modal-body > .grid > [class*="grid-"], {
         margin-bottom: 15px;
+    }
+
+    .gallery {
+        margin-top: 15px;
+    }
+
+    .grid-gallery .box {
+        margin-bottom: 0;
     }
 }
 
@@ -50,7 +58,6 @@
         }
     }
 }
-
 
 .modal-karnan .container {
     max-width: 900px;

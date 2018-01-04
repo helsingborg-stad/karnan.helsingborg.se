@@ -1,7 +1,7 @@
 <div id="modal-target-{{ sanitize_title($section['section_title']) }}" data-section-name="{{ sanitize_title($section['section_title']) }}" class="modal modal-backdrop-4 modal-medium modal-karnan" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content material-shadow-lg">
         <div class="modal-header">
-            <span class="h2">{{ $section['section_title'] }} - <?php _e("Look inside", 'karnan'); ?></span>
+            <span class="h2 hidden-sm hidden-md hidden-lg">{{ $section['section_title'] }} - <?php _e("Look inside", 'karnan'); ?></span>
             <a class="btn btn-close close" href="#{{ sanitize_title($section['section_title']) }}"></a>
         </div>
         <div class="modal-body container">
@@ -18,6 +18,7 @@
                         @if(!empty($section['section_image']['url']))
                         <img class="hidden-sm hidden-md hidden-lg" src="{{ $section['section_image']['url'] }}" alt="{{ $section['section_title'] }}">
                         @endif
+                        <span class="h1 hidden-xs text-color-2">{{ $section['section_title'] }} - <?php _e("Look inside", 'karnan'); ?></span>
                         {!! $section['content_guide'] !!}
                     </div>
                     @if(!empty($section['gallery']))
