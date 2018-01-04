@@ -45,7 +45,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
             $.scrollify.update();
             $.scrollify.instantMove(this.currentSection);
         });
-    }
+    };
 
     ScrollSnapping.prototype.startState = function () {
         //Set last section as current if no hash is defined
@@ -68,7 +68,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
         if ($.scrollify.currentIndex() + 1 <= this.sectionCount) {
             $.scrollify.current().next().addClass('prev-section');
         }
-    }
+    };
 
     ScrollSnapping.prototype.updateWrapper = function (index, sections) {
         //Remove old wrapper class
@@ -78,7 +78,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
 
         //Add active
         $('#one-page-content').addClass('active-section-' + index);
-    }
+    };
 
     ScrollSnapping.prototype.updateBody = function (index, sections) {
         //Remove old wrapper class
@@ -88,7 +88,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
 
         //Add active
         $('body').addClass('active-item-' + index);
-    }
+    };
 
     ScrollSnapping.prototype.updateActive = function (index, sections) {
         //Remove active class
@@ -100,7 +100,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
 
         //Set new active class
         sections[index].addClass('active-section');
-    }
+    };
 
     ScrollSnapping.prototype.updateNext = function (index, sections) {
         //Remove old next
@@ -112,7 +112,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
         if (sections[(index - 1)]) {
             sections[(index - 1)].addClass('next-section');
         }
-    }
+    };
 
     ScrollSnapping.prototype.updatePrev = function (index, sections) {
         //Remove old prev
@@ -124,7 +124,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
         if (sections[(index + 1)]) {
             sections[(index + 1)].addClass('prev-section');
         }
-    }
+    };
 
     ScrollSnapping.prototype.StartSections = function () {
 
@@ -151,7 +151,7 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
                 $(document).trigger('scrollifyStop', [index, sections, scrollSpeed, 'onepage']);
             }.bind(this)
         });
-    }
+    };
 
     ScrollSnapping.prototype.VirtualSections = function () {
 

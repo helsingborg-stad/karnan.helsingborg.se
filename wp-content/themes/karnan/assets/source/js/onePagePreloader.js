@@ -11,7 +11,7 @@ Karnan.OnePage.Preloader = (function ($) {
                 $('body').addClass("page-loaded").delay(1500).queue(function(next){
                     $("#preloader").hide(0);
                     next();
-                });;
+                });
                 this.markAsCached();
             }.bind(this));
         }
@@ -22,11 +22,11 @@ Karnan.OnePage.Preloader = (function ($) {
             return true;
         }
         return false;
-    }
+    };
 
     Preloader.prototype.markAsCached = function() {
         this.addCookie("karnanExistsInCache", 1, 1);
-    }
+    };
 
     Preloader.prototype.addCookie = function(name, value, days) {
         var expires;
@@ -39,7 +39,7 @@ Karnan.OnePage.Preloader = (function ($) {
             expires = "";
         }
         document.cookie = name+"="+value+expires+"; path=/";
-    }
+    };
 
     Preloader.prototype.getCookie = function (name) {
         var nameEQ = name + "=";
@@ -54,7 +54,7 @@ Karnan.OnePage.Preloader = (function ($) {
             }
         }
         return null;
-    }
+    };
 
     new Preloader();
 
