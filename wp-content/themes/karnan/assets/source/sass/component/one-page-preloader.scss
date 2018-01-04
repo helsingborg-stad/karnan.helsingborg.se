@@ -3,7 +3,7 @@
     position: fixed;
 
     z-index: $level-9;
-    background-color: $palette-2;
+    background-color: $palette-4;
 
     #preloader-blipper {
         @include center();
@@ -31,19 +31,19 @@
       svg {
         height: 150px;
         width: 150px;
-        filter: drop-shadow(0 0 3px rgba(#000,.3));
+
       }
     }
 
     #preloader-text {
       display: block;
-      text-transform: uppercase;
       text-indent: .6em;
     }
 
 }
 
 &.page-loaded:not(.preload-quick) #preloader {
+
   animation: fade-out 1s ease-out 1500ms both;
 
   #preloader-icon,

@@ -1,5 +1,6 @@
 /* Flex stripes */
 .stripe {
+    z-index: $level-10;
     display: flex;
     flex-direction: column;
 
