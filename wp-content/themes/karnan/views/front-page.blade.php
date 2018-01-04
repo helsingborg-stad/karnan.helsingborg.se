@@ -54,13 +54,6 @@
                                                 </a>
                                             @endif
 
-                                            @if(!empty($section['soundcloud']))
-                                                <a href="#modal-target-{{ sanitize_title($section['section_title']) }}-audio">
-                                                    <i class="pricon pricon-volume"></i>
-                                                    <span class="hidden-xs inline-block-sm"><?php _e("Audioguide", 'karnan'); ?><span>
-                                                </a>
-                                            @endif
-
                                             @if($section['show_live_icon'])
                                             <a id="go-to-live" href="#live-video-section">
                                                 <i class="pricon pricon-camera"></i>

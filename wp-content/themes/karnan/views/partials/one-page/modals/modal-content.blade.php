@@ -20,18 +20,6 @@
                         @endif
                         {!! $section['content_guide'] !!}
                     </div>
-                    @if(!empty($section['section_audioguide']))
-                        <div class="audio-player">
-                            <audio controls controlsList="nodownload">
-                                <source src="{{ $section['section_audioguide'] }}" type="audio/mpeg">
-                            </audio>
-                            <div class="album-art" style="background-image: url('{{ $section['section_audioguide_albumbart'] }}');">
-                                <a href="#play" class="toggle-action-play pricon pricon-play"></a>
-                                <a href="#play" class="toggle-action-pause pricon pricon-pause"></a>
-                            </div>
-                            <input type="range" class="action-seek" value="0" max="100" step="0.01"/>
-                        </div>
-                    @endif
                     @if(!empty($section['gallery']))
                         <div class="gallery">
                             <ul class="image-gallery grid grid-gallery">
@@ -46,6 +34,12 @@
                         </div>
                     @endif
                 </div>
+
+                @if(!empty($section['soundcloud']))
+                    <div class="grid-sm-12">
+                        {!! $section['soundcloud'] !!}
+                    </div>
+                @endif
             </div>
         </div>
 
