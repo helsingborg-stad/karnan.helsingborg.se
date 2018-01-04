@@ -70,3 +70,4 @@ vendor/
 .Trashes
 ehthumbs.db
 Thumbs.db
+/wp-content/themes/karnan/assets/tmp
