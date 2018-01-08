@@ -50,7 +50,7 @@
                                             @if(!empty($section['google_maps']))
                                                 <a href="#modal-target-{{ sanitize_title($section['section_title']) }}-360">
                                                     <i class="pricon pricon-360"></i>
-                                                    <span class="hidden-xs inline-block-sm"><?php _e("Virtual guide", 'karnan'); ?></span>
+                                                    <span class="hidden-xs inline-block-sm"><?php _e("360-view", 'karnan'); ?></span>
                                                 </a>
                                             @endif
 
@@ -63,7 +63,7 @@
 
                                             <a href="#modal-target-{{ sanitize_title($section['section_title']) }}">
                                                 <i class="pricon pricon-enter"></i>
-                                                <span class="hidden-xs inline-block-sm"><?php _e("Go inside", 'karnan'); ?><span>
+                                                <span class="hidden-xs inline-block-sm"><?php _e("Guide", 'karnan'); ?><span>
                                             </a>
                                         </div>
                                     </div>
