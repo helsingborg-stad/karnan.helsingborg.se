@@ -136,7 +136,7 @@
    ========================================================================== */
 
     gulp.task('sass', function () {
-        var app = gulp.src('assets/source/sass/app.scss')
+        var app = gulp.src('assets/source/sass/**/*.scss')
                 .pipe(plumber())
                 .pipe(sourcemaps.init())
                 .pipe(sass().on('error', sass.logError))
@@ -149,19 +149,7 @@
                 .pipe(cleanCSS({debug: true}))
                 .pipe(gulp.dest('./assets/tmp/css'));
 
-        var admin = gulp.src('assets/source/sass/admin.scss')
-                .pipe(plumber())
-                .pipe(sourcemaps.init())
-                .pipe(sass().on('error', sass.logError))
-                .pipe(autoprefixer({
-                        browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1']
-                    }))
-                .pipe(sourcemaps.write())
-                .pipe(gulp.dest('./assets/dist/css'))
-                .pipe(cleanCSS({debug: true}))
-                .pipe(gulp.dest('./assets/tmp/css'));
-
-        return [app, admin];
+        return [app];
     });
 
 /* ==========================================================================
