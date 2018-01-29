@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kärnan in Helsingborg\n"
-"POT-Creation-Date: 2017-11-16 16:01+0100\n"
-"PO-Revision-Date: 2017-11-16 16:01+0100\n"
+"POT-Creation-Date: 2018-01-29 14:48+0100\n"
+"PO-Revision-Date: 2018-01-29 14:48+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -117,38 +117,27 @@ msgstr "Klistra in inbäddningskoden för soundcloud-ljudklippet här"
 msgid "Kärnan"
 msgstr ""
 
-#: library/Theme/Template.php:11
-msgid "Virtual sections"
-msgstr "Virtuella sektioner"
-
 #: views/archive-event.blade.php:69
 msgid "No posts to show"
 msgstr "Inga inlägg att visa"
 
 #: views/front-page.blade.php:39 views/partials/one-page/elevator.blade.php:12
+#: views/partials/one-page/modals/modal-content.blade.php:5
+#: views/partials/one-page/modals/modal-content.blade.php:24
 msgid "m"
 msgstr "m"
 
-#: views/front-page.blade.php:48
-msgid "Read more"
-msgstr "Läs mer"
+#: views/front-page.blade.php:53
+msgid "360-view"
+msgstr "360-vy"
 
-#: views/front-page.blade.php:56
-msgid "Virtual guide"
-msgstr "Virtuell guide"
-
-#: views/front-page.blade.php:63
-#: views/partials/one-page/modals/modal-audio.blade.php:4
-msgid "Audioguide"
-msgstr "Ljudguide"
-
-#: views/front-page.blade.php:70
+#: views/front-page.blade.php:60
 msgid "Live video feed"
 msgstr "Live video"
 
-#: views/front-page.blade.php:76
-msgid "Go inside"
-msgstr "Kika in"
+#: views/front-page.blade.php:66
+msgid "Guide"
+msgstr ""
 
 #: views/partials/header.blade.php:31
 msgid "More"
@@ -160,15 +149,15 @@ msgstr "Virtuell guide"
 
 #: views/partials/one-page/modals/modal-360.blade.php:12
 #: views/partials/one-page/modals/modal-audio.blade.php:18
-#: views/partials/one-page/modals/modal-content.blade.php:53
+#: views/partials/one-page/modals/modal-content.blade.php:52
 msgid "Go back"
 msgstr "Gå tillbaka"
 
-#: views/partials/one-page/modals/modal-content.blade.php:4
-msgid "Look inside"
-msgstr "Kika in"
+#: views/partials/one-page/modals/modal-audio.blade.php:4
+msgid "Audioguide"
+msgstr "Ljudguide"
 
-#: views/partials/one-page/preloader.blade.php:12
+#: views/partials/one-page/preloader.blade.php:9
 msgid "Loading…"
 msgstr "Laddar…"
 
@@ -208,6 +197,21 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://github.com/helsingborg-stad/karnan/"
 msgstr ""
+
+#~ msgid "Virtual sections"
+#~ msgstr "Virtuella sektioner"
+
+#~ msgid "Read more"
+#~ msgstr "Läs mer"
+
+#~ msgid "Virtual guide"
+#~ msgstr "Virtuell guide"
+
+#~ msgid "Go inside"
+#~ msgstr "Kika in"
+
+#~ msgid "Look inside"
+#~ msgstr "Kika in"
 
 #~ msgid "Audioguide - Audiofile"
 #~ msgstr "Audioguide - Ljudfil\t"
