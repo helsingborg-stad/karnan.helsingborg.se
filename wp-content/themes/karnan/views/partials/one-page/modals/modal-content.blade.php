@@ -30,7 +30,7 @@
                             <ul class="image-gallery grid grid-gallery">
                                 @foreach($section['gallery'] as $image)
                                 <li class="grid-md-4 grid-xs-6">
-                                    <a class="box lightbox-trigger js-close-tar" data-close-target="modal-target-{{ sanitize_title($section['section_title']) }}" href="{{ $image['sizes']['large'] }}">
+                                    <a class="box lightbox-trigger js-close-target" data-close-target="modal-target-{{ sanitize_title($section['section_title']) }}" href="{{ $image['sizes']['large'] }}">
                                         {!! wp_get_attachment_image($image['ID'], array('250', '170')) !!}
                                     </a>
                                 </li>

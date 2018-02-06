@@ -13,7 +13,7 @@ Karnan.OnePage.GalleryPopup = (function ($) {
             $(document).on('closeLightBox', function() {
                 setTimeout(function(){
                   window.location.hash = hash;
-                }, 10);
+                }, 20);
             });
         });
     };
