@@ -18,5 +18,5 @@
             <a data-action="modal-close" href="#{{ sanitize_title($section['section_title']) }}" class="btn btn-primary btn-block close"><?php _e('Go back', 'karnan'); ?></a>
         </div>
     </div><!-- /.modal-content -->
-    <a href="#" class="backdrop"></a>
+    <a href="#close" class="backdrop"></a>
 </div><!-- /.modal -->

@@ -32,11 +32,9 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
         this.currentSection = $.scrollify.currentIndex();
 
         $('html').on('openModal', function() {
-
             this.currentSection = $.scrollify.currentIndex();
             $.scrollify.disable();
             disableBodyScroll(true, '.modal:target');
-
         });
 
         $('html').on('closeModal', function() {
