@@ -30,7 +30,7 @@
                             <ul class="image-gallery grid grid-gallery">
                                 @foreach($section['gallery'] as $image)
                                 <li class="grid-md-4 grid-xs-6">
-                                    <a class="box lightbox-trigger js-close-target" data-close-target="modal-target-{{ sanitize_title($section['section_title']) }}" href="{{ $image['sizes']['large'] }}">
+                                    <a class="box lightbox-trigger js-close-tar" data-close-target="modal-target-{{ sanitize_title($section['section_title']) }}" href="{{ $image['sizes']['large'] }}">
                                         {!! wp_get_attachment_image($image['ID'], array('250', '170')) !!}
                                     </a>
                                 </li>
@@ -52,5 +52,5 @@
             <a data-action="modal-close"  href="#{{ sanitize_title($section['section_title']) }}" class="btn btn-primary btn-block"><?php _e('Go back', 'karnan'); ?></a>
         </div>
     </div><!-- /.modal-content -->
-    <a href="#" class="backdrop"></a>
+    <a href="#close" class="backdrop"></a>
 </div><!-- /.modal -->
