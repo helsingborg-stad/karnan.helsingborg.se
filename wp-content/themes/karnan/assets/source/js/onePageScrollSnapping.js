@@ -38,10 +38,12 @@ Karnan.OnePage.ScrollSnapping = (function ($) {
         });
 
         $('html').on('closeModal', function() {
-            $.scrollify.enable();
-            disableBodyScroll(false, '.modal:target');
-            $.scrollify.update();
-            $.scrollify.instantMove(this.currentSection);
+            if (!$('html').hasClass('gallery-hidden')) {
+                $.scrollify.enable();
+                disableBodyScroll(false, '.modal:target');
+                $.scrollify.update();
+                $.scrollify.instantMove(this.currentSection);
+            }
         });
     };
 

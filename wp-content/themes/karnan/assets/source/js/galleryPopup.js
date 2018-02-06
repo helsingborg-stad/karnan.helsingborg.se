@@ -4,6 +4,7 @@ Karnan.OnePage = Karnan.OnePage || {};
 Karnan.OnePage.GalleryPopup = (function ($) {
     function GalleryPopup() {
         this.openModalOnClose();
+        this.disableCloseButton();
     }
 
     GalleryPopup.prototype.openModalOnClose = function () {
@@ -11,12 +12,19 @@ Karnan.OnePage.GalleryPopup = (function ($) {
             var hash = $(this).attr('data-close-target');
 
             $(document).on('closeLightBox', function() {
-                setTimeout(function(){
+
                   window.location.hash = hash;
-                }, 10);
+
             });
         });
     };
+
+    GalleryPopup.prototype.disableCloseButton = function () {
+        $(document).on('click', '#lightbox .btn-close', function(e) {
+            e.preventDefault();
+        });
+    };
+
     new GalleryPopup();
 
 
