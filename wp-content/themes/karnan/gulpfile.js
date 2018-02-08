@@ -35,7 +35,9 @@
     plumber         =   require('gulp-plumber'),
     jshint          =   require("gulp-jshint"),
     cleanCSS        =   require('gulp-clean-css'),
-    node_modules    =   'node_modules/';
+    node_modules    =   'node_modules/',
+    image           =   require('gulp-image'),
+    imagemin        =   require('gulp-imagemin');
 
 /* ==========================================================================
    Load configuration file
@@ -56,7 +58,7 @@
    ========================================================================== */
 
     gulp.task('build', function(callback) {
-        runSequence('clean:dist', ['sass', 'scripts'], 'rev', callback);
+        runSequence(['sass', 'scripts'], 'rev', callback);
     });
 
     gulp.task('build:sass', function(callback) {
@@ -195,4 +197,22 @@
 
     gulp.task('clean:tmp', function () {
         return del.sync('./assets/tmp');
+    });
+
+/* ==========================================================================
+   Image optimization tasks
+   ========================================================================== */
+
+    var imageSrc = [
+        'assets/image/**/**/*',
+        'assets/image/top/**/**/*',
+        '!assets/image/orginal/',
+        '!assets/image/orginal/*',
+        '!assets/image/orginal/**/*'
+    ];
+
+    gulp.task('image', function () {
+        return gulp.src(imageSrc)
+            .pipe(image())
+            .pipe(gulp.dest('./assets/dist/image'));
     });
