@@ -31,7 +31,7 @@
                 <div class="container full-width">
                     <div class="grid">
                         <div class="grid-xs-12 grid-md-12">
-                            <article class="full">
+                            <article class="full o-article o-article--section o-article--blue">
                                 <header>
                                     <h2>
                                     {!! $section['section_title_span'] !!}
