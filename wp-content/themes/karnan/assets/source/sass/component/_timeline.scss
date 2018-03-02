@@ -1,5 +1,6 @@
 .modularity-mod-timeline {
     margin-top: 2em;
+    margin-bottom: 2em;
 
     .timeline > .timeline__event > .timeline__date {
         @media screen and (min-width: 769px) {
@@ -24,5 +25,15 @@
 
     .animate {
      opacity: 0;
+    }
+
+    > .box {
+        box-shadow: none !important;
+        margin: 0 auto;
+        max-width: 1280px + 30px;
+
+    }
+    > .box > .box-content {
+        border: 0;
     }
 }
