@@ -2,6 +2,20 @@
     margin-top: 2em;
     margin-bottom: 2em;
 
+    //Stripe padding
+    padding-left: 10px;
+    @media #{$screen-sm-up} {
+        padding-left: 17px;
+    }
+
+    @media #{$screen-md-up} {
+        padding-left: 20px;
+    }
+
+    @media #{$screen-lg-up} {
+        padding-left: 25px;
+    }
+
     .timeline > .timeline__event > .timeline__date {
         @media screen and (min-width: 769px) {
             font-weight: 700;
@@ -30,9 +44,9 @@
     > .box {
         box-shadow: none !important;
         margin: 0 auto;
-        max-width: 1280px + 30px;
-
+        max-width: 1280px + 60px;
     }
+
     > .box > .box-content {
         border: 0;
     }
