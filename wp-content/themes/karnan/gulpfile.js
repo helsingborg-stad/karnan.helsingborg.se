@@ -35,9 +35,7 @@
     plumber         =   require('gulp-plumber'),
     jshint          =   require("gulp-jshint"),
     cleanCSS        =   require('gulp-clean-css'),
-    node_modules    =   'node_modules/',
-    image           =   require('gulp-image'),
-    imagemin        =   require('gulp-imagemin');
+    node_modules    =   'node_modules/'
 
 /* ==========================================================================
    Load configuration file

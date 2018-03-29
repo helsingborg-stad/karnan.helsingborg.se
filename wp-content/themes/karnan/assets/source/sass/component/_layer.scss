@@ -194,11 +194,7 @@ $sizes-list: 400 600 800 1000 1200 1400 1600;
     @media (#{$mqtype}-width: $mqsize) {
 
         .layer-gras {
-            background-image: url('../image/grass/png/#{$size}.png');
-
-            .webp & {
-                background-image: url('../image/grass/webp/#{$size}.webp');
-            }
+            background-image: url('../image/grass/jpg/#{$size}.jpg');
         }
 
         .layer-tower {
@@ -210,19 +206,11 @@ $sizes-list: 400 600 800 1000 1200 1400 1600;
         }
 
         .layer-city-top {
-            background-image: url('../image/top/city/png/#{$size}.png');
-
-            .webp & {
-                background-image: url('../image/top/city/webp/#{$size}.webp');
-            }
+            background-image: url('../image/top/city/jpg/#{$size}.jpg');
         }
 
         .layer-greenarea-top {
             background-image: url('../image/top/greenarea/png/#{$size}.png');
-
-            .webp & {
-                background-image: url('../image/top/greenarea/webp/#{$size}.webp');
-            }
         }
 
         .layer-tower-top {
