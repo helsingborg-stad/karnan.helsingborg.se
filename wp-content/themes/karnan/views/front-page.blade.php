@@ -13,7 +13,7 @@
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/image/karnan/png/400.png">
         </div>
         <div class="layer depth-1 layer-city-top">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/image/top/city/jpg/400.png">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/image/top/city/jpg/400.jpg">
         </div>
         <div class="layer depth-1 layer-greenarea-top">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/image/top/greenarea/png/400.png">
