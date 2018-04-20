@@ -36,8 +36,7 @@
     jshint          =   require("gulp-jshint"),
     cleanCSS        =   require('gulp-clean-css'),
     node_modules    =   'node_modules/',
-    image           =   require('gulp-image'),
-    imagemin        =   require('gulp-imagemin');
+    image           =   require('gulp-image');
 
 /* ==========================================================================
    Load configuration file
