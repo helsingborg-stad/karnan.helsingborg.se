@@ -10,7 +10,7 @@
 .layer {
     bottom: 50px;
     left: 0;
-    width: calc(100% - 0);
+    width: 100%;
     @media #{$screen-md-up} and (orientation: portrait) {
         left: 17px;
         width: calc(100% - 17px);
