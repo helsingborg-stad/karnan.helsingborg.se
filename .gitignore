@@ -6,7 +6,7 @@
 /config/salts.php
 /config/ad.php
 /config/capthca.php
-
+/config/*
 # Municipio dependencies #
 ##########################
 wp/
