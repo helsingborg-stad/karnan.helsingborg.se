@@ -23,7 +23,7 @@ $columnSize = \karnan\Controller\Archive::getColumnSize();
         <div class="box-content">
             @if (get_field('archive_' . sanitize_title(get_post_type()) . '_feed_date_published', 'option') != 'false')
             <span class="box-post-event-date">
-                {{ \Municipio\Helper\Event::formatEventDate($post->start_date, $post->end_date) }}
+                {{ \EventManagerIntegration\App::formatEventDate($post->start_date, $post->end_date) }}
             </span>
             @endif
 
