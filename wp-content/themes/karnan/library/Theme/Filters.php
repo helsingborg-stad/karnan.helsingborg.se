@@ -18,7 +18,7 @@ class Filters
         add_filter('acf/load_value/name=header_layout', array($this, 'forceJumboHeader'), 10, 3);
 
         //Filter header data
-        add_filter('HbgBlade/data', array($this, 'filterHbgBladeData'), 10, 1);
+        add_filter('Municipio/viewData', array($this, 'filterHbgBladeData'), 10, 1);
 
         //Set custom classes to timeline module
         add_filter('Modularity/Module/Classes', array($this, 'timelineClasses'), 10, 3);
