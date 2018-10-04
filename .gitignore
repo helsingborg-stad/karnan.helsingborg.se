@@ -16,7 +16,7 @@ wp-content/*
 !wp-content/mu-plugins
 !wp-content/mu-plugins/*
 !wp-content/object-cache.php
-composer.lock
+!composer.lock
 
 # Site dependencies #
 ##########################
