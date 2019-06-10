@@ -7,7 +7,7 @@ class SingleEvent extends \Municipio\Controller\SingleEvent
     public function init()
     {
         global $post;
-        $this->data['date'] = $this->singleEventDate($post->ID);
+        $this->data['date'] =  method_exists('\EventManagerIntegration\Helper\SingleEventData', 'singleEventDate') ? \EventManagerIntegration\Helper\SingleEventData::singleEventDate() : null;
         $this->data['location'] = get_post_meta($post->ID, 'location', true);
     }
 
