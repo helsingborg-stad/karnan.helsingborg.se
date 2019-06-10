@@ -72,3 +72,4 @@ ehthumbs.db
 Thumbs.db
 /wp-content/themes/karnan/assets/tmp
 /config/multisite.php
+attachmentDownloader.php
