@@ -4,7 +4,7 @@
   "description": "Childtheme for Municipio theme",
   "main": "gulpfile.js",
   "dependencies": {
-    "gsap": "^1.20.3",
+    "gsap": "^3.6.0",
     "jquery-mousewheel": "^3.1.13",
     "jquery-scrollify": "^1.0.17",
     "jquery.stellar": "^0.6.2"
