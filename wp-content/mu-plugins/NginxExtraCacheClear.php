@@ -16,7 +16,7 @@ class NginxExtraCacheClear
      */
     public function __construct()
     {
-        // Only run if nginx helper local file delete constant is set.
+        // Only run if nginx helper local cache file path constant is set.
         if (defined('RT_WP_NGINX_HELPER_CACHE_PATH')) {
             add_filter('rt_nginx_helper_purge_url', [$this, 'queryStringCacheClear'], 10, 1);
             add_action('wp_loaded', [$this, 'modularityModuleSavePurge']);
@@ -52,8 +52,8 @@ class NginxExtraCacheClear
      */
     public function getNginxCacheFilePath($url)
     {
-        // Build a hash of the URL.
-        $hash = md5($url);
+        // Build a hash of the cache key.
+        $hash = md5($this->generateCacheKey($url));
 
         // Ensure trailing slash.
         $cache_path = RT_WP_NGINX_HELPER_CACHE_PATH;
@@ -74,6 +74,18 @@ class NginxExtraCacheClear
     }
 
     /**
+     * Generate the cache key based on url.
+     * @param string $url URL to use for cache key generation.
+     *
+     * @return string The cache key.
+     */
+    public function generateCacheKey($url)
+    {
+        $urlData = wp_parse_url($url);
+        return $urlData['scheme'] . 'GET' . $urlData['host'] . $urlData['path'];
+    }
+
+    /**
      * Cache clear query string versions based on url.
      * @param string $url Url sent in filter.
      *
@@ -84,13 +96,12 @@ class NginxExtraCacheClear
         // Skip home url so we dont purge everything all the time.
         if ($url !== get_home_url() . '/') {
             // Build the cache key and add wildcard * in the end.
-            $urlData = wp_parse_url($url);
-            $cacheKey = $urlData['scheme'] . 'GET' . $urlData['host'] . $urlData['path'] . '\?.*';
+            $cacheKeyRegex = $this->generateCacheKey($url) . '\?.*';
 
             // Command to grep for key in cache files.
             $command = 'find ' . RT_WP_NGINX_HELPER_CACHE_PATH . ' -type f | ' .
                        'xargs --no-run-if-empty -n1000 grep -El -m 1 ' .
-                       '"^KEY: ' . $cacheKey . '"';
+                       '"^KEY: ' . $$cacheKeyRegex . '"';
 
             // Get recursive files and nuke em!
             $cacheFiles = [];
